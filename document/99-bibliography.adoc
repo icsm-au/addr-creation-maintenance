@@ -1,2 +1,5 @@
 == Bibliography
 
+[[ANZ4819]] AS/NZS4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_
+
+[[ISO19160-1]] ISO19160-1:: International Organization for Standardization, _ISO 19160-1: Addressing Part 1: Conceptual model_ (2015). https://www.iso.org/standard/61710.html

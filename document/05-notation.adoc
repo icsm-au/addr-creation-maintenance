@@ -1,2 +1,5 @@
 == Notation
 
+=== Identifiers
+
+URIs for identifiable provisions in this document are specified as partial URIs relative to https://standards.isotc211.org/19160/-2/1, as specified in ISO 19105.

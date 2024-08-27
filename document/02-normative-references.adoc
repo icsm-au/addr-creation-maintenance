@@ -1,2 +1,13 @@
 == Normative References
 
+The following standard is needed for the application of the Australian Profile:
+
+* ISO 19160-2:2023 Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world.
+
+The following documents informed aspects of this standard for Australia:
+
+* <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>
+* AS 4590.1:2017 Interchange of client information
+* <<ISO19160-1, AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model>>
+* ICSM Addressing 2035 Strategy and Supporting Addendum1
+

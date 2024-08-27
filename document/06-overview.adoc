@@ -1,2 +1,7 @@
 == Overview
 
+This document specifies how addresses should be assigned and maintained to support Australia’s addressing infrastructure. It intends to help addressing authorities to fulfil custodial responsibilities and enable a consistent national approach to ongoing maintenance, accuracy and quality of addresses.
+
+It is intended for use by agencies responsible for addressing, particularly Local Government in Australia. It should also be adhered to by developers where addressing authorities enable address numbering and road naming proposals.
+
+This standard should be used in collaboration with national guidelines held by the Intergovernmental Committee on Surveying and Mapping (ICSM).

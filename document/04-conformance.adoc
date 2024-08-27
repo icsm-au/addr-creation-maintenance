@@ -1,2 +1,3 @@
 == Conformance
 
+TBC – how we conform to the ISO Standard
