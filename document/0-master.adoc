@@ -1,4 +1,4 @@
-= Address Model
+= Australian Addressing Creation & Maintenance Standard
 :toc: left
 :table-stripes: even
 :sectids:

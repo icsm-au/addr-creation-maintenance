@@ -25,9 +25,9 @@ jobs:
         echo "Add README to doc/"
         asciidoctor README.adoc -o doc/index.html
         echo "Add model to doc/"
-        asciidoctor 00-master.adoc -o doc/doc.html           
+        asciidoctor document/0-master.adoc -o doc/doc.html           
         echo "Add images to doc/"
-        cp -r images doc/
+        cp -r document/images doc/
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

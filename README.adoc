@@ -18,7 +18,8 @@ Please contribute by:
 . Creating Issue tickets within this repository's Issue Tracker
 .. at https://github.com/Spatial-Information-QLD/addr-creation-maintenance/issues
 . Creating Pull Requests to absorb changes against the document source files
-.. at https://github.com/Spatial-Information-QLD/addr-creation-maintenance/pulls
+.. the source files are in the `document/` folder of this repository
+.. Pull Requests should be lodged at https://github.com/Spatial-Information-QLD/addr-creation-maintenance/pulls
 
 _If creating Pull Requests is a new/unknown thing for you, please communicate with the contacts below for help._
 
