@@ -1,0 +1,28 @@
+= Address Model
+:toc: left
+:table-stripes: even
+:sectids:
+:sectanchors:
+:sectnums:
+
+include::00-introduction.adoc[]
+
+include::01-scope.adoc[]
+
+include::02-normative-references.adoc[]
+
+include::03-terms-definitions.adoc[]
+
+include::04-conformance.adoc[]
+
+include::06-overview.adoc[]
+
+include::07-good-practices.adoc[]
+
+include::08-governance-framework.adoc[]
+
+:sectnums!:
+
+include::50-annex-a-identifiers.adoc[]
+
+include::99-bibliography.adoc[]

@@ -1,0 +1,4 @@
+== Good practice
+
+_For assigning and maintaining addresses_
+

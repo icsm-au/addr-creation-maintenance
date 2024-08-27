@@ -1,0 +1,52 @@
+= Australian Addressing Creation & Maintenance Standard
+
+_The Australian Profile of ISO 19160.2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world_
+
+This repository contains the source files for the _Australian Addressing Creation & Maintenance Standard_ which is temporarily rendered online at:
+
+* https://Spatial-Information-QLD.github.io/addr-creation-maintenance/doc.html
+
+This Standard will receive a permanent home at a persistent online location when officially endorsed.
+
+== Contributions
+
+We encourage all contributions to this Standard!
+
+Please contribute by:
+
+. Raising concerns/ideas within ICSM's Address Working Group
+. Creating Issue tickets within this repository's Issue Tracker
+.. at https://github.com/Spatial-Information-QLD/addr-creation-maintenance/issues
+. Creating Pull Requests to absorb changes against the document source files
+.. at https://github.com/Spatial-Information-QLD/addr-creation-maintenance/pulls
+
+_If creating Pull Requests is a new/unknown thing for you, please communicate with the contacts below for help._
+
+== Rights and License
+
+The information in this repository is available for reuse under the https://creativecommons.org/licenses/by/4.0/[Creative Commons 4.0 license], see the LICENSE file for the deed.
+
+&copy; Intergovernmental Committee on Survey ing and Mapping, 2024
+
+
+== Contacts
+
+For more information about these vocabularies, contact:
+
+*Spatial Information* +
+GeoResources Division +
+Department of Resources +
+Queensland Government +
+CadastralAdminDataHelp@resources.qld.gov.au
+
+For further information, please visit:
+
+https://www.resources.qld.gov.au/data-mapping +
+https://qldspatial.information.qld.gov.au/
+
+For technical model implementation questions, contact:
+
+*Nicholas Car* +
+https://kurrawong.ai[KurrawongAI] +
+nick@kurrawong.ai +
+_Contractor to Spatial Information Qld._
