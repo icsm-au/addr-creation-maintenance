@@ -13,3 +13,7 @@
 [[ANZ4819]] AS/NZS4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_. https://store.standards.org.au/product/as-nzs-4819-2011
 
 [[ASNZSISO19160-4]] ASNZSISO19160-4:: Standards Australia. _AS/NZS ISO 19160.4: Addressing, Part 4: International postal address components and template language_ (2023). https://store.standards.org.au/product/as-nzs-iso-19160-4-2023
+
+[[RDF]] RDF:: World Wide Web Consortium, _RDF 1.1 Concepts and Abstract Syntax_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/rdf11-concepts/
+
+[[TTL]] TTL:: World Wide Web Consortium, _RDF 1.1 Turtle Terse RDF Triple Language_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/turtle/
