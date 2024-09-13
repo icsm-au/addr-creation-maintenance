@@ -25,7 +25,7 @@ jobs:
         echo "Add README to doc/"
         asciidoctor README.adoc -o doc/index.html
         echo "Add model to doc/"
-        asciidoctor document/0-master.adoc -o doc/doc.html           
+        asciidoctor document/00-master.adoc -o doc/doc.html           
         # echo "Add images to doc/"
         # cp -r document/images doc/
     - name: Deploy 🚀
