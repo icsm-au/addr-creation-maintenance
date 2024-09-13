@@ -1,2 +1,11 @@
 [[AnnexA]]
 == Annex A: Identifiers
+
+_This section is normative_
+
+Addressing information created in conformance with this standard _MUST_ use identifiers that meet the following criteria:
+
+1. Interpretable as IRIs, according to <<RFC3987, RFC3987>>
+2. Issued via a system- and organisation-independent mechanism designed for long-term identifier stability and operation
+
+Identifiers for addressing information that meet these criteria _MAY_ be used by implementing jurisdictions independently of one another or in a coordinated manner. Advice from the https://www.linked.data.gov.au/[Australian Government Linked Data Working Group] _SHOULD_ be sought regarding technical aspects of these sorts of identifiers.

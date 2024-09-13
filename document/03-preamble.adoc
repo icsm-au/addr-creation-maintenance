@@ -57,6 +57,9 @@ The following document defines the addressing model used for address records:
 
 [[locality]] locality:: a named geographical area defining a community or area of interest, which may be rural or urban in character, and is usually a suburb in the latter case. SOURCE: <<ANZ4819, ANZ4819>>
 
+[[IRI]] IRI:: Internationalized Resource Identifiers, IRIs, are a sequence of characters from the
+   Universal Character Set. SOURCE: <<ISO10646, ISO10646>>
+
 [[primary-address-site]] primary address site:: an address site that is not contained within another address site. It may contain a sub-address site. SOURCE: <<ANZ4819, ANZ4819>>
 
 [[profile]] profile:: set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function. SOURCE: <<ISO19160-2, ISO19160-2>>

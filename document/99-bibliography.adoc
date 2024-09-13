@@ -2,10 +2,14 @@
 
 [[ADDR2024]] ADDR2024:: Intergovernmental Committee on Surveying & Mapping. _Address Model_ (2024). https://linked.data.gov.au/def/addr
 
+[[ISO10646]] ISO10646:: International Organization for Standardization, _ISO/IEC 10646: Information technology — Universal coded character set (UCS)_. https://www.iso.org/standard/76835.html
+
 [[ISO19160-1]] ISO19160-1:: International Organization for Standardization, _ISO 19160-1: Addressing Part 1: Conceptual model_ (2015). https://www.iso.org/standard/61710.html
 
 [[ISO19160-2]] ISO19160-2:: International Organization for Standardization, _ISO 19160-2: Part 2: Assigning and maintaining addresses for objects in the physical world_ (2023). https://www.iso.org/standard/81674.html
 
-[[ANZ4819]] AS/NZS4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_
+[[RFC3987]] RDF3987:: Internet Engineering Taskforce, _Internationalized Resource Identifiers (IRIs)_ (2005) https://datatracker.ietf.org/doc/html/rfc3987
+
+[[ANZ4819]] AS/NZS4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_. https://store.standards.org.au/product/as-nzs-4819-2011
 
 [[ASNZSISO19160-4]] ASNZSISO19160-4:: Standards Australia. _AS/NZS ISO 19160.4: Addressing, Part 4: International postal address components and template language_ (2023). https://store.standards.org.au/product/as-nzs-iso-19160-4-2023
