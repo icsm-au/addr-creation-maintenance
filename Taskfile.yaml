@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  html:
+    desc: Regenerate doc.html
+    cmds:
+      - asciidoctor -o document/doc.html document/00-master.adoc
+      - echo "HTML remade"

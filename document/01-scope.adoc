@@ -1,9 +1,0 @@
-== Scope
-
-This document is a Profile of ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world.
-
-In the Australian context this standard applies to thoroughfare based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819>>. This standard does not apply to other address classes such as postal or landmark at this time. Postal addressing is expected to adhere to AS/NZS ISO 19160.4:2023.
-
-This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.
-
-This standard provides requirements for addressing authorities to assign addresses, record the related information, and signage related to addressing components.

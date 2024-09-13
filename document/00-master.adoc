@@ -5,17 +5,13 @@
 :sectanchors:
 :sectnums:
 
-include::00-introduction.adoc[]
+include::01-abstract.adoc[]
 
-include::01-scope.adoc[]
+include::02-metadata.adoc[]
 
-include::02-normative-references.adoc[]
+include::03-preamble.adoc[]
 
-include::03-terms-definitions.adoc[]
-
-include::04-conformance.adoc[]
-
-include::06-overview.adoc[]
+include::04-introduction.adoc[]
 
 include::07-good-practices.adoc[]
 
