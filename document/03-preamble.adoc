@@ -69,7 +69,22 @@ The following document defines the addressing model used for address records:
 
 === Conformance
 
-TBC – how we conform to the ISO Standard
+Keywords used to signify requirements in this document are those defined by <<RFC2119, RFC2119>> and they are:
+
+* _MUST_
+* _MUST NOT_
+* _REQUIRED_
+* _SHALL_
+* _SHALL NOT_
+* _SHOULD_
+* _SHOULD NOT_
+* _RECOMMENDED_
+* _MAY_
+
+For process and information to be conformant with this standard, the imperatives of those keywords _MUST_ be followed as per their <<RFC2119, RFC2119>> definitions.
+
+Address information created following processes outlined in this standard _MUST_ conform to the <<ADDR2024, ICSM Address Model>> with conformance to it tested as per it's https://linked.data.gov.au/def/addr#AnnexB[Annex B: Validation] section.
+
 
 ////
 === Notation
