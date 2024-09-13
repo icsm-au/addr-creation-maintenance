@@ -6,7 +6,7 @@
 
 [[ISO19160-2]] ISO19160-2:: International Organization for Standardization, _ISO 19160-2: Part 2: Assigning and maintaining addresses for objects in the physical world_ (2023). https://www.iso.org/standard/81674.html
 
-[[RFC2119]] RDF2119:: Internet Engineering Taskforce, _Key words for use in RFCs to Indicate Requirement Levels_ (1997) https://www.rfc-editor.org/rfc/rfc2119
+[[RFC2119]] RDF2119:: Internet Engineering Taskforce, _Key words for use in RFCs to Indicate Requirement Levels_ (1997) https://datatracker.ietf.org/doc/html/rfc2119
 
 [[ANZ4819]] AS/NZS4819:2011:: Standards Australia, _AS/NZS 4819:2011 Rural and urban addressing_
 
