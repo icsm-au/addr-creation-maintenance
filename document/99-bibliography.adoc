@@ -1,6 +1,6 @@
 == Bibliography
 
-[[ADDR2024]] ADDR2024:: Intergovernmental Committee on Surveying & Mapping. _Address Model_ (2024). https://linked.data.gov.au/def/addr
+[[ADDR2024]] ADDR2024:: Intergovernmental Committee on Surveying & Mapping, _Address Model_ (2024). https://linked.data.gov.au/def/addr
 
 [[ISO10646]] ISO10646:: International Organization for Standardization, _ISO/IEC 10646: Information technology — Universal coded character set (UCS)_. https://www.iso.org/standard/76835.html
 
@@ -10,10 +10,12 @@
 
 [[RFC3987]] RDF3987:: Internet Engineering Taskforce, _Internationalized Resource Identifiers (IRIs)_ (2005) https://datatracker.ietf.org/doc/html/rfc3987
 
+[[RFC2119]] RDF2119:: Internet Engineering Taskforce, _Key words for use in RFCs to Indicate Requirement Levels_ (1997) https://datatracker.ietf.org/doc/html/rfc2119
+
 [[ANZ4819]] AS/NZS4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_. https://store.standards.org.au/product/as-nzs-4819-2011
 
 [[ASNZSISO19160-4]] ASNZSISO19160-4:: Standards Australia. _AS/NZS ISO 19160.4: Addressing, Part 4: International postal address components and template language_ (2023). https://store.standards.org.au/product/as-nzs-iso-19160-4-2023
 
 [[RDF]] RDF:: World Wide Web Consortium, _RDF 1.1 Concepts and Abstract Syntax_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/rdf11-concepts/
 
-[[TTL]] TTL:: World Wide Web Consortium, _RDF 1.1 Turtle Terse RDF Triple Language_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/turtle/
+[[TTL]] TTL:: World Wide Web Consortium, _RDF 1.1 Turtle Terse RDF Triple Language_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/turtle
