@@ -53,7 +53,7 @@ The following document defines the addressing model used for address records:
 
 [[formed]] formed:: in relation to a road, means that it is physically constructed or prepared for passage by vehicles or pedestrians. SOURCE: <<ANZ4819, ANZ4819>>
 
-[[geocode]] geocode:: a point feature for an address spatially defined by coordinates. SOURCE: this standard
+[[geocode]] geocode:: a point feature for an address indicating a geometry. SOURCE: this standard
 
 [[locality]] locality:: a named geographical area defining a community or area of interest, which may be rural or urban in character, and is usually a suburb in the latter case. SOURCE: <<ANZ4819, ANZ4819>>
 
