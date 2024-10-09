@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="generator" content="Asciidoctor 2.0.16">
 <title>Australian Addressing Creation &amp; Maintenance Standard</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -84,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.square{list-style-type:square}
-ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -193,8 +193,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
 details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
 details{margin-left:1.25rem}
-details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
-details>summary::-webkit-details-marker{display:none}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;-webkit-tap-highlight-color:transparent}
 details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
 details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
 details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
@@ -208,10 +207,13 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -233,8 +235,9 @@ pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
 table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
 table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
 .quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
@@ -271,7 +274,7 @@ table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-c
 table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
 table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
 table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
-table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -287,11 +290,10 @@ ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
-li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
 ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
 ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
 ul.unstyled,ol.unstyled{margin-left:0}
-li>p:empty:only-child::before{content:"";display:inline-block}
 ul.checklist>li>p:first-child{margin-left:-1em}
 ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
 ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
@@ -334,6 +336,8 @@ sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
 div.unbreakable{page-break-inside:avoid}
 .big{font-size:larger}
 .small{font-size:smaller}
@@ -390,7 +394,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -518,7 +522,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modified</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-10-09</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issued</strong></p></td>
@@ -790,12 +794,12 @@ Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>addr</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>https://linked.data.gov.au/def/addr/</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>+https://linked.data.gov.au/def/addr/+</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ADDR2024">ICSM&#8217;s  Address Model</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>addrcm</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>https://linked.data.gov.au/def/addrcm/</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>+https://linked.data.gov.au/def/addrcm/+</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>This Document</strong></p></td>
 </tr>
 <tr>
@@ -917,8 +921,9 @@ Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 <h3 id="_general"><a class="anchor" href="#_general"></a>5.1. General</h3>
 <div class="sect3">
 <h4 id="_objectives"><a class="anchor" href="#_objectives"></a>5.1.1. Objectives</h4>
-<div class="sect4">
-<h5 id="_requirement_1_reqgoodpracticegeneralobjectives"><a class="anchor" href="#_requirement_1_reqgoodpracticegeneralobjectives"></a>Requirement 1. /req/goodPractice/general/objectives</h5>
+<div class="paragraph">
+<p><strong>Requirement 1. /req/goodPractice/general/objectives</strong></p>
+</div>
 <div class="paragraph">
 <p>A good practice shall specify one or more objectives for which addresses are assigned and shall be guided by these objectives.
 This standard specifies requirements for address assignment in Australia to enable each address to be readily and unambiguously identified and located.
@@ -930,181 +935,287 @@ Objectives of the standard are:
 These objectives are to apply to all addressable locations throughout Australia, including indigenous communities and private communities such as mining towns and retirement villages.
 It is noted that addresses previously confirming to AS/NZS 2819:2011 should meet this standard. Addresses created prior to AS/NZS 2819:2011 may not adhere to requirements as AS/NZS 4819:2011 explicitly noted that the standard was not to be applied retrospectively.</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 1. /rec/goodPractice/general/objectivesforPublicGood</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_1_recgoodpracticegeneralobjectivesforpublicgood"><a class="anchor" href="#_recommendation_1_recgoodpracticegeneralobjectivesforpublicgood"></a>Recommendation 1. /rec/goodPractice/general/objectivesforPublicGood</h5>
 <div class="paragraph">
 <p>An objective should specify that the assignment and maintenance of addresses is done with the purpose of benefitting governance and society and thereby achieving public good.
 Making address assignment and maintenance data open benefits governance and society by enhancing transparency, facilitating efficient urban planning, infrastructure development, emergency response, and ensuring equitable access to essential services, ultimately contributing to the public good.</p>
 </div>
 </div>
-</div>
 <div class="sect3">
 <h4 id="_context"><a class="anchor" href="#_context"></a>5.1.2. Context</h4>
-<div class="sect4">
-<h5 id="_requirement_2_reqgoodpracticegeneralcontext"><a class="anchor" href="#_requirement_2_reqgoodpracticegeneralcontext"></a>Requirement 2. /req/goodPractice/general/context</h5>
+<div class="paragraph">
+<p><strong>Requirement 2. /req/goodPractice/general/context</strong></p>
+</div>
 <div class="paragraph">
 <p>A good practice shall specify the context in which the address assignment and maintenance takes place and shall be guided by this context.
-When new housing, business complexes, or other types of development occur, local government are responsible for assigning and maintaining addresses for their jurisdiction. However, for Australian Capital Territory (ACT) and Northern Territory, the role is fulfilled by the territory government.
-State and territory governments aggregate these addresses into authoritative jurisdictional datasets. Data products and services are then distributed through various channels, including to the national data provider. PSMA Australia Limited (a public company owned by the nine governments of Australia; trading as Geoscape Australia) collate data at the national level.</p>
+When new housing, business complexes, or other types of development occur, local government are responsible for assigning and maintaining addresses for their jurisdiction. However, for Australian Capital Territory (ACT) and Northern Territory, the role is fulfilled by the territory government.</p>
 </div>
+<div class="paragraph">
+<p>State and territory governments aggregate these addresses into authoritative jurisdictional datasets. Data products and services are then distributed through various channels, including to the national data provider. PSMA Australia Limited (a public company owned by the nine governments of Australia; trading as Geoscape Australia) collate data at the national level.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_conceptual_model"><a class="anchor" href="#_conceptual_model"></a>5.1.3. Conceptual Model</h4>
-<div class="sect4">
-<h5 id="_requirement_3_reqgoodpracticegeneralconceptualmodel"><a class="anchor" href="#_requirement_3_reqgoodpracticegeneralconceptualmodel"></a>Requirement 3. /req/goodPractice/general/conceptualModel</h5>
 <div class="paragraph">
-<p>A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses.
-Australia is currently developing a national addressing model. Review is being taken of use of the Queensland conceptual model as a national model: <a href="https://linked.data.gov.au/def/addr" class="bare">https://linked.data.gov.au/def/addr</a>
-•	Address Model: Address Model
-•	Roads model: Roads Model
-•	Geographical Names model: Geographical Names Model
-•	Compound naming model: Compound Naming Model
-•	Cadastral model: Cadastral Model
-•	Lifecycle model: Lifecycle Model</p>
+<p><strong>Requirement 3. /req/goodPractice/general/conceptualModel</strong></p>
 </div>
+<div class="paragraph">
+<p>A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses.</p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_2_recgoodpracticegeneraliso19160_1profile"><a class="anchor" href="#_recommendation_2_recgoodpracticegeneraliso19160_1profile"></a>Recommendation 2. /rec/goodPractice/general/ISO19160-1Profile</h5>
+<div class="paragraph">
+<p>Australia is currently developing a national addressing model. Review is being taken of use of the Queensland conceptual model as a national model: <a href="https://linked.data.gov.au/def/addr" class="bare">https://linked.data.gov.au/def/addr</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Address Model: Address Model</p>
+</li>
+<li>
+<p>Roads model: Roads Model</p>
+</li>
+<li>
+<p>Geographical Names model: Geographical Names Model</p>
+</li>
+<li>
+<p>Compound naming model: Compound Naming Model</p>
+</li>
+<li>
+<p>Cadastral model: Cadastral Model</p>
+</li>
+<li>
+<p>Lifecycle model: Lifecycle Model</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation 2. /rec/goodPractice/general/ISO19160-1Profile</strong></p>
+</div>
 <div class="paragraph">
 <p>The conceptual model that describes classes (types) of addresses assigned and maintained through the good practice should conform to ISO 19160-1:2015.
 NOTE 1 Amongst others, ISO 19160-1:2015 requires that a conformant address model clearly specifies how the position of an address is represented in the model. ISO 19160-1:2015 provides two ways for doing this: 1) an address has coordinates to specify its position; 2) the position of the address is inferred from the addressed object. [SOURCE: ISO 19160-1:2015, 6.1]
 NOTE 2 Postal addresses are defined and described in ISO 19160-4:2017, a profile of ISO 19160-1:2015.
 EXAMPLE 14 The draft NZ profile of ISO 19160-1:2015 describes its conformance to ISO 19160-1:2015. The NZ profile defines six address classes: Thoroughfare, Water, Service Delivery, Rural Post Delivery, Thoroughfare4819, and Water4819. New addresses (excluding NZ Post addresses for service delivery and rural post delivery) quality assured by the LINZ address team are assessed against the Thoroughfare4819 and Water4819 classes, and these classes align with the requirements in AS/NZS 4819:2011.</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 3. /rec/goodPractice/general/intellectualPropertyRights</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_3_recgoodpracticegeneralintellectualpropertyrights"><a class="anchor" href="#_recommendation_3_recgoodpracticegeneralintellectualpropertyrights"></a>Recommendation 3. /rec/goodPractice/general/intellectualPropertyRights</h5>
 <div class="paragraph">
 <p>A good practice should specify to whom the intellectual property rights of the address assignment method and the address data belong. At the least, government organizations should have free access to the address data for services to ensure the health, safety and welfare of the public.
 TBC</p>
 </div>
 </div>
-</div>
 <div class="sect3">
 <h4 id="_license"><a class="anchor" href="#_license"></a>5.1.4. License</h4>
-<div class="sect4">
-<h5 id="_requirement_4_reqgoodpracticegenerallicense"><a class="anchor" href="#_requirement_4_reqgoodpracticegenerallicense"></a>Requirement 4. /req/goodPractice/general/license</h5>
+<div class="paragraph">
+<p><strong>Requirement 4. /req/goodPractice/general/license</strong></p>
+</div>
 <div class="paragraph">
 <p>A good practice shall specify the licences under which the address data is available and the terms and conditions for their use. Different licenses may apply for different users.</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_national"><a class="anchor" href="#_national"></a>National</h5>
+<h5 id="_national"><a class="anchor" href="#_national"></a>5.1.4.1. National</h5>
 <div class="paragraph">
 <p>Australia – The national address dataset is released quarterly under a modified Creative Commons Attribution 4.0 International license (CC BY 4.0), which adds a restriction relating to the use of the open G-NAF for the sending of mail .</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_jurisdictions"><a class="anchor" href="#_jurisdictions"></a>Jurisdictions</h5>
+<h5 id="_jurisdictions"><a class="anchor" href="#_jurisdictions"></a>5.1.4.2. Jurisdictions</h5>
 <div class="sect5">
-<h6 id="_australian_capital_territory"><a class="anchor" href="#_australian_capital_territory"></a>Australian Capital Territory</h6>
+<h6 id="_australian_capital_territory"><a class="anchor" href="#_australian_capital_territory"></a>5.1.4.2.1. Australian Capital Territory</h6>
 <div class="paragraph">
 <p>ACT - <a href="https://creativecommons.org/licenses/by/3.0/au/deed.en" class="bare">https://creativecommons.org/licenses/by/3.0/au/deed.en</a></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_new_south_wales"><a class="anchor" href="#_new_south_wales"></a>New South Wales</h6>
+<h6 id="_new_south_wales"><a class="anchor" href="#_new_south_wales"></a>5.1.4.2.2. New South Wales</h6>
 <div class="paragraph">
 <p>New South Wales – open data service?</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_northern_territory"><a class="anchor" href="#_northern_territory"></a>Northern Territory</h6>
+<h6 id="_northern_territory"><a class="anchor" href="#_northern_territory"></a>5.1.4.2.3. Northern Territory</h6>
 <div class="paragraph">
 <p>Northern Territory - Addresses are managed by the Survey Branch of the Department of Infrastructure, Planning and Logistics. [Cannot find data on <a href="https://data.nt.gov.au/" class="bare">https://data.nt.gov.au/</a>]</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_queensland"><a class="anchor" href="#_queensland"></a>Queensland</h6>
+<h6 id="_queensland"><a class="anchor" href="#_queensland"></a>5.1.4.2.4. Queensland</h6>
 <div class="paragraph">
 <p>Queensland – Addresses are available as open data through QSpatial, licensed under a Creative Commons - Attribution 4.0 International licence. <a href="https://creativecommons.org/licenses/by/4.0/" class="bare">https://creativecommons.org/licenses/by/4.0/</a></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_south_australia"><a class="anchor" href="#_south_australia"></a>South Australia</h6>
+<h6 id="_south_australia"><a class="anchor" href="#_south_australia"></a>5.1.4.2.5. South Australia</h6>
 <div class="paragraph">
 <p>South Australia - [Cannot find data other than rural address locations in LocationSAMapViewer]</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_tasmania"><a class="anchor" href="#_tasmania"></a>Tasmania</h6>
+<h6 id="_tasmania"><a class="anchor" href="#_tasmania"></a>5.1.4.2.6. Tasmania</h6>
 <div class="paragraph">
 <p>Tasmania – Addresses are available through theList, licensed under a Creative Commons licence.  <a href="https://creativecommons.org/licenses/by/3.0/au/deed.en" class="bare">https://creativecommons.org/licenses/by/3.0/au/deed.en</a></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_victoria"><a class="anchor" href="#_victoria"></a>Victoria</h6>
+<h6 id="_victoria"><a class="anchor" href="#_victoria"></a>5.1.4.2.7. Victoria</h6>
 <div class="paragraph">
 <p>Victoria – Addresses are available as open data through VicMap, licensed under a Creative Commons - Attribution 4.0 International licence. <a href="https://creativecommons.org/licenses/by/4.0/" class="bare">https://creativecommons.org/licenses/by/4.0/</a></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_western_australia"><a class="anchor" href="#_western_australia"></a>Western Australia</h6>
+<h6 id="_western_australia"><a class="anchor" href="#_western_australia"></a>5.1.4.2.8. Western Australia</h6>
 <div class="paragraph">
 <p>Western Australia – Subscription data?</p>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_recommendation_4_recgoodpracticegeneralfacilitateassignment"><a class="anchor" href="#_recommendation_4_recgoodpracticegeneralfacilitateassignment"></a>Recommendation 4. /rec/goodPractice/general/facilitateAssignment</h5>
 <div class="paragraph">
-<p>A good practice should specify a method for assigning values to address components that could be automated to speed up or facilitate address assignment and maintenance.
-EXAMPLE 19 AS/NZS 4819:2011, Rural and urban addressing, contains a clause for addressing rural properties based on the measured distance along the road, from a defined datum point, the accessway of the property is, with odd numbers on the left side of the road and even numbers on the right.
-Use of vocabularies
-•	Address alias types: <a href="https://linked.data.gov.au/def/address-alias-type" class="bare">https://linked.data.gov.au/def/address-alias-type</a>
-•	Address classes: <a href="https://linked.data.gov.au/def/address-classes" class="bare">https://linked.data.gov.au/def/address-classes</a>
-•	Address status types: <a href="https://linked.data.gov.au/def/address-status-type" class="bare">https://linked.data.gov.au/def/address-status-type</a>
-•	Geocode types: <a href="https://linked.data.gov.au/def/geocode-types" class="bare">https://linked.data.gov.au/def/geocode-types</a>
-•	Level types: <a href="https://linked.data.gov.au/def/level-types" class="bare">https://linked.data.gov.au/def/level-types</a>
-•	Record access: <a href="https://linked.data.gov.au/def/record-access" class="bare">https://linked.data.gov.au/def/record-access</a>
-•	Sub-address types: <a href="https://linked.data.gov.au/def/subaddress-types" class="bare">https://linked.data.gov.au/def/subaddress-types</a>
-•	Information source: <a href="https://linked.data.gov.au/def/source" class="bare">https://linked.data.gov.au/def/source</a>
-•	Ground relationship: <a href="https://linked.data.gov.au/def/ground-relationship" class="bare">https://linked.data.gov.au/def/ground-relationship</a>
-•	LRRS indicator: <a href="https://linked.data.gov.au/def/lrrs-indicator" class="bare">https://linked.data.gov.au/def/lrrs-indicator</a>
-•	Population zone: <a href="https://linked.data.gov.au/def/population-zone" class="bare">https://linked.data.gov.au/def/population-zone</a>
-•	Positional accuracy: <a href="https://linked.data.gov.au/def/positional-accuracy" class="bare">https://linked.data.gov.au/def/positional-accuracy</a>
-•	Record access: <a href="https://linked.data.gov.au/def/record-access" class="bare">https://linked.data.gov.au/def/record-access</a>
-•	Road cadastral relationship: <a href="https://linked.data.gov.au/def/road-cadastral-relationship" class="bare">https://linked.data.gov.au/def/road-cadastral-relationship</a>
-•	Road classifications: <a href="https://linked.data.gov.au/def/road-classifications" class="bare">https://linked.data.gov.au/def/road-classifications</a>
-•	Road geometry notes: <a href="https://linked.data.gov.au/def/road-geometry-notes" class="bare">https://linked.data.gov.au/def/road-geometry-notes</a>
-•	Road lane count: <a href="https://linked.data.gov.au/def/road-lane-count" class="bare">https://linked.data.gov.au/def/road-lane-count</a>
-•	Road maintainer: <a href="https://linked.data.gov.au/def/road-maintainer" class="bare">https://linked.data.gov.au/def/road-maintainer</a>
-•	Road name part types: <a href="https://linked.data.gov.au/def/road-name-part-types" class="bare">https://linked.data.gov.au/def/road-name-part-types</a>
-•	Road operational statuses: <a href="https://linked.data.gov.au/def/road-operational-statuses" class="bare">https://linked.data.gov.au/def/road-operational-statuses</a>
-•	Road owner: <a href="https://linked.data.gov.au/def/road-owner" class="bare">https://linked.data.gov.au/def/road-owner</a>
-•	Road seasonality: <a href="https://linked.data.gov.au/def/road-seasonality" class="bare">https://linked.data.gov.au/def/road-seasonality</a>
-•	Road sub-classes: <a href="https://linked.data.gov.au/def/road-sub-classes" class="bare">https://linked.data.gov.au/def/road-sub-classes</a>
-•	Road suffixes: <a href="https://linked.data.gov.au/def/road-suffixes" class="bare">https://linked.data.gov.au/def/road-suffixes</a>
-•	Road surfaces: <a href="https://linked.data.gov.au/def/road-surfaces" class="bare">https://linked.data.gov.au/def/road-surfaces</a>
-•	Road trafficability: <a href="https://linked.data.gov.au/def/road-trafficability" class="bare">https://linked.data.gov.au/def/road-trafficability</a>
-•	Road travel direction: <a href="https://linked.data.gov.au/def/road-travel-direction" class="bare">https://linked.data.gov.au/def/road-travel-direction</a>
-•	Road types: <a href="https://linked.data.gov.au/def/road-types" class="bare">https://linked.data.gov.au/def/road-types</a>
-•	Road user access: <a href="https://linked.data.gov.au/def/road-user-access" class="bare">https://linked.data.gov.au/def/road-user-access</a>
-•	Spatial capture method: <a href="https://linked.data.gov.au/def/spatial-capture-method" class="bare">https://linked.data.gov.au/def/spatial-capture-method</a>
-•	State controlled road indicator: <a href="https://linked.data.gov.au/def/scr-indicator" class="bare">https://linked.data.gov.au/def/scr-indicator</a>
-•	Surface capture method: <a href="https://linked.data.gov.au/def/surface-capture-method" class="bare">https://linked.data.gov.au/def/surface-capture-method</a>
-•	Information source: <a href="https://linked.data.gov.au/def/source" class="bare">https://linked.data.gov.au/def/source</a>
-•	Geographical names part types: <a href="https://linked.data.gov.au/def/gn-part-types" class="bare">https://linked.data.gov.au/def/gn-part-types</a>
-•	Geographical name statuses: <a href="https://linked.data.gov.au/def/gn-statuses" class="bare">https://linked.data.gov.au/def/gn-statuses</a>
-•	Geographical objects categories vocabulary: <a href="https://linked.data.gov.au/def/go-categories" class="bare">https://linked.data.gov.au/def/go-categories</a></p>
+<p><strong>Recommendation 4. /rec/goodPractice/general/facilitateAssignment</strong></p>
+</div>
+<div class="paragraph">
+<p>A good practice should specify a method for assigning values to address components that could be automated to speed up or facilitate address assignment and maintenance.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 19 AS/NZS 4819:2011, Rural and urban addressing, contains a clause for addressing rural properties based on the measured distance along the road, from a defined datum point, the accessway of the property is, with odd numbers on the left side of the road and even numbers on the right.</p>
+</div>
+<div class="paragraph">
+<p>Use of vocabularies</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Address alias types: <a href="https://linked.data.gov.au/def/address-alias-type" class="bare">https://linked.data.gov.au/def/address-alias-type</a></p>
+</li>
+<li>
+<p>Address classes: <a href="https://linked.data.gov.au/def/address-classes" class="bare">https://linked.data.gov.au/def/address-classes</a></p>
+</li>
+<li>
+<p>Address status types: <a href="https://linked.data.gov.au/def/address-status-type" class="bare">https://linked.data.gov.au/def/address-status-type</a></p>
+</li>
+<li>
+<p>Geocode types: <a href="https://linked.data.gov.au/def/geocode-types" class="bare">https://linked.data.gov.au/def/geocode-types</a></p>
+</li>
+<li>
+<p>Level types: <a href="https://linked.data.gov.au/def/level-types" class="bare">https://linked.data.gov.au/def/level-types</a></p>
+</li>
+<li>
+<p>Record access: <a href="https://linked.data.gov.au/def/record-access" class="bare">https://linked.data.gov.au/def/record-access</a></p>
+</li>
+<li>
+<p>Sub-address types: <a href="https://linked.data.gov.au/def/subaddress-types" class="bare">https://linked.data.gov.au/def/subaddress-types</a></p>
+</li>
+<li>
+<p>Information source: <a href="https://linked.data.gov.au/def/source" class="bare">https://linked.data.gov.au/def/source</a></p>
+</li>
+<li>
+<p>Ground relationship: <a href="https://linked.data.gov.au/def/ground-relationship" class="bare">https://linked.data.gov.au/def/ground-relationship</a></p>
+</li>
+<li>
+<p>LRRS indicator: <a href="https://linked.data.gov.au/def/lrrs-indicator" class="bare">https://linked.data.gov.au/def/lrrs-indicator</a></p>
+</li>
+<li>
+<p>Population zone: <a href="https://linked.data.gov.au/def/population-zone" class="bare">https://linked.data.gov.au/def/population-zone</a></p>
+</li>
+<li>
+<p>Positional accuracy: <a href="https://linked.data.gov.au/def/positional-accuracy" class="bare">https://linked.data.gov.au/def/positional-accuracy</a></p>
+</li>
+<li>
+<p>Record access: <a href="https://linked.data.gov.au/def/record-access" class="bare">https://linked.data.gov.au/def/record-access</a></p>
+</li>
+<li>
+<p>Road cadastral relationship: <a href="https://linked.data.gov.au/def/road-cadastral-relationship" class="bare">https://linked.data.gov.au/def/road-cadastral-relationship</a></p>
+</li>
+<li>
+<p>Road classifications: <a href="https://linked.data.gov.au/def/road-classifications" class="bare">https://linked.data.gov.au/def/road-classifications</a></p>
+</li>
+<li>
+<p>Road geometry notes: <a href="https://linked.data.gov.au/def/road-geometry-notes" class="bare">https://linked.data.gov.au/def/road-geometry-notes</a></p>
+</li>
+<li>
+<p>Road lane count: <a href="https://linked.data.gov.au/def/road-lane-count" class="bare">https://linked.data.gov.au/def/road-lane-count</a></p>
+</li>
+<li>
+<p>Road maintainer: <a href="https://linked.data.gov.au/def/road-maintainer" class="bare">https://linked.data.gov.au/def/road-maintainer</a></p>
+</li>
+<li>
+<p>Road name part types: <a href="https://linked.data.gov.au/def/road-name-part-types" class="bare">https://linked.data.gov.au/def/road-name-part-types</a></p>
+</li>
+<li>
+<p>Road operational statuses: <a href="https://linked.data.gov.au/def/road-operational-statuses" class="bare">https://linked.data.gov.au/def/road-operational-statuses</a></p>
+</li>
+<li>
+<p>Road owner: <a href="https://linked.data.gov.au/def/road-owner" class="bare">https://linked.data.gov.au/def/road-owner</a></p>
+</li>
+<li>
+<p>Road seasonality: <a href="https://linked.data.gov.au/def/road-seasonality" class="bare">https://linked.data.gov.au/def/road-seasonality</a></p>
+</li>
+<li>
+<p>Road sub-classes: <a href="https://linked.data.gov.au/def/road-sub-classes" class="bare">https://linked.data.gov.au/def/road-sub-classes</a></p>
+</li>
+<li>
+<p>Road suffixes: <a href="https://linked.data.gov.au/def/road-suffixes" class="bare">https://linked.data.gov.au/def/road-suffixes</a></p>
+</li>
+<li>
+<p>Road surfaces: <a href="https://linked.data.gov.au/def/road-surfaces" class="bare">https://linked.data.gov.au/def/road-surfaces</a></p>
+</li>
+<li>
+<p>Road trafficability: <a href="https://linked.data.gov.au/def/road-trafficability" class="bare">https://linked.data.gov.au/def/road-trafficability</a></p>
+</li>
+<li>
+<p>Road travel direction: <a href="https://linked.data.gov.au/def/road-travel-direction" class="bare">https://linked.data.gov.au/def/road-travel-direction</a></p>
+</li>
+<li>
+<p>Road types: <a href="https://linked.data.gov.au/def/road-types" class="bare">https://linked.data.gov.au/def/road-types</a></p>
+</li>
+<li>
+<p>Road user access: <a href="https://linked.data.gov.au/def/road-user-access" class="bare">https://linked.data.gov.au/def/road-user-access</a></p>
+</li>
+<li>
+<p>Spatial capture method: <a href="https://linked.data.gov.au/def/spatial-capture-method" class="bare">https://linked.data.gov.au/def/spatial-capture-method</a></p>
+</li>
+<li>
+<p>State controlled road indicator: <a href="https://linked.data.gov.au/def/scr-indicator" class="bare">https://linked.data.gov.au/def/scr-indicator</a></p>
+</li>
+<li>
+<p>Surface capture method: <a href="https://linked.data.gov.au/def/surface-capture-method" class="bare">https://linked.data.gov.au/def/surface-capture-method</a></p>
+</li>
+<li>
+<p>Information source: <a href="https://linked.data.gov.au/def/source" class="bare">https://linked.data.gov.au/def/source</a></p>
+</li>
+<li>
+<p>Geographical names part types: <a href="https://linked.data.gov.au/def/gn-part-types" class="bare">https://linked.data.gov.au/def/gn-part-types</a></p>
+</li>
+<li>
+<p>Geographical name statuses: <a href="https://linked.data.gov.au/def/gn-statuses" class="bare">https://linked.data.gov.au/def/gn-statuses</a></p>
+</li>
+<li>
+<p>Geographical objects categories vocabulary: <a href="https://linked.data.gov.au/def/go-categories" class="bare">https://linked.data.gov.au/def/go-categories</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_communication_through_physical_identifiers"><a class="anchor" href="#_communication_through_physical_identifiers"></a>5.1.5. Communication Through Physical Identifiers</h4>
-<div class="sect4">
-<h5 id="_requirement_5_reqgoodpracticegeneralcommunicationthroughphysicalidentifiers"><a class="anchor" href="#_requirement_5_reqgoodpracticegeneralcommunicationthroughphysicalidentifiers"></a>Requirement 5. /req/goodPractice/general/communicationThroughPhysicalIdentifiers</h5>
 <div class="paragraph">
-<p>A good practice shall specify how addresses will be communicated through physical identifiers.
-EXAMPLE 26 Addresses are communicated by street name signs on street corners and number signs on buildings.
-EXAMPLE 27 AS/NZS 4819:2011, Rural and urban addressing, specifies that “it is desirable that the possible range and direction of numbers be included on the road name sign”.
-To support emergency services, street numbers shall be visible from the access point to the address site.</p>
+<p><strong>Requirement 5. /req/goodPractice/general/communicationThroughPhysicalIdentifiers</strong></p>
 </div>
+<div class="paragraph">
+<p>A good practice shall specify how addresses will be communicated through physical identifiers.</p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_5_recgoodpracticegeneralkeepingaddressdatainsynch"><a class="anchor" href="#_recommendation_5_recgoodpracticegeneralkeepingaddressdatainsynch"></a>Recommendation 5. /rec/goodPractice/general/keepingAddressDataInSynch</h5>
+<div class="paragraph">
+<p>EXAMPLE 26 Addresses are communicated by street name signs on street corners and number signs on buildings.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 27 AS/NZS 4819:2011, Rural and urban addressing, specifies that “it is desirable that the possible range and direction of numbers be included on the road name sign”.</p>
+</div>
+<div class="paragraph">
+<p>To support emergency services, street numbers shall be visible from the access point to the address site.</p>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation 5. /rec/goodPractice/general/keepingAddressDataInSynch</strong></p>
+</div>
 <div class="paragraph">
 <p>A good practice should specify a method for keeping addresses in the physical world in synch with address data.</p>
 </div>
@@ -1113,251 +1224,412 @@ To support emergency services, street numbers shall be visible from the access p
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_principles"><a class="anchor" href="#_principles"></a>5.2. Principles</h3>
 <div class="sect3">
 <h4 id="_addressing_principles"><a class="anchor" href="#_addressing_principles"></a>5.2.1. Addressing principles</h4>
-<div class="sect4">
-<h5 id="_recommendation_6_recgoodpracticeprinciplesaddressingunambiguity"><a class="anchor" href="#_recommendation_6_recgoodpracticeprinciplesaddressingunambiguity"></a>Recommendation 6. /rec/goodPractice/principles/addressing/unambiguity</h5>
 <div class="paragraph">
-<p>An address shall be assigned to an addressable object in the physical world so that it allows the unambiguous determination of the object for purposes of identification and location (ISO 19160-1:2015).
-NOTE 1 The position of an address can be represented in two ways: 1) The position is specified by coordinates in the ‘position’ attribute. 2) The position is inferred from the addressed object. See 6.1 in ISO 19160-1:2015.
-A thoroughfare address shall be assigned that conforms to the list of mandatory components to enable unambiguity, and enable it to be readily located.</p>
+<p><strong>Recommendation 6. /rec/goodPractice/principles/addressing/unambiguity</strong></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_sustainable_assignment_method"><a class="anchor" href="#_sustainable_assignment_method"></a>Sustainable Assignment Method</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_6_reqgoodpracticeprinciplesaddressingsustainableassignmentmethod"><a class="anchor" href="#_requirement_6_reqgoodpracticeprinciplesaddressingsustainableassignmentmethod"></a>Requirement 6. /req/goodPractice/principles/addressing/sustainableAssignmentMethod</h5>
 <div class="paragraph">
-<p>Addressing shall be sustainable in the sense that additional addresses can be added without breaking the consistency of the address assignment method of existing addresses.
-EXAMPLE 4 Leaving spaces between numbers when addresses are initially assigned makes it possible to assign additional addresses later when densification takes place. Alternatively, a number can be assigned based on the distance from an intersection of origin of the street.</p>
+<p>An address shall be assigned to an addressable object in the physical world so that it allows the unambiguous determination of the object for purposes of identification and location (ISO 19160-1:2015).</p>
+</div>
+<div class="paragraph">
+<p>NOTE 1 The position of an address can be represented in two ways: 1) The position is specified by coordinates in the ‘position’ attribute. 2) The position is inferred from the addressed object. See 6.1 in ISO 19160-1:2015.</p>
+</div>
+<div class="paragraph">
+<p>A thoroughfare address shall be assigned that conforms to the list of mandatory components to enable unambiguity, and enable it to be readily located.</p>
+</div>
+<div class="sect4">
+<h5 id="_sustainable_assignment_method"><a class="anchor" href="#_sustainable_assignment_method"></a>5.2.1.1. Sustainable Assignment Method</h5>
+<div class="paragraph">
+<p><strong>Requirement 6. /req/goodPractice/principles/addressing/sustainableAssignmentMethod</strong></p>
+</div>
+<div class="paragraph">
+<p>Addressing shall be sustainable in the sense that additional addresses can be added without breaking the consistency of the address assignment method of existing addresses.</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 4 Leaving spaces between numbers when addresses are initially assigned makes it possible to assign additional addresses later when densification takes place. Alternatively, a number can be assigned based on the distance from an intersection of origin of the street.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_piloting_assignment_method"><a class="anchor" href="#_piloting_assignment_method"></a>Piloting Assignment Method</h5>
-
+<h5 id="_piloting_assignment_method"><a class="anchor" href="#_piloting_assignment_method"></a>5.2.1.2. Piloting Assignment Method</h5>
+<div class="paragraph">
+<p><strong>Requirement 7. /req/goodPractice/principles/addressing/pilotingAssignmentMethod</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_requirement_7_reqgoodpracticeprinciplesaddressingpilotingassignmentmethod"><a class="anchor" href="#_requirement_7_reqgoodpracticeprinciplesaddressingpilotingassignmentmethod"></a>Requirement 7. /req/goodPractice/principles/addressing/pilotingAssignmentMethod</h5>
 <div class="paragraph">
 <p>The assignment method shall be piloted or tested before rolling it out on a larger scale.
 TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_device_independence"><a class="anchor" href="#_device_independence"></a>Device Independence</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_8_reqgoodpracticeprinciplesaddressingdeviceindependence"><a class="anchor" href="#_requirement_8_reqgoodpracticeprinciplesaddressingdeviceindependence"></a>Requirement 8. /req/goodPractice/principles/addressing/deviceIndependence</h5>
+<h5 id="_device_independence"><a class="anchor" href="#_device_independence"></a>5.2.1.3. Device Independence</h5>
 <div class="paragraph">
-<p>Unambiguous location of the object shall be possible without requiring the use of a digital device.
-This requirement is necessitated, for example, in the case of an emergency when an object needs to be identified and located in the absence of connectivity (e.g., through signage when standing in front of it).
-EXAMPLE 5 During the 2019-20 Australian wildfires there was widespread loss of connectivity due to direct fire damage to telecommunications infrastructure. This resulted in a prolonged loss of internet access to location information [e.g., address] which hampered firefighters who had to rely on radio (verbal) communication.</p>
+<p><strong>Requirement 8. /req/goodPractice/principles/addressing/deviceIndependence</strong></p>
+</div>
+<div class="paragraph">
+<p>Unambiguous location of the object shall be possible without requiring the use of a digital device.</p>
+</div>
+<div class="paragraph">
+<p>This requirement is necessitated, for example, in the case of an emergency when an object needs to be identified and located in the absence of connectivity (e.g., through signage when standing in front of it).</p>
+</div>
+<div class="paragraph">
+<p>EXAMPLE 5 During the 2019-20 Australian wildfires there was widespread loss of connectivity due to direct fire damage to telecommunications infrastructure. This resulted in a prolonged loss of internet access to location information [e.g., address] which hampered firefighters who had to rely on radio (verbal) communication.</p>
 </div>
 <div class="paragraph">
 <p>Address elements in reverse allow gradually pinpointing of address
 State à Locality à Road / Waterway à Number</p>
 </div>
 <div class="paragraph">
-<p>An address shall be unique
-A sub address number shall be unique regardless of subaddress (unit) type or building level
-An address shall be assigned a unique number in relation to the access throughfare
-An address shall not contain two road names
-Each address shall be assigned at least one geocode with coordinates</p>
+<p>An address shall be unique</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_no_personal_information"><a class="anchor" href="#_no_personal_information"></a>No Personal Information</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_9_reqgoodpracticeprinciplesaddressingnopersonalinformation"><a class="anchor" href="#_requirement_9_reqgoodpracticeprinciplesaddressingnopersonalinformation"></a>Requirement 9. /req/goodPractice/principles/addressing/noPersonalInformation</h5>
 <div class="paragraph">
-<p>An address shall not include information about an individual or organization, owning the object to which it is assigned, or living and/or working at the object to which the address is assigned.
-An address shall not include personal information related to a person or organisation that owns or occupies the address site (or object) to which the address is assigned.</p>
+<p>A sub address number shall be unique regardless of subaddress (unit) type or building level</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_dimensions_congruent_with_objectives"><a class="anchor" href="#_dimensions_congruent_with_objectives"></a>Dimensions Congruent With Objectives</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_10_reqgoodpracticeprinciplesaddressingdimensionscongruentwithobjectives"><a class="anchor" href="#_requirement_10_reqgoodpracticeprinciplesaddressingdimensionscongruentwithobjectives"></a>Requirement 10. /req/goodPractice/principles/addressing/dimensionsCongruentWithObjectives</h5>
 <div class="paragraph">
-<p>Addresses shall be of an address class with dimensions congruent with the context in which they are assigned and maintained, and with the objectives for which they are assigned and maintained.
-TBC</p>
+<p>An address shall be assigned a unique number in relation to the access throughfare</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_suitable_components"><a class="anchor" href="#_suitable_components"></a>Suitable Components</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_11_reqgoodpracticeprinciplesaddressingsuitablecomponents"><a class="anchor" href="#_requirement_11_reqgoodpracticeprinciplesaddressingsuitablecomponents"></a>Requirement 11. /req/goodPractice/principles/addressing/suitableComponents</h5>
 <div class="paragraph">
-<p>The address components of an address class shall be suitable to meet the objectives for which that class is designed.
-Each address shall be assigned a class as in <a href="https://linked.data.gov.au/def/address-classes" class="bare">https://linked.data.gov.au/def/address-classes</a>, which use the components as laid out below. All addresses will be associated with an addressable object that has associated geometry, with, at a minimum, a geocode. Geocodes will be associated with a geocode type from <a href="https://linked.data.gov.au/def/geocode-types" class="bare">https://linked.data.gov.au/def/geocode-types</a>. All address components will be stored with lifecycle and provenance information.
-Any address assigned to an object shall have a digital equivalent address record in the authoritative state and national address datasets . This record shall be updated whenever an address is assigned or changed .</p>
+<p>An address shall not contain two road names</p>
+</div>
+<div class="paragraph">
+<p>Each address shall be assigned at least one geocode with coordinates</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_no_personal_information"><a class="anchor" href="#_no_personal_information"></a>5.2.1.4. No Personal Information</h5>
+<div class="paragraph">
+<p><strong>Requirement 9. /req/goodPractice/principles/addressing/noPersonalInformation</strong></p>
+</div>
+<div class="paragraph">
+<p>An address shall not include information about an individual or organization, owning the object to which it is assigned, or living and/or working at the object to which the address is assigned.</p>
+</div>
+<div class="paragraph">
+<p>An address shall not include personal information related to a person or organisation that owns or occupies the address site (or object) to which the address is assigned.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_dimensions_congruent_with_objectives"><a class="anchor" href="#_dimensions_congruent_with_objectives"></a>5.2.1.5. Dimensions Congruent With Objectives</h5>
+<div class="paragraph">
+<p><strong>Requirement 10. /req/goodPractice/principles/addressing/dimensionsCongruentWithObjectives</strong></p>
+</div>
+<div class="paragraph">
+<p>Addresses shall be of an address class with dimensions congruent with the context in which they are assigned and maintained, and with the objectives for which they are assigned and maintained.</p>
+</div>
+<div class="paragraph">
+<p>TBC</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_suitable_components"><a class="anchor" href="#_suitable_components"></a>5.2.1.6. Suitable Components</h5>
+<div class="paragraph">
+<p><strong>Requirement 11. /req/goodPractice/principles/addressing/suitableComponents</strong></p>
+</div>
+<div class="paragraph">
+<p>The address components of an address class shall be suitable to meet the objectives for which that class is designed.</p>
+</div>
+<div class="paragraph">
+<p>Each address shall be assigned a class as in <a href="https://linked.data.gov.au/def/address-classes" class="bare">https://linked.data.gov.au/def/address-classes</a>, which use the components as laid out below. All addresses will be associated with an addressable object that has associated geometry, with, at a minimum, a geocode. Geocodes will be associated with a geocode type from <a href="https://linked.data.gov.au/def/geocode-types" class="bare">https://linked.data.gov.au/def/geocode-types</a>. All address components will be stored with lifecycle and provenance information.</p>
+</div>
+<div class="paragraph">
+<p>Any address assigned to an object shall have a digital equivalent address record in the authoritative state and national address datasets . This record shall be updated whenever an address is assigned or changed.</p>
 </div>
 <div class="sect5">
-<h6 id="_thoroughfare"><a class="anchor" href="#_thoroughfare"></a>Thoroughfare</h6>
+<h6 id="_thoroughfare"><a class="anchor" href="#_thoroughfare"></a>5.2.1.6.1. Thoroughfare</h6>
 <div class="paragraph">
-<p>Addresses in the Thoroughfare class specify a location by reference to a thoroughfare i.e. a road or water feature name.
-All throughfare addresses shall comprise at a minimum the following components:
-(a)	Address number  elements
-(b)	Thoroughfare name (road or water feature name ) and type elements
-(c)	Locality name
-(d)	State or territory name
-The combination of these four components shall create a unique address, which reflects the point of access to the address site.
-An address may also include the following additional components:
-(a)	Address site name
-(b)	Building name
-(c)	Landmark name
-(d)	Sub-address type
-(e)	Level type and number
-(f)	Postcode
-(g)	Country
-(h)	Indigenous country
-An address shall be assigned to an addressable object.
-In instances where an address site has more than one point of access, alternative addresses may be created to reflect the additional access points. These additional addresses shall be stored against the same addressable object.
-An addressable object shall have at least one spatial geometry stored against it.</p>
+<p>Addresses in the Thoroughfare class specify a location by reference to a thoroughfare i.e. a road or water feature name.</p>
 </div>
 <div class="paragraph">
-<p>======= Address number</p>
+<p>All throughfare addresses shall comprise at a minimum the following components:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Address number elements</p>
+</li>
+<li>
+<p>Thoroughfare name (road or water feature name ) and type elements</p>
+</li>
+<li>
+<p>Locality name</p>
+</li>
+<li>
+<p>State or territory name</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>The designation and form of an address number is crucial in enabling an address site to be readily located by emergency service responders and service delivery providers.
-An address number shall be assigned to each separately owned or occupied area of land, and each separately owned or occupied building or part of a building. The address number assignation method relates to the address class. For throughfare addresses, address numbers follow general and specific address class principles.</p>
+<p>The combination of these four components shall create a unique address, which reflects the point of access to the address site.
+An address may also include the following additional components:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Address site name</p>
+</li>
+<li>
+<p>Building name</p>
+</li>
+<li>
+<p>Landmark name</p>
+</li>
+<li>
+<p>Sub-address type</p>
+</li>
+<li>
+<p>Level type and number</p>
+</li>
+<li>
+<p>Postcode</p>
+</li>
+<li>
+<p>Country</p>
+</li>
+<li>
+<p>Indigenous country</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>======= General address numbering principles</p>
+<p>An address shall be assigned to an addressable object.</p>
 </div>
 <div class="paragraph">
-<p>Address numbers shall be assigned prior to occupation and as early as practicable in the development process.
-Address numbers shall be assigned according to the location of the point of access to the address site from the throughfare (road or water feature).
-Address number allocation shall ensure clear, logical and unambiguous numbering:
-	Address numbers shall be sequential positive integers from lowest to highest, and continue for the entire length of the named road even when it continues across administrative boundaries.
-	The datum point for address numbering should be at the commencement of the road from where access to that road is most common, or is planned to occur, at the point of naming. This shall take into account assignation of reserved numbering requirements in a staged development.
-	A number range shall not be assigned as an address number. And existing ranges phased out.
-	A primary address number shall not be prefixed by alphabetical characters.
-	Primary address sites shall be numbered using odd numbers on the left of the throughfare and even numbers on the right .
-	Where there are no addresses numbers available for an address site due to existing allocations, alpha suffixes shall be assigned to the base number; with the exception that address sites that share access should be treated as sub-address sites.
-	Alpha suffixes shall start at A, be assigned incrementally in the same direction as the numbering of addresses on the throughfare, and not extend beyond E.
-	Renumbering of the road is required where there are more than five additional address sites requiring numbering in this way.
-	In instances where an existing address site uses the base number, this may be retained (i.e. not have a suffix) provided it is in order.
-	A lot number shall not be used in place of an address number.
-	Where a road is renamed as a result of redesign or development, address sites shall be renumbered if required to ensure adherence to this standard.
-	Where an area of rural numbering is reclassified as urban, previously assigned rural numbers should be retained if urban numbering requirements can be met for the infill addressing.</p>
+<p>In instances where an address site has more than one point of access, alternative addresses may be created to reflect the additional access points. These additional addresses shall be stored against the same addressable object.</p>
 </div>
 <div class="paragraph">
-<p>======= Urban address numbering</p>
+<p>An addressable object shall have at least one spatial geometry stored against it.</p>
 </div>
 <div class="paragraph">
-<p>For addresses designated part of the urban address class, address numbers shall be reserved to meet potential future allocation needs, for example where there are unusually wide frontages or potential for infill development.
-An address site on a corner shall be assigned both a number indicating the main point of access, and an address number on the other road assigned as an alternative address (if access exists), or be reserved for future development.</p>
+<p><strong>Address number</strong></p>
 </div>
 <div class="paragraph">
-<p>======= Rural address numbering</p>
+<p>The designation and form of an address number is crucial in enabling an address site to be readily located by emergency service responders and service delivery providers.</p>
 </div>
 <div class="paragraph">
-<p>For addresses designated part of the rural address class, address numbering shall be determined by dividing the distance in metres from the datum point to the access point by ten, then rounding to the nearest odd number on the left or even number on the right side of the road (rural numbering method).
-Address numbers shall not exceed five digits – for roads over 1000km long, address numbering shall be restarted at a different datum point, preferably a town, natural feature or major intersection, with numbering in the same direction.
-In the absence of an access point, a rural number within the range determined by the rural numbering method may be assigned. The rural number shall be reassigned if an access point is subsequently created.
-In areas with multiple address access points within the minimum step intervals of 20m, the distance criteria may be varied as long as the overall integrity of the rural numbering system is maintained. Alternatively, suffixes may be added in accordance with Section 7.2.1.1.1.1.</p>
+<p>An address number shall be assigned to each separately owned or occupied area of land, and each separately owned or occupied building or part of a building. The address number assignation method relates to the address class. For throughfare addresses, address numbers follow general and specific address class principles.</p>
 </div>
 <div class="paragraph">
-<p>======= Numbering for roads that cross both rural and urban areas</p>
+<p><strong>General address numbering principles</strong></p>
 </div>
 <div class="paragraph">
-<p>If a road name continues across rural and urban extents, the rural numbering method should be utilised but may be varied as necessary in urban areas to ensure numbering remains logical and unique.
-Where a highway crosses an urban area in which another local name is used, numbering shall relate to each named road, both in assignment methodology and extent. Rural numbering shall encompass distances including the sections with local names.</p>
+<p>Address numbers shall be assigned prior to occupation and as early as practicable in the development process.</p>
 </div>
 <div class="paragraph">
-<p>======= Water address numbering</p>
+<p>Address numbers shall be assigned according to the location of the point of access to the address site from the throughfare (road or water feature).</p>
+</div>
+<div class="paragraph">
+<p>Address number allocation shall ensure clear, logical and unambiguous numbering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Address numbers shall be sequential positive integers from lowest to highest, and continue for the entire length of the named road even when it continues across administrative boundaries.</p>
+</li>
+<li>
+<p>The datum point for address numbering should be at the commencement of the road from where access to that road is most common, or is planned to occur, at the point of naming. This shall take into account assignation of reserved numbering requirements in a staged development.</p>
+</li>
+<li>
+<p>A number range shall not be assigned as an address number. And existing ranges phased out.</p>
+</li>
+<li>
+<p>A primary address number shall not be prefixed by alphabetical characters.</p>
+</li>
+<li>
+<p>Primary address sites shall be numbered using odd numbers on the left of the throughfare and even numbers on the right .</p>
+</li>
+<li>
+<p>Where there are no addresses numbers available for an address site due to existing allocations, alpha suffixes shall be assigned to the base number; with the exception that address sites that share access should be treated as sub-address sites.</p>
+</li>
+<li>
+<p>Alpha suffixes shall start at A, be assigned incrementally in the same direction as the numbering of addresses on the throughfare, and not extend beyond E.</p>
+</li>
+<li>
+<p>Renumbering of the road is required where there are more than five additional address sites requiring numbering in this way.</p>
+</li>
+<li>
+<p>In instances where an existing address site uses the base number, this may be retained (i.e. not have a suffix) provided it is in order.</p>
+</li>
+<li>
+<p>A lot number shall not be used in place of an address number.</p>
+</li>
+<li>
+<p>Where a road is renamed as a result of redesign or development, address sites shall be renumbered if required to ensure adherence to this standard.</p>
+</li>
+<li>
+<p>Where an area of rural numbering is reclassified as urban, previously assigned rural numbers should be retained if urban numbering requirements can be met for the infill addressing.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Urban address numbering</strong></p>
+</div>
+<div class="paragraph">
+<p>For addresses designated part of the urban address class, address numbers shall be reserved to meet potential future allocation needs, for example where there are unusually wide frontages or potential for infill development.</p>
+</div>
+<div class="paragraph">
+<p>An address site on a corner shall be assigned both a number indicating the main point of access, and an address number on the other road assigned as an alternative address (if access exists), or be reserved for future development.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rural address numbering</strong></p>
+</div>
+<div class="paragraph">
+<p>For addresses designated part of the rural address class, address numbering shall be determined by dividing the distance in metres from the datum point to the access point by ten, then rounding to the nearest odd number on the left or even number on the right side of the road (rural numbering method).</p>
+</div>
+<div class="paragraph">
+<p>Address numbers shall not exceed five digits – for roads over 1000km long, address numbering shall be restarted at a different datum point, preferably a town, natural feature or major intersection, with numbering in the same direction.</p>
+</div>
+<div class="paragraph">
+<p>In the absence of an access point, a rural number within the range determined by the rural numbering method may be assigned. The rural number shall be reassigned if an access point is subsequently created.</p>
+</div>
+<div class="paragraph">
+<p>In areas with multiple address access points within the minimum step intervals of 20m, the distance criteria may be varied as long as the overall integrity of the rural numbering system is maintained. Alternatively, suffixes may be added in accordance with Section 7.2.1.1.1.1.</p>
+</div>
+<div class="paragraph">
+<p><strong>Numbering for roads that cross both rural and urban areas</strong></p>
+</div>
+<div class="paragraph">
+<p>If a road name continues across rural and urban extents, the rural numbering method should be utilised but may be varied as necessary in urban areas to ensure numbering remains logical and unique.</p>
+</div>
+<div class="paragraph">
+<p>Where a highway crosses an urban area in which another local name is used, numbering shall relate to each named road, both in assignment methodology and extent. Rural numbering shall encompass distances including the sections with local names.</p>
+</div>
+<div class="paragraph">
+<p><strong>Water address numbering</strong></p>
 </div>
 <div class="paragraph">
 <p>Addresses fall under the class of water if the site cannot be accessed from a road, and is instead accessed from a water feature or island.
-For addresses designated part of the inlet address class, inlet or bay address numbering uses the distance in metres from a datum point at one end of the inlet or bay, divided by ten, and rounded to the nearest number.
-For addresses designated part of the island address class, numbering uses the distance in metres clockwise from a datum point, divided by ten, and rounded to the nearest number.
-For addresses designated part of the river address class, river and creek address numbering uses the distance in metres upstream from a datum point (e.g. river mouth), divided by ten, and rounded to the nearest odd number on the true right and even number on the true left (i.e. to the direction in relation to the flow of the river).</p>
+For addresses designated part of the inlet address class, inlet or bay address numbering uses the distance in metres from a datum point at one end of the inlet or bay, divided by ten, and rounded to the nearest number.</p>
 </div>
 <div class="paragraph">
-<p>======= Sub-address numbering</p>
+<p>For addresses designated part of the island address class, numbering uses the distance in metres clockwise from a datum point, divided by ten, and rounded to the nearest number.</p>
 </div>
 <div class="paragraph">
-<p>Sub-address numbering shall be used for address sites contained within other address sites e.g. an apartment block or marina. A sub-address may utilise either the primary or an alternative address for the parent site.
-The sub-address number precedes the address for the parent site, and shall be formatted when used with a ‘/’ between the sub-address number and address number.
-The sub-address number should be stored with the sub-address type from <a href="https://linked.data.gov.au/def/subaddress-types" class="bare">https://linked.data.gov.au/def/subaddress-types</a>, although this does not have to be provided within an address string.</p>
+<p>For addresses designated part of the river address class, river and creek address numbering uses the distance in metres upstream from a datum point (e.g. river mouth), divided by ten, and rounded to the nearest odd number on the true right and even number on the true left (i.e. to the direction in relation to the flow of the river).</p>
 </div>
 <div class="paragraph">
-<p>======= Thoroughfare name</p>
+<p><strong>Sub-address numbering</strong></p>
 </div>
 <div class="paragraph">
-<p>======== Roads</p>
+<p>Sub-address numbering shall be used for address sites contained within other address sites e.g. an apartment block or marina. A sub-address may utilise either the primary or an alternative address for the parent site.</p>
 </div>
 <div class="paragraph">
-<p>An address shall not include more than one road name.
-A road name shall be short, clear and unambiguous, and meet national naming principles. It shall not be offensive, racist, derogatory or demeaning.
-All formed roads, including private roads, that are generally open to the public or to services shall be named .
-A named road shall include only one section navigable by vehicles (or pedestrians), unless separated by a median strip.
-A road shall only have one name, other than part of a highway that is assigned a local name where it passes through a town or city.
-An unbroken section of road crossing an administrative boundary shall retain the same name.
-A road name shall consist of a name element followed by a road type. The accepted road types are in <a href="https://linked.data.gov.au/def/road-types" class="bare">https://linked.data.gov.au/def/road-types</a>. The road type shall reflect the function and characteristics of the road as described in the vocabulary.
-A road named after 2011 should not have a cardinal indicator after the road type. For roads named prior to this, road suffixes should refer to <a href="https://linked.data.gov.au/def/road-suffixes" class="bare">https://linked.data.gov.au/def/road-suffixes</a>.
-The name element of a road name, regardless of road type, shall not be the same as, or similar in spelling or sound, to an existing road name in the same locality, an adjoining locality, or in the same local government area.
-A road name should be enduring and changed only when necessary. A road name should be changed when redesign or redevelopment breaks the road extent into two or more segments so it is no longer contiguous.</p>
+<p>The sub-address number precedes the address for the parent site, and shall be formatted when used with a ‘/’ between the sub-address number and address number.</p>
 </div>
 <div class="paragraph">
-<p>======== Water features</p>
+<p>The sub-address number should be stored with the sub-address type from <a href="https://linked.data.gov.au/def/subaddress-types" class="bare">https://linked.data.gov.au/def/subaddress-types</a>, although this does not have to be provided within an address string.</p>
 </div>
 <div class="paragraph">
-<p>For address sites accessed from the water and not accessible from a road, the throughfare component should refer to the water feature name. The name shall be acceptable to the applicable naming authority.
-The water throughfare should indicate the type of geographical object from <a href="https://linked.data.gov.au/def/go-categories" class="bare">https://linked.data.gov.au/def/go-categories</a>.</p>
+<p><strong>Thoroughfare name</strong></p>
 </div>
 <div class="paragraph">
-<p>======= Locality</p>
+<p><strong>Roads</strong></p>
 </div>
 <div class="paragraph">
-<p>======== Naming</p>
+<p>An address shall not include more than one road name.</p>
 </div>
 <div class="paragraph">
-<p>A locality name shall be short, unique within the country, and assigned according to national naming principles. It shall not be offensive, racist, derogatory or demeaning.
-A locality name should not be similar in spelling or sound to any other locality name with the country.
-A dual or alternative name shall not be assigned to a locality.
-A locality name should be enduring and changed only when necessary.
-A locality name should not be substituted with a promotional name , neighbourhood, or regional name in an address.
-A locality shall be assigned the geographical object category of <a href="https://linked.data.gov.au/def/go-categorieslocality" class="bare">https://linked.data.gov.au/def/go-categorieslocality</a>.</p>
+<p>A road name shall be short, clear and unambiguous, and meet national naming principles. It shall not be offensive, racist, derogatory or demeaning.</p>
 </div>
 <div class="paragraph">
-<p>======== Boundaries</p>
+<p>All formed roads, including private roads, that are generally open to the public or to services shall be named.</p>
 </div>
 <div class="paragraph">
-<p>Locality boundaries shall be clearly defined, not overlap, and be contiguous. A locality should not cross a Local Government boundary, and should be contained within, and not cross, state or territory boundaries.
-When defining a locality boundary, the following should be considered:
-	A locality boundary should define a community of interest
-	Definite and distinguishable physical features or barriers should be used where appropriate e.g. creeks, rivers, ridgelines, centres of roads, railways.
-	The boundary should not, where possible, bisect properties in common ownership or land parcels.
+<p>A named road shall include only one section navigable by vehicles (or pedestrians), unless separated by a median strip.</p>
+</div>
+<div class="paragraph">
+<p>A road shall only have one name, other than part of a highway that is assigned a local name where it passes through a town or city.</p>
+</div>
+<div class="paragraph">
+<p>An unbroken section of road crossing an administrative boundary shall retain the same name.</p>
+</div>
+<div class="paragraph">
+<p>A road name shall consist of a name element followed by a road type. The accepted road types are in <a href="https://linked.data.gov.au/def/road-types" class="bare">https://linked.data.gov.au/def/road-types</a>. The road type shall reflect the function and characteristics of the road as described in the vocabulary.</p>
+</div>
+<div class="paragraph">
+<p>A road named after 2011 should not have a cardinal indicator after the road type. For roads named prior to this, road suffixes should refer to <a href="https://linked.data.gov.au/def/road-suffixes" class="bare">https://linked.data.gov.au/def/road-suffixes</a>.</p>
+</div>
+<div class="paragraph">
+<p>The name element of a road name, regardless of road type, shall not be the same as, or similar in spelling or sound, to an existing road name in the same locality, an adjoining locality, or in the same local government area.</p>
+</div>
+<div class="paragraph">
+<p>A road name should be enduring and changed only when necessary. A road name should be changed when redesign or redevelopment breaks the road extent into two or more segments so it is no longer contiguous.</p>
+</div>
+<div class="paragraph">
+<p><strong>Water features</strong></p>
+</div>
+<div class="paragraph">
+<p>For address sites accessed from the water and not accessible from a road, the throughfare component should refer to the water feature name. The name shall be acceptable to the applicable naming authority.</p>
+</div>
+<div class="paragraph">
+<p>The water throughfare should indicate the type of geographical object from <a href="https://linked.data.gov.au/def/go-categories" class="bare">https://linked.data.gov.au/def/go-categories</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Locality</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Naming</strong></p>
+</div>
+<div class="paragraph">
+<p>A locality name shall be short, unique within the country, and assigned according to national naming principles. It shall not be offensive, racist, derogatory or demeaning.</p>
+</div>
+<div class="paragraph">
+<p>A locality name should not be similar in spelling or sound to any other locality name with the country.</p>
+</div>
+<div class="paragraph">
+<p>A dual or alternative name shall not be assigned to a locality.</p>
+</div>
+<div class="paragraph">
+<p>A locality name should be enduring and changed only when necessary.</p>
+</div>
+<div class="paragraph">
+<p>A locality name should not be substituted with a promotional name , neighbourhood, or regional name in an address.</p>
+</div>
+<div class="paragraph">
+<p>A locality shall be assigned the geographical object category of <a href="https://linked.data.gov.au/def/go-categorieslocality" class="bare">https://linked.data.gov.au/def/go-categorieslocality</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Boundaries</strong></p>
+</div>
+<div class="paragraph">
+<p>Locality boundaries shall be clearly defined, not overlap, and be contiguous. A locality should not cross a Local Government boundary, and should be contained within, and not cross, state or territory boundaries.</p>
+</div>
+<div class="paragraph">
+<p>When defining a locality boundary, the following should be considered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A locality boundary should define a community of interest</p>
+</li>
+<li>
+<p>Definite and distinguishable physical features or barriers should be used where appropriate e.g. creeks, rivers, ridgelines, centres of roads, railways.</p>
+</li>
+<li>
+<p>The boundary should not, where possible, bisect properties in common ownership or land parcels.
 A locality boundary should be enduring and changed only when necessary. However, these should be reviewed and amended where appropriate in areas subject to development.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>======= Landmark</p>
+<p><strong>Landmark</strong></p>
 </div>
 <div class="paragraph">
-<p>Addresses in the Landmark class specify a location by reference to a named landmark. A landmark is a relatively permanent feature of the manmade landscape that has recognizable identity within a particular cultural context .
-All landmark addresses shall comprise the following components:
-(a)	Landmark Name
+<p>Addresses in the Landmark class specify a location by reference to a named landmark. A landmark is a relatively permanent feature of the manmade landscape that has recognizable identity within a particular cultural context.</p>
+</div>
+<div class="paragraph">
+<p>All landmark addresses shall comprise the following components:</p>
+</div>
+<div class="paragraph">
+<p>(a)	Landmark Name
 (b)	Locality (or city/town) name
-(c)	State or territory name
-Landmark addresses shall not include an address number or thoroughfare name, but should be linked to an associated throughfare address.</p>
+(c)	State or territory name</p>
+</div>
+<div class="paragraph">
+<p>Landmark addresses shall not include an address number or thoroughfare name, but should be linked to an associated throughfare address.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_postal"><a class="anchor" href="#_postal"></a>Postal</h6>
+<h6 id="_postal"><a class="anchor" href="#_postal"></a>5.2.1.6.2. Postal</h6>
 <div class="paragraph">
 <p>Addresses in the Postal class specify points of postal delivery which have no definite relation to the location of the recipient, such as post office boxes, overseas military addresses and general delivery offices. Postal addresses will follow the AS/NZS ISO 19160.4:2023 standard and components are not covered in this profile.</p>
 </div>
@@ -1367,86 +1639,94 @@ Landmark addresses shall not include an address number or thoroughfare name, but
 <div class="sect3">
 <h4 id="_address_data_principles"><a class="anchor" href="#_address_data_principles"></a>5.2.2. Address Data Principles</h4>
 <div class="sect4">
-<h5 id="_represents_address_in_physical_world"><a class="anchor" href="#_represents_address_in_physical_world"></a>Represents Address In Physical World</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_12_reqgoodpracticeprinciplesaddressdatarepresentsaddressinphysicalworld"><a class="anchor" href="#_requirement_12_reqgoodpracticeprinciplesaddressdatarepresentsaddressinphysicalworld"></a>Requirement 12. /req/goodPractice/principles/addressData/representsAddressInPhysicalWorld</h5>
+<h5 id="_represents_address_in_physical_world"><a class="anchor" href="#_represents_address_in_physical_world"></a>5.2.2.1. Represents Address In Physical World</h5>
 <div class="paragraph">
-<p>Address data shall represent the addresses assigned to objects in the physical world.
-TBC</p>
+<p><strong>Requirement 12. /req/goodPractice/principles/addressData/representsAddressInPhysicalWorld</strong></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_interoperability"><a class="anchor" href="#_interoperability"></a>Interoperability</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_13_reqgoodpracticeprinciplesaddressdatainteroperability"><a class="anchor" href="#_requirement_13_reqgoodpracticeprinciplesaddressdatainteroperability"></a>Requirement 13. /req/goodPractice/principles/addressData/interoperability</h5>
 <div class="paragraph">
-<p>Address data shall be interoperable between public administration systems, such as the cadastre, population register or urban information systems.
-TBC</p>
+<p>Address data shall represent the addresses assigned to objects in the physical world.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_data_maintenance"><a class="anchor" href="#_data_maintenance"></a>Data Maintenance</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_requirement_14_reqgoodpracticeprinciplesaddressdatadatamaintenance"><a class="anchor" href="#_requirement_14_reqgoodpracticeprinciplesaddressdatadatamaintenance"></a>Requirement 14. /req/goodPractice/principles/addressData/dataMaintenance</h5>
 <div class="paragraph">
-<p>Address data shall be maintained through processes and systems that consider general purpose data management principles, as well as specific requirements due to the geospatial nature of address data.
-An address shall be recorded with the location coordinates for the point or access from the thoroughfare to which it is addressed.
-The recording of an alternative address shall enable it to be readily distinguished from the related primary address.
-The recording of a sub-address and the recording of its primary address shall enable them to be readily related to each other.
-Road and water feature names shall be recorded in relation to the localities they pass through.
-Locality names shall be recorded in relation to the state/territory within which it is located.
-Information about address components that are obsolete shall be retained within lifecycle information including dates.
-The relationship between a new address and any address(es) that it replaces shall be recorded.</p>
+<p>TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_digital_maintenance"><a class="anchor" href="#_digital_maintenance"></a>Digital Maintenance</h5>
-
+<h5 id="_interoperability"><a class="anchor" href="#_interoperability"></a>5.2.2.2. Interoperability</h5>
+<div class="paragraph">
+<p><strong>Requirement 13. /req/goodPractice/principles/addressData/interoperability</strong></p>
+</div>
+<div class="paragraph">
+<p>Address data shall be interoperable between public administration systems, such as the cadastre, population register or urban information systems.</p>
+</div>
+<div class="paragraph">
+<p>TBC</p>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_requirement_15_reqgoodpracticeprinciplesaddressdatadigitalmaintenance"><a class="anchor" href="#_requirement_15_reqgoodpracticeprinciplesaddressdatadigitalmaintenance"></a>Requirement 15. /req/goodPractice/principles/addressData/digitalMaintenance</h5>
+<h5 id="_data_maintenance"><a class="anchor" href="#_data_maintenance"></a>5.2.2.3. Data Maintenance</h5>
+<div class="paragraph">
+<p><strong>Requirement 14. /req/goodPractice/principles/addressData/dataMaintenance</strong></p>
+</div>
+<div class="paragraph">
+<p>Address data shall be maintained through processes and systems that consider general purpose data management principles, as well as specific requirements due to the geospatial nature of address data.</p>
+</div>
+<div class="paragraph">
+<p>An address shall be recorded with the location coordinates for the point or access from the thoroughfare to which it is addressed.
+The recording of an alternative address shall enable it to be readily distinguished from the related primary address.</p>
+</div>
+<div class="paragraph">
+<p>The recording of a sub-address and the recording of its primary address shall enable them to be readily related to each other.
+Road and water feature names shall be recorded in relation to the localities they pass through.</p>
+</div>
+<div class="paragraph">
+<p>Locality names shall be recorded in relation to the state/territory within which it is located.</p>
+</div>
+<div class="paragraph">
+<p>Information about address components that are obsolete shall be retained within lifecycle information including dates.</p>
+</div>
+<div class="paragraph">
+<p>The relationship between a new address and any address(es) that it replaces shall be recorded.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_digital_maintenance"><a class="anchor" href="#_digital_maintenance"></a>5.2.2.4. Digital Maintenance</h5>
+<div class="paragraph">
+<p><strong>Requirement 15. /req/goodPractice/principles/addressData/digitalMaintenance</strong></p>
+</div>
 <div class="paragraph">
 <p>In the case of digital address data, the data shall be maintained in an address data management system with appropriate software solutions, such as spatial database management systems and/or geographic information systems.
 TBC</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 7. /rec/goodPractice/principles/addressing/equivalentDigitalRecord</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_7_recgoodpracticeprinciplesaddressingequivalentdigitalrecord"><a class="anchor" href="#_recommendation_7_recgoodpracticeprinciplesaddressingequivalentdigitalrecord"></a>Recommendation 7. /rec/goodPractice/principles/addressing/equivalentDigitalRecord</h5>
-
+<div class="paragraph">
+<p><strong>Recommendation 8. /rec/goodPractice/principles/addressing/updateAddressData</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_8_recgoodpracticeprinciplesaddressingupdateaddressdata"><a class="anchor" href="#_recommendation_8_recgoodpracticeprinciplesaddressingupdateaddressdata"></a>Recommendation 8. /rec/goodPractice/principles/addressing/updateAddressData</h5>
-
+<div class="paragraph">
+<p><strong>Recommendation 9. /rec/goodPractice/principles/addressData/conformsToISO19160-1</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_9_recgoodpracticeprinciplesaddressdataconformstoiso19160_1"><a class="anchor" href="#_recommendation_9_recgoodpracticeprinciplesaddressdataconformstoiso19160_1"></a>Recommendation 9. /rec/goodPractice/principles/addressData/conformsToISO19160-1</h5>
 <div class="paragraph">
 <p>Address data should conform to ISO 19160-1:2015, or a profile thereof.
 TBC</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 10. /rec/goodPractice/principles/addressData/conformsToISO19160-4</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_10_recgoodpracticeprinciplesaddressdataconformstoiso19160_4"><a class="anchor" href="#_recommendation_10_recgoodpracticeprinciplesaddressdataconformstoiso19160_4"></a>Recommendation 10. /rec/goodPractice/principles/addressData/conformsToISO19160-4</h5>
 <div class="paragraph">
 <p>For postal addressing, address data should conform to ISO 19160-4:2017, or a profile thereof.
 TBC</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 11. /rec/goodPractice/principles/addressData/conformsToISO19160-3</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_11_recgoodpracticeprinciplesaddressdataconformstoiso19160_3"><a class="anchor" href="#_recommendation_11_recgoodpracticeprinciplesaddressdataconformstoiso19160_3"></a>Recommendation 11. /rec/goodPractice/principles/addressData/conformsToISO19160-3</h5>
 <div class="paragraph">
 <p>The quality of address data should be described conformant to ISO 19160-3:2020, or a profile thereof.
 TBC</p>
 </div>
+<div class="paragraph">
+<p><strong>Recommendation 12. /rec/goodPractice/principles/addressData/sharing</strong></p>
 </div>
-<div class="sect4">
-<h5 id="_recommendation_12_recgoodpracticeprinciplesaddressdatasharing"><a class="anchor" href="#_recommendation_12_recgoodpracticeprinciplesaddressdatasharing"></a>Recommendation 12. /rec/goodPractice/principles/addressData/sharing</h5>
 <div class="paragraph">
 <p>In the case of digital address data, the data should be shared through address retrieval solutions that preserve and maintain data integrity, e.g., through spreadsheets or APIs.
 TBC</p>
@@ -1599,7 +1879,7 @@ TBC</p>
 <div class="sect3">
 <h4 id="_addressing_processes"><a class="anchor" href="#_addressing_processes"></a>6.3.3. Addressing Processes</h4>
 <div class="sect4">
-<h5 id="_initiation_process"><a class="anchor" href="#_initiation_process"></a>Initiation Process</h5>
+<h5 id="_initiation_process"><a class="anchor" href="#_initiation_process"></a>6.3.3.1. Initiation Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 26</strong> <code>addrcm-req:initiationProcess</code></p>
 </div>
@@ -1620,7 +1900,7 @@ TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_purpose_values_process"><a class="anchor" href="#_purpose_values_process"></a>Purpose Values Process</h5>
+<h5 id="_purpose_values_process"><a class="anchor" href="#_purpose_values_process"></a>6.3.3.2. Purpose Values Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 27</strong> <code>addrcm-req:proposeValuesProcess</code></p>
 </div>
@@ -1632,7 +1912,7 @@ TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_approval_process"><a class="anchor" href="#_approval_process"></a>Approval Process</h5>
+<h5 id="_approval_process"><a class="anchor" href="#_approval_process"></a>6.3.3.3. Approval Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 28</strong> <code>addrcm-req:approvalProcess</code></p>
 </div>
@@ -1644,7 +1924,7 @@ TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_announcement_process"><a class="anchor" href="#_announcement_process"></a>Announcement Process</h5>
+<h5 id="_announcement_process"><a class="anchor" href="#_announcement_process"></a>6.3.3.4. Announcement Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 29</strong> <code>addrcm-req:announcementProcess</code></p>
 </div>
@@ -1656,7 +1936,7 @@ TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_communication_process"><a class="anchor" href="#_communication_process"></a>Communication Process</h5>
+<h5 id="_communication_process"><a class="anchor" href="#_communication_process"></a>6.3.3.5. Communication Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 30</strong> <code>addrcm-req:communicationProcess</code></p>
 </div>
@@ -1671,7 +1951,7 @@ TBC</p>
 <div class="sect3">
 <h4 id="_address_data_processes"><a class="anchor" href="#_address_data_processes"></a>6.3.4. Address Data Processes</h4>
 <div class="sect4">
-<h5 id="_update_process"><a class="anchor" href="#_update_process"></a>Update Process</h5>
+<h5 id="_update_process"><a class="anchor" href="#_update_process"></a>6.3.4.1. Update Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 31</strong> <code>addrcm-req:updateProcess</code></p>
 </div>
@@ -1683,7 +1963,7 @@ TBC</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_distribution_process"><a class="anchor" href="#_distribution_process"></a>Distribution Process</h5>
+<h5 id="_distribution_process"><a class="anchor" href="#_distribution_process"></a>6.3.4.2. Distribution Process</h5>
 <div class="paragraph">
 <p><strong>Requirement 32</strong> <code>addrcm-req:distributionProcess</code></p>
 </div>
@@ -1821,7 +2101,7 @@ TBC</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-09 22:44:31 +1000
+Last updated 2024-10-09 13:38:03 UTC
 </div>
 </div>
 </body>
