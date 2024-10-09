@@ -28,6 +28,7 @@ jobs:
         asciidoctor document/00-master.adoc -o doc/doc.html           
         # echo "Add images to doc/"
         # cp -r document/images doc/
+        cp doc-old.html doc/doc-old.html
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
