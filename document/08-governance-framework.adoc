@@ -1,3 +1,2 @@
 == Governance Framework
 
-_For assigning and maintaining addresses_

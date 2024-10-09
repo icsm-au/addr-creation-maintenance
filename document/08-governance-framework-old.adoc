@@ -1,0 +1,159 @@
+== Governance Framework
+
+=== General
+
+==== Strategy
+
+*Requirement 16* `addrcm-req:strategy`
+
+A governance framework shall be guided by a strategy for assigning addresses to objects. The strategy shall be based on policies and guidelines.
+
+TBC
+
+==== Policies
+
+*Requirement 17* `addrcm-req:policies`
+
+A governance framework shall exercise authority and control over address assignment and maintenance through policies with well defined decision-making structures and procedures.
+
+TBC
+
+*Recommendation 13* `addrcm-req:policiesSupportObjectivesAndContext`
+
+The policies should support the objectives and context.
+
+TBC
+
+==== Good Practice
+
+*Requirement 18* `addrcm-req:goodPractice`
+
+A governance framework shall specify the good practice according to which addresses shall be assigned and maintained (see clause 8).
+
+TBC
+
+=== Addressing Stakeholders
+
+==== Identification
+
+*Requirement 19* `addrcm-req:identification`
+
+A governance framework shall identify the addressing stakeholders involved in the processes and decision-making related to assignment and maintenance of addresses.
+
+TBC
+
+==== Responsibilities
+
+*Requirement 20* `addrcm-req:responsibilities`
+
+A governance framework shall assign at least one responsibility to each stakeholder in the governance framework, and they shall be accountable for their responsibilities.
+
+TBC
+
+==== Mandates
+
+*Requirement 21* `addrcm-req:mandates`
+
+Assignment of responsibilities to stakeholders shall consider legal and other mandates. Responsibilities are assigned to each stakeholder in the governance framework based on the extent of the mandate of the respective stakeholders.
+
+TBC
+
+==== Resourcing
+
+*Requirement 22* `addrcm-req:resourcing`
+
+Stakeholders shall take responsibility for how they are funded, resourced and organized to fulfil their responsibilities in the governance framework.
+
+TBC
+
+==== Sustainability
+
+*Requirement 23* `addrcm-req:sustainability`
+
+Funding and resourcing of stakeholders in a governance framework shall be sustainable, i.e., ongoing and able to be maintained in the long run.
+
+TBC
+
+=== Processes
+
+==== Specification
+
+*Requirement 24* `addrcm-req:specification`
+
+A governance framework shall specify and coordinate the processes for assigning and maintaining addresses, as specified in 8.3.1, and if address data is maintained, it shall specify and coordinate the required processes related to address data, specified in 8.3.2. Each process comprises a series of tasks towards achieving a specified goal.
+
+TBC
+
+==== Tasks
+
+*Requirement 25* `addrcm-req:tasks`
+
+A governance framework shall assign at least one stakeholder to each task in a process.
+
+TBC
+
+==== Addressing Processes
+
+===== Initiation Process
+
+*Requirement 26* `addrcm-req:initiationProcess`
+
+A governance framework shall specify and coordinate a process for initiating the assignment or maintenance of an address.
+
+TBC
+
+*Recommendation 14* `addrcm-req:consultationProcess`
+
+A governance framework should specify and coordinate a process for consultation when new address component values are assigned or changed due to maintenance.
+
+TBC
+
+===== Purpose Values Process
+
+*Requirement 27* `addrcm-req:proposeValuesProcess`
+
+A governance framework shall specify and coordinate a process for proposing new values or changes to address components values.
+
+TBC
+
+===== Approval Process
+
+*Requirement 28* `addrcm-req:approvalProcess`
+
+A governance framework shall specify and coordinate a process for approving or rejecting the proposed new address assignment or changes to an address due to maintenance.
+
+TBC
+
+===== Announcement Process
+
+*Requirement 29* `addrcm-req:announcementProcess`
+
+A governance framework shall specify and coordinate a process for the announcement of a newly assigned address or changes to an address due to maintenance.
+
+TBC
+
+===== Communication Process
+
+*Requirement 30* `addrcm-req:communicationProcess`
+
+A governance framework shall specify a process for communicating addresses in the physical world, following approval of assignment or maintenance of an address.
+
+TBC
+
+==== Address Data Processes
+
+===== Update Process
+
+*Requirement 31* `addrcm-req:updateProcess`
+
+A governance framework shall specify and coordinate a process for updating the authoritative dataset after approval of assignment or maintenance of an address.
+
+TBC
+
+===== Distribution Process
+
+*Requirement 32* `addrcm-req:distributionProcess`
+
+A governance framework shall specify and coordinate a process for making address data available after an update to the authoritative dataset.
+
+TBC

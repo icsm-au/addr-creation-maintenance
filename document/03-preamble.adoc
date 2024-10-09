@@ -88,6 +88,45 @@ For process and information to be conformant with this standard, the imperatives
 
 Address information created following processes outlined in this standard _MUST_ conform to the <<ADDR2024, ICSM Address Model>> with conformance to it tested as per it's https://linked.data.gov.au/def/addr#AnnexB[Annex B: Validation] section.
 
+=== Namespaces
+
+Namespaces, in this document's context, are managed <<IRI, IRIs>> which allow further IRIs to be created within their scope. Namespaces are allocated to macro data objects and provide IRIs for all the micro data objects within that object.
+
+For example, the IRI for the <<ADDR2024, Address Model>> is `+https://linked.data.gov.au/def/addr+` and the namespace of `+https://linked.data.gov.au/def/addr/+` (the Address Model's IRI + `/`) allows for IRIs to be created for elements within the model such as one for the `AddressableObject` class which is `+https://linked.data.gov.au/def/addr/AddressableObject+`.
+
+When used in some forms of data and human-readable text, IRIs can either be written in full or in a shortened form using prefixes for known namespace. For example, the `Addresable Object` mentioned above can be written in full like this:
+
+`+https://linked.data.gov.au/def/addr/AddressableObject+`
+
+or in prefixed form with the prefix `addr` for the namespace `+https://linked.data.gov.au/def/addr/+` like this:
+
+`addr:AddressableObject`
+
+The prefixed namespaces used in this document are:
+
+[width=100%, frame=none, grid=none, cols="1,5,4"]
+|===
+|Prefix | Namespace | Description
+
+| `*addr*` | `*+https://linked.data.gov.au/def/addr/+*` | <<ADDR2024, ICSM's  Address Model>>
+| `*addrcm*` | `*+https://linked.data.gov.au/def/addrcm/+*` | *This Document*
+| `addreq` | `+https://linked.data.gov.au/def/addrcm-req/+` | https://linked.data.gov.au/def/addrcm-req[Address Creation & Maintenance Requirements Vocabulary]
+| `als` | `+https://linked.data.gov.au/def/address-lifecycle-stage-type/+` | https://linked.data.gov.au/def/lifecycle-stage-types[Address Lifecycle Stage Types vocabulary]
+| `apt` | `+https://linked.data.gov.au/def/address-part-type/+` | https://linked.data.gov.au/def/addr-part-types[Address Part Types vocabulary]
+| `asgsed3` | `+https://linked.data.gov.au/dataset/asgsed3/+` | https://linked.data.gov.au/dataset/asgsed3[Australian Statistical Geographies Standard Dataset, Release 3]
+| `cn` | `+https://linked.data.gov.au/def/cn/+` | https://linked.data.gov.au/def/cn[Compound Naming Model]
+| `ex` | `+http://example.com/+` | Generic examples
+| `geo` | `+http://www.opengis.net/ont/geosparql#+` | https://docs.ogc.org/is/22-047r1/22-047r1.html[OGC GeoSPARQL]
+| `gt` | `+http://www.opengis.net/ont/geocode-types/+` | https://linked.data.gov.au/def/geocode-types[Geocode types vocabulary]
+| `ls` | `+https://linked.data.gov.au/def/lifecycle/+` | https://linked.data.gov.au/def/lifecycle[Lifecycle Model]
+| `owl` | `+http://www.w3.org/2002/07/owl#+` | https://www.w3.org/TR/owl2-overview/[Web Ontology Language ontology]
+| `rdf` | `+http://www.w3.org/1999/02/22-rdf-syntax-ns#+` | https://www.w3.org/TR/rdf-concepts/[The RDF Concepts Vocabulary]
+| `rdfs` | `+http://www.w3.org/2000/01/rdf-schema#+` | https://www.w3.org/TR/rdf12-schema/[RDF Schema ontology]
+| `sdo` | `+https://schema.org/+` | https://schema.org[schema.org model]
+| `skos` | `+http://www.w3.org/2004/02/skos/core#+` | https://www.w3.org/TR/skos-reference/[Simple Knowledge Organization System (SKOS) ontology]
+| `time` | `+http://www.w3.org/2006/time#+` | https://www.w3.org/TR/owl-time/[Time Ontology in OWL]
+| `xsd` | `+http://www.w3.org/2001/XMLSchema#+` | https://www.w3.org/TR/xmlschema-2/[XML Schema Definitions ontology]
+|===
 
 ////
 === Notation

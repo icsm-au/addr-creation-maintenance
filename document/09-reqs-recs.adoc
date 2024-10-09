@@ -1,0 +1,66 @@
+== Requirements & Recommendations
+
+=== Requirements
+
+[cols="1,4,10"]
+|===
+| ID | Label | Definition
+
+| 1 | https://linked.data.gov.au/def/addrcm-req/objectives[Objectives] | A good practice shall specify one or more objectives for which addresses are assigned and shall be guided by these objectives
+| 2 | https://linked.data.gov.au/def/addrcm-req/context[Context] | A good practice shall specify the context in which the address assignment and maintenance takes place and shall be guided by this context
+| 3 | https://linked.data.gov.au/def/addrcm-req/conceptualModel[Context] | A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses
+| 4 | https://linked.data.gov.au/def/addrcm-req/license[License] | A good practice shall specify the licences under which the address data is available and the terms and conditions for their use. Different licenses may apply for different users
+| 5 | https://linked.data.gov.au/def/addrcm-req/communicationThroughPhysicalIdentifiers[Communication Through Physical Identifiers] | A good practice shall specify how addresses will be communicated through physical identifiers
+| 6 | https://linked.data.gov.au/def/addrcm-req/sustainableAssignmentMethod[Sustainable Assignment Method] | Addressing shall be sustainable in the sense that additional addresses can be added without breaking the consistency of the address assignment method of existing addresses
+| 7 | https://linked.data.gov.au/def/addrcm-req/pilotingAssignmentMethod[Piloting Assignment Method] | The assignment method shall be piloted or tested before rolling it out on a larger scale
+| 8 | https://linked.data.gov.au/def/addrcm-req/deviceIndependence[Device Independence] | Unambiguous location of the object shall be possible without requiring the use of a digital device
+| 9 | https://linked.data.gov.au/def/addrcm-req/noPersonalInformation[No Personal Information] | An address shall not include information about an individual or organization, owning the object to which it is assigned, or living and/or working at the object to which the address is assigned
+| 10 | https://linked.data.gov.au/def/addrcm-req/dimensionsCongruentWithObjectives[Dimensions Congruent With Objectives] | Addresses shall be of an address class with dimensions congruent with the context in which they are assigned and maintained, and with the objectives for which they are assigned and maintained
+| 11 | https://linked.data.gov.au/def/addrcm-req/suitableComponents[Suitable Components] | The address components of an address class shall be suitable to meet the objectives for which that class is designed
+| 12 | https://linked.data.gov.au/def/addrcm-req/representsAddressInPhysicalWorld[Represents Address In Physical World] | Address data shall represent the addresses assigned to objects in the physical world
+| 13 | https://linked.data.gov.au/def/addrcm-req/interoperability[Interoperability] | Address data shall be interoperable between public administration systems, such as the cadastre, population register or urban information systems
+| 14 | https://linked.data.gov.au/def/addrcm-req/dataMaintenance[Data Maintenance] | Address data shall be maintained through processes and systems that consider general purpose data management principles, as well as specific requirements due to the geospatial nature of address data
+| 15 | https://linked.data.gov.au/def/addrcm-req/digitalMaintenance[Digital Maintenance] | In the case of digital address data, the data shall be maintained in an address data management system with appropriate software solutions, such as spatial database management systems and/or geographic information systems
+| 16 | https://linked.data.gov.au/def/addrcm-req/strategy[Strategy] | A governance framework shall be guided by a strategy for assigning addresses to objects. The strategy shall be based on policies and guidelines
+| 17 | https://linked.data.gov.au/def/addrcm-req/policies[Policies] | A governance framework shall exercise authority and control over address assignment and maintenance through policies with well defined decision-making structures and procedures
+| 18 | https://linked.data.gov.au/def/addrcm-req/goodPractice[Good Practice] | A governance framework shall specify the good practice according to which addresses shall be assigned and maintained (see clause 8)
+| 19 | https://linked.data.gov.au/def/addrcm-req/identification[Identification] | A governance framework shall identify the addressing stakeholders involved in the processes and decision-making related to assignment and maintenance of addresses
+| 20 | https://linked.data.gov.au/def/addrcm-req/responsibilities[Responsibilities] | A governance framework shall assign at least one responsibility to each stakeholder in the governance framework, and they shall be accountable for their responsibilities
+| 21 | https://linked.data.gov.au/def/addrcm-req/mandates[Mandates] | Assignment of responsibilities to stakeholders shall consider legal and other mandates. Responsibilities are assigned to each stakeholder in the governance framework based on the extent of the mandate of the respective stakeholders
+| 22 | https://linked.data.gov.au/def/addrcm-req/resourcing[Resourcing] | Stakeholders shall take responsibility for how they are funded, resourced and organized to fulfil their responsibilities in the governance framework
+| 23 | https://linked.data.gov.au/def/addrcm-req/sustainability[Sustainability] | Funding and resourcing of stakeholders in a governance framework shall be sustainable, i.e., ongoing and able to be maintained in the long run
+| 24 | https://linked.data.gov.au/def/addrcm-req/specification[Specification] | A governance framework shall specify and coordinate the processes for assigning and maintaining addresses, as specified in 8.3.1, and if address data is maintained, it shall specify and coordinate the required processes related to address data, specified in 8.3.2. Each process comprises a series of tasks towards achieving a specified goal
+| 25 | https://linked.data.gov.au/def/addrcm-req/tasks[Tasks] | A governance framework shall assign at least one stakeholder to each task in a process
+| 26 | https://linked.data.gov.au/def/addrcm-req/initiationProcess[Initiation Process] | A governance framework shall specify and coordinate a process for initiating the assignment or maintenance of an address
+| 27 | https://linked.data.gov.au/def/addrcm-req/proposeValuesProcess[Purpose Values Process] | A governance framework shall specify and coordinate a process for proposing new values or changes to address components values
+| 28 | https://linked.data.gov.au/def/addrcm-req/approvalProcess[Approval Process] | A governance framework shall specify and coordinate a process for approving or rejecting the proposed new address assignment or changes to an address due to maintenance
+| 29 | https://linked.data.gov.au/def/addrcm-req/announcementProcess[Announcement Process] | A governance framework shall specify and coordinate a process for the announcement of a newly assigned address or changes to an address due to maintenance
+| 30 | https://linked.data.gov.au/def/addrcm-req/communicationProcess[Communication Process] | A governance framework shall specify a process for communicating addresses in the physical world, following approval of assignment or maintenance of an address
+| 31 | https://linked.data.gov.au/def/addrcm-req/updateProcess[Update Process] | A governance framework shall specify and coordinate a process for updating the authoritative dataset after approval of assignment or maintenance of an address
+| 32 | https://linked.data.gov.au/def/addrcm-req/distributionProcess[Distribution Process] | A governance framework shall specify and coordinate a process for making address data available after an update to the authoritative dataset
+|===
+
+
+=== Recommendations
+
+[cols="1,4,10"]
+|===
+| ID | Label | Definition
+
+| 1 | https://linked.data.gov.au/def/addrcm-rec/objectivesForPublicGood[Objectives For Public Good] | An objective should specify that the assignment and maintenance of addresses is done with the purpose of benefitting governance and society and thereby achieving public good
+| 2 | https://linked.data.gov.au/def/addrcm-rec/iso19160-1-profile[ISO 19160-1 Profile] | The conceptual model that describes classes (types) of addresses assigned and maintained through the good practice should conform to ISO 19160-1:2015
+| 3 | https://linked.data.gov.au/def/addrcm-rec/intellectualPropertyRights[Intellectual Property Rights] | A good practice should specify to whom the intellectual property rights of the address assignment method and the address data belong. At the least, government organizations should have free access to the address data for services to ensure the health, safety and welfare of the public.
+| 4 | https://linked.data.gov.au/def/addrcm-rec/facilitateAssignment[Facilitate Assignment] | A good practice should specify a method for assigning values to address components that could be automated to speed up or facilitate address assignment and maintenance
+| 5 | https://linked.data.gov.au/def/addrcm-rec/keepingAddressDataInSynch[Keeping Address Data In Synch] | A good practice should specify a method for keeping addresses in the physical world in synch with address data.
+| 6 | https://linked.data.gov.au/def/addrcm-rec/unambiguity[Unambiguity] | An address shall be assigned to an addressable object in the physical world so that it allows the unambiguous determination of the object for purposes of identification and location (ISO 19160-1:2015).
+
+A thoroughfare address shall be assigned that conforms to the list of mandatory components to enable unambiguity, and enable it to be readily located.
+| 7 | https://linked.data.gov.au/def/addrcm-rec/equivalentDigitalRecord[Equivalent Digital Record] | TODO: add definition
+| 8 | https://linked.data.gov.au/def/addrcm-rec/updateAddressData[Update Address Data] | TODO: add definition
+| 9 | https://linked.data.gov.au/def/addrcm-rec/conformsToIso19160-1[Conforms To ISO 19160-1] | Address data should conform to ISO 19160-1:2015, or a profile thereof
+| 10 | https://linked.data.gov.au/def/addrcm-rec/conformsToIso19160-4[Conforms To ISO 19160-4] | For postal addressing, address data should conform to ISO 19160-4:2017, or a profile thereof
+| 11 | https://linked.data.gov.au/def/addrcm-rec/conformsToIso19160-3[Conforms To ISO 19160-3] | The quality of address data should be described conformant to ISO 19160-3:2020, or a profile thereof
+| 12 | https://linked.data.gov.au/def/addrcm-rec/sharing[Sharing] | In the case of digital address data, the data should be shared through address retrieval solutions that preserve and maintain data integrity, e.g., through spreadsheets or APIs
+| 13 | https://linked.data.gov.au/def/addrcm-rec/policiesSupportObjectivesAndContext[Policies Support Objectives And Context] | The policies should support the objectives and context
+| 14 | https://linked.data.gov.au/def/addrcm-rec/consultationProcess[Consultation Process] | A governance framework should specify and coordinate a process for consultation when new address component values are assigned or changed due to maintenance
+|===

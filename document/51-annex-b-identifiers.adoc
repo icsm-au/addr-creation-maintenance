@@ -1,5 +1,5 @@
-[[AnnexA]]
-== Annex A: Identifiers
+[[AnnexB]]
+== Annex B: Identifiers
 
 _This section is normative_
 

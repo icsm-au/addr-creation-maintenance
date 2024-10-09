@@ -17,8 +17,12 @@ include::07-good-practices.adoc[]
 
 include::08-governance-framework.adoc[]
 
+include::09-reqs-recs.adoc[]
+
 :sectnums!:
 
-include::50-annex-a-identifiers.adoc[]
+include::50-annex-a-extended-examples.adoc[]
+
+include::51-annex-b-identifiers.adoc[]
 
 include::99-bibliography.adoc[]
