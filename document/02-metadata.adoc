@@ -7,7 +7,7 @@
 |**Name** | Address Creation & Maintenance Standard
 |**Description** | How addresses should be assigned and maintained to support Australia’s addressing infrastructure
 |**Created** | 2024-09-01
-|**Modified** | 2024-09-13
+|**Modified** | 2024-10-09
 |**Issued** | 0000-00-00
 |**Creator** | https://linked.data.gov.au/org/icsm-addrwg[ICSM's Addressing Working Group]
 |**Publisher** | https://linked.data.gov.au/org/icsm[Intergovernmental Committee on Surveying & Mapping (ICSM)] (ICSM@ga.gov.au)
