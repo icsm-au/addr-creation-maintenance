@@ -24,11 +24,11 @@ jobs:
         mkdir doc
         echo "Add README to doc/"
         asciidoctor README.adoc -o doc/index.html
-        echo "Add model to doc/"
-        asciidoctor document/00-master.adoc -o doc/doc.html           
+        echo "Add document to doc/"
+        asciidoctor document/00-master.adoc -o doc/doc.html
+        asciidoctor document/00-master-old.adoc -o doc/doc-old.html
         # echo "Add images to doc/"
         # cp -r document/images doc/
-        cp doc-old.html doc/doc-old.html
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

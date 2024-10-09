@@ -4,7 +4,8 @@
 
 ==== Objectives
 
-===== Requirement 1. /req/goodPractice/general/objectives
+*Requirement 1. /req/goodPractice/general/objectives*
+
 A good practice shall specify one or more objectives for which addresses are assigned and shall be guided by these objectives.
 This standard specifies requirements for address assignment in Australia to enable each address to be readily and unambiguously identified and located.
 Objectives of the standard are:
@@ -15,42 +16,51 @@ Objectives of the standard are:
 These objectives are to apply to all addressable locations throughout Australia, including indigenous communities and private communities such as mining towns and retirement villages.
 It is noted that addresses previously confirming to AS/NZS 2819:2011 should meet this standard. Addresses created prior to AS/NZS 2819:2011 may not adhere to requirements as AS/NZS 4819:2011 explicitly noted that the standard was not to be applied retrospectively.
 
-===== Recommendation 1. /rec/goodPractice/general/objectivesforPublicGood
+*Recommendation 1. /rec/goodPractice/general/objectivesforPublicGood*
+
 An objective should specify that the assignment and maintenance of addresses is done with the purpose of benefitting governance and society and thereby achieving public good.
 Making address assignment and maintenance data open benefits governance and society by enhancing transparency, facilitating efficient urban planning, infrastructure development, emergency response, and ensuring equitable access to essential services, ultimately contributing to the public good.
 
 ==== Context
 
-===== Requirement 2. /req/goodPractice/general/context
+*Requirement 2. /req/goodPractice/general/context*
+
 A good practice shall specify the context in which the address assignment and maintenance takes place and shall be guided by this context.
 When new housing, business complexes, or other types of development occur, local government are responsible for assigning and maintaining addresses for their jurisdiction. However, for Australian Capital Territory (ACT) and Northern Territory, the role is fulfilled by the territory government.
+
 State and territory governments aggregate these addresses into authoritative jurisdictional datasets. Data products and services are then distributed through various channels, including to the national data provider. PSMA Australia Limited (a public company owned by the nine governments of Australia; trading as Geoscape Australia) collate data at the national level.
 
 ==== Conceptual Model
 
-===== Requirement 3. /req/goodPractice/general/conceptualModel
-A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses.
-Australia is currently developing a national addressing model. Review is being taken of use of the Queensland conceptual model as a national model: https://linked.data.gov.au/def/addr
-•	Address Model: Address Model
-•	Roads model: Roads Model
-•	Geographical Names model: Geographical Names Model
-•	Compound naming model: Compound Naming Model
-•	Cadastral model: Cadastral Model
-•	Lifecycle model: Lifecycle Model
+*Requirement 3. /req/goodPractice/general/conceptualModel*
 
-===== Recommendation 2. /rec/goodPractice/general/ISO19160-1Profile
+A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses.
+
+Australia is currently developing a national addressing model. Review is being taken of use of the Queensland conceptual model as a national model: https://linked.data.gov.au/def/addr
+
+* Address Model: Address Model
+* Roads model: Roads Model
+* Geographical Names model: Geographical Names Model
+* Compound naming model: Compound Naming Model
+* Cadastral model: Cadastral Model
+* Lifecycle model: Lifecycle Model
+
+*Recommendation 2. /rec/goodPractice/general/ISO19160-1Profile*
+
 The conceptual model that describes classes (types) of addresses assigned and maintained through the good practice should conform to ISO 19160-1:2015.
 NOTE 1 Amongst others, ISO 19160-1:2015 requires that a conformant address model clearly specifies how the position of an address is represented in the model. ISO 19160-1:2015 provides two ways for doing this: 1) an address has coordinates to specify its position; 2) the position of the address is inferred from the addressed object. [SOURCE: ISO 19160-1:2015, 6.1]
 NOTE 2 Postal addresses are defined and described in ISO 19160-4:2017, a profile of ISO 19160-1:2015.
 EXAMPLE 14 The draft NZ profile of ISO 19160-1:2015 describes its conformance to ISO 19160-1:2015. The NZ profile defines six address classes: Thoroughfare, Water, Service Delivery, Rural Post Delivery, Thoroughfare4819, and Water4819. New addresses (excluding NZ Post addresses for service delivery and rural post delivery) quality assured by the LINZ address team are assessed against the Thoroughfare4819 and Water4819 classes, and these classes align with the requirements in AS/NZS 4819:2011.
 
-===== Recommendation 3. /rec/goodPractice/general/intellectualPropertyRights
+*Recommendation 3. /rec/goodPractice/general/intellectualPropertyRights*
+
 A good practice should specify to whom the intellectual property rights of the address assignment method and the address data belong. At the least, government organizations should have free access to the address data for services to ensure the health, safety and welfare of the public.
 TBC
 
 ==== License
 
-===== Requirement 4. /req/goodPractice/general/license
+*Requirement 4. /req/goodPractice/general/license*
+
 A good practice shall specify the licences under which the address data is available and the terms and conditions for their use. Different licenses may apply for different users.
 
 ===== National
@@ -91,56 +101,65 @@ Victoria – Addresses are available as open data through VicMap, licensed under
 
 Western Australia – Subscription data?
 
-===== Recommendation 4. /rec/goodPractice/general/facilitateAssignment
+*Recommendation 4. /rec/goodPractice/general/facilitateAssignment*
+
 A good practice should specify a method for assigning values to address components that could be automated to speed up or facilitate address assignment and maintenance.
+
 EXAMPLE 19 AS/NZS 4819:2011, Rural and urban addressing, contains a clause for addressing rural properties based on the measured distance along the road, from a defined datum point, the accessway of the property is, with odd numbers on the left side of the road and even numbers on the right.
+
 Use of vocabularies
-•	Address alias types: https://linked.data.gov.au/def/address-alias-type
-•	Address classes: https://linked.data.gov.au/def/address-classes
-•	Address status types: https://linked.data.gov.au/def/address-status-type
-•	Geocode types: https://linked.data.gov.au/def/geocode-types
-•	Level types: https://linked.data.gov.au/def/level-types
-•	Record access: https://linked.data.gov.au/def/record-access
-•	Sub-address types: https://linked.data.gov.au/def/subaddress-types
-•	Information source: https://linked.data.gov.au/def/source
-•	Ground relationship: https://linked.data.gov.au/def/ground-relationship
-•	LRRS indicator: https://linked.data.gov.au/def/lrrs-indicator
-•	Population zone: https://linked.data.gov.au/def/population-zone
-•	Positional accuracy: https://linked.data.gov.au/def/positional-accuracy
-•	Record access: https://linked.data.gov.au/def/record-access
-•	Road cadastral relationship: https://linked.data.gov.au/def/road-cadastral-relationship
-•	Road classifications: https://linked.data.gov.au/def/road-classifications
-•	Road geometry notes: https://linked.data.gov.au/def/road-geometry-notes
-•	Road lane count: https://linked.data.gov.au/def/road-lane-count
-•	Road maintainer: https://linked.data.gov.au/def/road-maintainer
-•	Road name part types: https://linked.data.gov.au/def/road-name-part-types
-•	Road operational statuses: https://linked.data.gov.au/def/road-operational-statuses
-•	Road owner: https://linked.data.gov.au/def/road-owner
-•	Road seasonality: https://linked.data.gov.au/def/road-seasonality
-•	Road sub-classes: https://linked.data.gov.au/def/road-sub-classes
-•	Road suffixes: https://linked.data.gov.au/def/road-suffixes
-•	Road surfaces: https://linked.data.gov.au/def/road-surfaces
-•	Road trafficability: https://linked.data.gov.au/def/road-trafficability
-•	Road travel direction: https://linked.data.gov.au/def/road-travel-direction
-•	Road types: https://linked.data.gov.au/def/road-types
-•	Road user access: https://linked.data.gov.au/def/road-user-access
-•	Spatial capture method: https://linked.data.gov.au/def/spatial-capture-method
-•	State controlled road indicator: https://linked.data.gov.au/def/scr-indicator
-•	Surface capture method: https://linked.data.gov.au/def/surface-capture-method
-•	Information source: https://linked.data.gov.au/def/source
-•	Geographical names part types: https://linked.data.gov.au/def/gn-part-types
-•	Geographical name statuses: https://linked.data.gov.au/def/gn-statuses
-•	Geographical objects categories vocabulary: https://linked.data.gov.au/def/go-categories
+
+* Address alias types: https://linked.data.gov.au/def/address-alias-type
+* Address classes: https://linked.data.gov.au/def/address-classes
+* Address status types: https://linked.data.gov.au/def/address-status-type
+* Geocode types: https://linked.data.gov.au/def/geocode-types
+* Level types: https://linked.data.gov.au/def/level-types
+* Record access: https://linked.data.gov.au/def/record-access
+* Sub-address types: https://linked.data.gov.au/def/subaddress-types
+* Information source: https://linked.data.gov.au/def/source
+* Ground relationship: https://linked.data.gov.au/def/ground-relationship
+* LRRS indicator: https://linked.data.gov.au/def/lrrs-indicator
+* Population zone: https://linked.data.gov.au/def/population-zone
+* Positional accuracy: https://linked.data.gov.au/def/positional-accuracy
+* Record access: https://linked.data.gov.au/def/record-access
+* Road cadastral relationship: https://linked.data.gov.au/def/road-cadastral-relationship
+* Road classifications: https://linked.data.gov.au/def/road-classifications
+* Road geometry notes: https://linked.data.gov.au/def/road-geometry-notes
+* Road lane count: https://linked.data.gov.au/def/road-lane-count
+* Road maintainer: https://linked.data.gov.au/def/road-maintainer
+* Road name part types: https://linked.data.gov.au/def/road-name-part-types
+* Road operational statuses: https://linked.data.gov.au/def/road-operational-statuses
+* Road owner: https://linked.data.gov.au/def/road-owner
+* Road seasonality: https://linked.data.gov.au/def/road-seasonality
+* Road sub-classes: https://linked.data.gov.au/def/road-sub-classes
+* Road suffixes: https://linked.data.gov.au/def/road-suffixes
+* Road surfaces: https://linked.data.gov.au/def/road-surfaces
+* Road trafficability: https://linked.data.gov.au/def/road-trafficability
+* Road travel direction: https://linked.data.gov.au/def/road-travel-direction
+* Road types: https://linked.data.gov.au/def/road-types
+* Road user access: https://linked.data.gov.au/def/road-user-access
+* Spatial capture method: https://linked.data.gov.au/def/spatial-capture-method
+* State controlled road indicator: https://linked.data.gov.au/def/scr-indicator
+* Surface capture method: https://linked.data.gov.au/def/surface-capture-method
+* Information source: https://linked.data.gov.au/def/source
+* Geographical names part types: https://linked.data.gov.au/def/gn-part-types
+* Geographical name statuses: https://linked.data.gov.au/def/gn-statuses
+* Geographical objects categories vocabulary: https://linked.data.gov.au/def/go-categories
 
 ==== Communication Through Physical Identifiers
 
-===== Requirement 5. /req/goodPractice/general/communicationThroughPhysicalIdentifiers
+*Requirement 5. /req/goodPractice/general/communicationThroughPhysicalIdentifiers*
+
 A good practice shall specify how addresses will be communicated through physical identifiers.
+
 EXAMPLE 26 Addresses are communicated by street name signs on street corners and number signs on buildings.
+
 EXAMPLE 27 AS/NZS 4819:2011, Rural and urban addressing, specifies that “it is desirable that the possible range and direction of numbers be included on the road name sign”.
+
 To support emergency services, street numbers shall be visible from the access point to the address site.
 
-===== Recommendation 5. /rec/goodPractice/general/keepingAddressDataInSynch
+*Recommendation 5. /rec/goodPractice/general/keepingAddressDataInSynch*
+
 A good practice should specify a method for keeping addresses in the physical world in synch with address data.
 
 TBC
@@ -149,180 +168,240 @@ TBC
 
 ==== Addressing principles
 
-===== Recommendation 6. /rec/goodPractice/principles/addressing/unambiguity
+*Recommendation 6. /rec/goodPractice/principles/addressing/unambiguity*
+
 An address shall be assigned to an addressable object in the physical world so that it allows the unambiguous determination of the object for purposes of identification and location (ISO 19160-1:2015).
+
 NOTE 1 The position of an address can be represented in two ways: 1) The position is specified by coordinates in the ‘position’ attribute. 2) The position is inferred from the addressed object. See 6.1 in ISO 19160-1:2015.
+
 A thoroughfare address shall be assigned that conforms to the list of mandatory components to enable unambiguity, and enable it to be readily located.
 
 ===== Sustainable Assignment Method
 
-===== Requirement 6. /req/goodPractice/principles/addressing/sustainableAssignmentMethod
+*Requirement 6. /req/goodPractice/principles/addressing/sustainableAssignmentMethod*
+
 Addressing shall be sustainable in the sense that additional addresses can be added without breaking the consistency of the address assignment method of existing addresses.
+
 EXAMPLE 4 Leaving spaces between numbers when addresses are initially assigned makes it possible to assign additional addresses later when densification takes place. Alternatively, a number can be assigned based on the distance from an intersection of origin of the street.
 
 ===== Piloting Assignment Method
 
-===== Requirement 7. /req/goodPractice/principles/addressing/pilotingAssignmentMethod
+*Requirement 7. /req/goodPractice/principles/addressing/pilotingAssignmentMethod*
+
 The assignment method shall be piloted or tested before rolling it out on a larger scale.
 TBC
 
 ===== Device Independence
 
-===== Requirement 8. /req/goodPractice/principles/addressing/deviceIndependence
+*Requirement 8. /req/goodPractice/principles/addressing/deviceIndependence*
+
 Unambiguous location of the object shall be possible without requiring the use of a digital device.
+
 This requirement is necessitated, for example, in the case of an emergency when an object needs to be identified and located in the absence of connectivity (e.g., through signage when standing in front of it).
+
 EXAMPLE 5 During the 2019-20 Australian wildfires there was widespread loss of connectivity due to direct fire damage to telecommunications infrastructure. This resulted in a prolonged loss of internet access to location information [e.g., address] which hampered firefighters who had to rely on radio (verbal) communication.
 
 Address elements in reverse allow gradually pinpointing of address
 State à Locality à Road / Waterway à Number
 
 An address shall be unique
+
 A sub address number shall be unique regardless of subaddress (unit) type or building level
+
 An address shall be assigned a unique number in relation to the access throughfare
+
 An address shall not contain two road names
+
 Each address shall be assigned at least one geocode with coordinates
 
 ===== No Personal Information
 
-===== Requirement 9. /req/goodPractice/principles/addressing/noPersonalInformation
+*Requirement 9. /req/goodPractice/principles/addressing/noPersonalInformation*
+
 An address shall not include information about an individual or organization, owning the object to which it is assigned, or living and/or working at the object to which the address is assigned.
+
 An address shall not include personal information related to a person or organisation that owns or occupies the address site (or object) to which the address is assigned.
 
 ===== Dimensions Congruent With Objectives
 
-===== Requirement 10. /req/goodPractice/principles/addressing/dimensionsCongruentWithObjectives
+*Requirement 10. /req/goodPractice/principles/addressing/dimensionsCongruentWithObjectives*
+
 Addresses shall be of an address class with dimensions congruent with the context in which they are assigned and maintained, and with the objectives for which they are assigned and maintained.
+
 TBC
 
 ===== Suitable Components
 
-===== Requirement 11. /req/goodPractice/principles/addressing/suitableComponents
+*Requirement 11. /req/goodPractice/principles/addressing/suitableComponents*
+
 The address components of an address class shall be suitable to meet the objectives for which that class is designed.
+
 Each address shall be assigned a class as in https://linked.data.gov.au/def/address-classes, which use the components as laid out below. All addresses will be associated with an addressable object that has associated geometry, with, at a minimum, a geocode. Geocodes will be associated with a geocode type from https://linked.data.gov.au/def/geocode-types. All address components will be stored with lifecycle and provenance information.
-Any address assigned to an object shall have a digital equivalent address record in the authoritative state and national address datasets . This record shall be updated whenever an address is assigned or changed .
+
+Any address assigned to an object shall have a digital equivalent address record in the authoritative state and national address datasets . This record shall be updated whenever an address is assigned or changed.
 
 ====== Thoroughfare
 
 Addresses in the Thoroughfare class specify a location by reference to a thoroughfare i.e. a road or water feature name.
+
 All throughfare addresses shall comprise at a minimum the following components:
-(a)	Address number  elements
-(b)	Thoroughfare name (road or water feature name ) and type elements
-(c)	Locality name
-(d)	State or territory name
+
+a.	Address number elements
+b.	Thoroughfare name (road or water feature name ) and type elements
+c.	Locality name
+d.	State or territory name
+
 The combination of these four components shall create a unique address, which reflects the point of access to the address site.
 An address may also include the following additional components:
-(a)	Address site name
-(b)	Building name
-(c)	Landmark name
-(d)	Sub-address type
-(e)	Level type and number
-(f)	Postcode
-(g)	Country
-(h)	Indigenous country
+
+a.	Address site name
+b.	Building name
+c.	Landmark name
+d.	Sub-address type
+e.	Level type and number
+f.	Postcode
+g.	Country
+h.	Indigenous country
+
 An address shall be assigned to an addressable object.
+
 In instances where an address site has more than one point of access, alternative addresses may be created to reflect the additional access points. These additional addresses shall be stored against the same addressable object.
+
 An addressable object shall have at least one spatial geometry stored against it.
 
-======= Address number
+*Address number*
 
 The designation and form of an address number is crucial in enabling an address site to be readily located by emergency service responders and service delivery providers.
+
 An address number shall be assigned to each separately owned or occupied area of land, and each separately owned or occupied building or part of a building. The address number assignation method relates to the address class. For throughfare addresses, address numbers follow general and specific address class principles.
 
-======= General address numbering principles
+*General address numbering principles*
 
 Address numbers shall be assigned prior to occupation and as early as practicable in the development process.
-Address numbers shall be assigned according to the location of the point of access to the address site from the throughfare (road or water feature).
-Address number allocation shall ensure clear, logical and unambiguous numbering:
-	Address numbers shall be sequential positive integers from lowest to highest, and continue for the entire length of the named road even when it continues across administrative boundaries.
-	The datum point for address numbering should be at the commencement of the road from where access to that road is most common, or is planned to occur, at the point of naming. This shall take into account assignation of reserved numbering requirements in a staged development.
-	A number range shall not be assigned as an address number. And existing ranges phased out.
-	A primary address number shall not be prefixed by alphabetical characters.
-	Primary address sites shall be numbered using odd numbers on the left of the throughfare and even numbers on the right .
-	Where there are no addresses numbers available for an address site due to existing allocations, alpha suffixes shall be assigned to the base number; with the exception that address sites that share access should be treated as sub-address sites.
-	Alpha suffixes shall start at A, be assigned incrementally in the same direction as the numbering of addresses on the throughfare, and not extend beyond E.
-	Renumbering of the road is required where there are more than five additional address sites requiring numbering in this way.
-	In instances where an existing address site uses the base number, this may be retained (i.e. not have a suffix) provided it is in order.
-	A lot number shall not be used in place of an address number.
-	Where a road is renamed as a result of redesign or development, address sites shall be renumbered if required to ensure adherence to this standard.
-	Where an area of rural numbering is reclassified as urban, previously assigned rural numbers should be retained if urban numbering requirements can be met for the infill addressing.
 
-======= Urban address numbering
+Address numbers shall be assigned according to the location of the point of access to the address site from the throughfare (road or water feature).
+
+Address number allocation shall ensure clear, logical and unambiguous numbering:
+
+* Address numbers shall be sequential positive integers from lowest to highest, and continue for the entire length of the named road even when it continues across administrative boundaries.
+* The datum point for address numbering should be at the commencement of the road from where access to that road is most common, or is planned to occur, at the point of naming. This shall take into account assignation of reserved numbering requirements in a staged development.
+* A number range shall not be assigned as an address number. And existing ranges phased out.
+* A primary address number shall not be prefixed by alphabetical characters.
+* Primary address sites shall be numbered using odd numbers on the left of the throughfare and even numbers on the right .
+* Where there are no addresses numbers available for an address site due to existing allocations, alpha suffixes shall be assigned to the base number; with the exception that address sites that share access should be treated as sub-address sites.
+* Alpha suffixes shall start at A, be assigned incrementally in the same direction as the numbering of addresses on the throughfare, and not extend beyond E.
+* Renumbering of the road is required where there are more than five additional address sites requiring numbering in this way.
+* In instances where an existing address site uses the base number, this may be retained (i.e. not have a suffix) provided it is in order.
+* A lot number shall not be used in place of an address number.
+* Where a road is renamed as a result of redesign or development, address sites shall be renumbered if required to ensure adherence to this standard.
+* Where an area of rural numbering is reclassified as urban, previously assigned rural numbers should be retained if urban numbering requirements can be met for the infill addressing.
+
+*Urban address numbering*
 
 For addresses designated part of the urban address class, address numbers shall be reserved to meet potential future allocation needs, for example where there are unusually wide frontages or potential for infill development.
+
 An address site on a corner shall be assigned both a number indicating the main point of access, and an address number on the other road assigned as an alternative address (if access exists), or be reserved for future development.
 
-======= Rural address numbering
+*Rural address numbering*
 
 For addresses designated part of the rural address class, address numbering shall be determined by dividing the distance in metres from the datum point to the access point by ten, then rounding to the nearest odd number on the left or even number on the right side of the road (rural numbering method).
+
 Address numbers shall not exceed five digits – for roads over 1000km long, address numbering shall be restarted at a different datum point, preferably a town, natural feature or major intersection, with numbering in the same direction.
+
 In the absence of an access point, a rural number within the range determined by the rural numbering method may be assigned. The rural number shall be reassigned if an access point is subsequently created.
+
 In areas with multiple address access points within the minimum step intervals of 20m, the distance criteria may be varied as long as the overall integrity of the rural numbering system is maintained. Alternatively, suffixes may be added in accordance with Section 7.2.1.1.1.1.
 
-======= Numbering for roads that cross both rural and urban areas
+*Numbering for roads that cross both rural and urban areas*
 
 If a road name continues across rural and urban extents, the rural numbering method should be utilised but may be varied as necessary in urban areas to ensure numbering remains logical and unique.
+
 Where a highway crosses an urban area in which another local name is used, numbering shall relate to each named road, both in assignment methodology and extent. Rural numbering shall encompass distances including the sections with local names.
 
-======= Water address numbering
+*Water address numbering*
 
 Addresses fall under the class of water if the site cannot be accessed from a road, and is instead accessed from a water feature or island.
 For addresses designated part of the inlet address class, inlet or bay address numbering uses the distance in metres from a datum point at one end of the inlet or bay, divided by ten, and rounded to the nearest number.
+
 For addresses designated part of the island address class, numbering uses the distance in metres clockwise from a datum point, divided by ten, and rounded to the nearest number.
+
 For addresses designated part of the river address class, river and creek address numbering uses the distance in metres upstream from a datum point (e.g. river mouth), divided by ten, and rounded to the nearest odd number on the true right and even number on the true left (i.e. to the direction in relation to the flow of the river).
 
-======= Sub-address numbering
+*Sub-address numbering*
 
 Sub-address numbering shall be used for address sites contained within other address sites e.g. an apartment block or marina. A sub-address may utilise either the primary or an alternative address for the parent site.
+
 The sub-address number precedes the address for the parent site, and shall be formatted when used with a ‘/’ between the sub-address number and address number.
+
 The sub-address number should be stored with the sub-address type from https://linked.data.gov.au/def/subaddress-types, although this does not have to be provided within an address string.
 
-======= Thoroughfare name
+*Thoroughfare name*
 
-======== Roads
+*Roads*
 
 An address shall not include more than one road name.
+
 A road name shall be short, clear and unambiguous, and meet national naming principles. It shall not be offensive, racist, derogatory or demeaning.
-All formed roads, including private roads, that are generally open to the public or to services shall be named .
+
+All formed roads, including private roads, that are generally open to the public or to services shall be named.
+
 A named road shall include only one section navigable by vehicles (or pedestrians), unless separated by a median strip.
+
 A road shall only have one name, other than part of a highway that is assigned a local name where it passes through a town or city.
+
 An unbroken section of road crossing an administrative boundary shall retain the same name.
+
 A road name shall consist of a name element followed by a road type. The accepted road types are in https://linked.data.gov.au/def/road-types. The road type shall reflect the function and characteristics of the road as described in the vocabulary.
+
 A road named after 2011 should not have a cardinal indicator after the road type. For roads named prior to this, road suffixes should refer to https://linked.data.gov.au/def/road-suffixes.
+
 The name element of a road name, regardless of road type, shall not be the same as, or similar in spelling or sound, to an existing road name in the same locality, an adjoining locality, or in the same local government area.
+
 A road name should be enduring and changed only when necessary. A road name should be changed when redesign or redevelopment breaks the road extent into two or more segments so it is no longer contiguous.
 
-======== Water features
+*Water features*
 
 For address sites accessed from the water and not accessible from a road, the throughfare component should refer to the water feature name. The name shall be acceptable to the applicable naming authority.
+
 The water throughfare should indicate the type of geographical object from https://linked.data.gov.au/def/go-categories.
 
-======= Locality
+*Locality*
 
-======== Naming
+*Naming*
 
 A locality name shall be short, unique within the country, and assigned according to national naming principles. It shall not be offensive, racist, derogatory or demeaning.
+
 A locality name should not be similar in spelling or sound to any other locality name with the country.
+
 A dual or alternative name shall not be assigned to a locality.
+
 A locality name should be enduring and changed only when necessary.
+
 A locality name should not be substituted with a promotional name , neighbourhood, or regional name in an address.
+
 A locality shall be assigned the geographical object category of https://linked.data.gov.au/def/go-categorieslocality.
 
-======== Boundaries
+*Boundaries*
 
 Locality boundaries shall be clearly defined, not overlap, and be contiguous. A locality should not cross a Local Government boundary, and should be contained within, and not cross, state or territory boundaries.
+
 When defining a locality boundary, the following should be considered:
-	A locality boundary should define a community of interest
-	Definite and distinguishable physical features or barriers should be used where appropriate e.g. creeks, rivers, ridgelines, centres of roads, railways.
-	The boundary should not, where possible, bisect properties in common ownership or land parcels.
+
+* A locality boundary should define a community of interest
+* Definite and distinguishable physical features or barriers should be used where appropriate e.g. creeks, rivers, ridgelines, centres of roads, railways.
+* The boundary should not, where possible, bisect properties in common ownership or land parcels.
 A locality boundary should be enduring and changed only when necessary. However, these should be reviewed and amended where appropriate in areas subject to development.
 
-======= Landmark
+*Landmark*
 
-Addresses in the Landmark class specify a location by reference to a named landmark. A landmark is a relatively permanent feature of the manmade landscape that has recognizable identity within a particular cultural context .
+Addresses in the Landmark class specify a location by reference to a named landmark. A landmark is a relatively permanent feature of the manmade landscape that has recognizable identity within a particular cultural context.
+
 All landmark addresses shall comprise the following components:
+
 (a)	Landmark Name
 (b)	Locality (or city/town) name
 (c)	State or territory name
+
 Landmark addresses shall not include an address number or thoroughfare name, but should be linked to an associated throughfare address.
 
 ====== Postal
@@ -333,50 +412,65 @@ Addresses in the Postal class specify points of postal delivery which have no de
 
 ===== Represents Address In Physical World
 
-===== Requirement 12. /req/goodPractice/principles/addressData/representsAddressInPhysicalWorld
+*Requirement 12. /req/goodPractice/principles/addressData/representsAddressInPhysicalWorld*
+
 Address data shall represent the addresses assigned to objects in the physical world.
+
 TBC
 
 ===== Interoperability
 
-===== Requirement 13. /req/goodPractice/principles/addressData/interoperability
+*Requirement 13. /req/goodPractice/principles/addressData/interoperability*
+
 Address data shall be interoperable between public administration systems, such as the cadastre, population register or urban information systems.
+
 TBC
 
 ===== Data Maintenance
 
-===== Requirement 14. /req/goodPractice/principles/addressData/dataMaintenance
+*Requirement 14. /req/goodPractice/principles/addressData/dataMaintenance*
+
 Address data shall be maintained through processes and systems that consider general purpose data management principles, as well as specific requirements due to the geospatial nature of address data.
+
 An address shall be recorded with the location coordinates for the point or access from the thoroughfare to which it is addressed.
 The recording of an alternative address shall enable it to be readily distinguished from the related primary address.
+
 The recording of a sub-address and the recording of its primary address shall enable them to be readily related to each other.
 Road and water feature names shall be recorded in relation to the localities they pass through.
+
 Locality names shall be recorded in relation to the state/territory within which it is located.
+
 Information about address components that are obsolete shall be retained within lifecycle information including dates.
+
 The relationship between a new address and any address(es) that it replaces shall be recorded.
 
 ===== Digital Maintenance
 
-===== Requirement 15. /req/goodPractice/principles/addressData/digitalMaintenance
+*Requirement 15. /req/goodPractice/principles/addressData/digitalMaintenance*
+
 In the case of digital address data, the data shall be maintained in an address data management system with appropriate software solutions, such as spatial database management systems and/or geographic information systems.
 TBC
 
-===== Recommendation 7. /rec/goodPractice/principles/addressing/equivalentDigitalRecord
+*Recommendation 7. /rec/goodPractice/principles/addressing/equivalentDigitalRecord*
 
-===== Recommendation 8. /rec/goodPractice/principles/addressing/updateAddressData
+*Recommendation 8. /rec/goodPractice/principles/addressing/updateAddressData*
 
-===== Recommendation 9. /rec/goodPractice/principles/addressData/conformsToISO19160-1
+*Recommendation 9. /rec/goodPractice/principles/addressData/conformsToISO19160-1*
+
 Address data should conform to ISO 19160-1:2015, or a profile thereof.
 TBC
 
-===== Recommendation 10. /rec/goodPractice/principles/addressData/conformsToISO19160-4
+*Recommendation 10. /rec/goodPractice/principles/addressData/conformsToISO19160-4*
+
 For postal addressing, address data should conform to ISO 19160-4:2017, or a profile thereof.
 TBC
 
-===== Recommendation 11. /rec/goodPractice/principles/addressData/conformsToISO19160-3
+*Recommendation 11. /rec/goodPractice/principles/addressData/conformsToISO19160-3*
+
 The quality of address data should be described conformant to ISO 19160-3:2020, or a profile thereof.
 TBC
 
-===== Recommendation 12. /rec/goodPractice/principles/addressData/sharing
+*Recommendation 12. /rec/goodPractice/principles/addressData/sharing*
+
 In the case of digital address data, the data should be shared through address retrieval solutions that preserve and maintain data integrity, e.g., through spreadsheets or APIs.
 TBC
