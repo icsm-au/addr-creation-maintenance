@@ -1,0 +1,486 @@
+PREFIX : <https://linked.data.gov.au/def/addrcm-req/>
+PREFIX cs: <https://linked.data.gov.au/def/addrcm-req>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX status: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX themes: <https://linked.data.gov.au/def/fsdf/themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:generalGoodPractice
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition ""@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :objectives ,
+        :context ,
+        :conceptualModel ,
+        :license ,
+        :communicationThroughPhysicalIdentifiers ;
+    skos:prefLabel "General Good Practice"@en ;
+.
+
+:principles
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition ""@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :sustainableAssignmentMethod ,
+        :pilotingAssignmentMethod ,
+        :deviceIndependence ,
+        :noPersonalInformation ,
+        :dimensionsCongruentWithObjectives ,
+        :suitableComponents ,
+        :representsAddressInPhysicalWorld ,
+        :interoperability ,
+        :dataMaintenance ,
+        :digitalMaintenance ;
+    skos:prefLabel "Principles"@en ;
+.
+
+:generalGovernanceFramework
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition ""@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :strategy ,
+        :policies ,
+        :goodPractice ;
+    skos:prefLabel "General Governance Framework"@en ;
+.
+
+:addressingStakeholders
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition ""@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :identification ,
+        :responsibilities ,
+        :mandates ,
+        :resourcing ,
+        :sustainability ;
+    skos:prefLabel "Addressing Stakeholders"@en ;
+.
+
+:processes
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition ""@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :specification ,
+        :tasks ,
+        :initiationProcess ,
+        :proposeValuesProcess ,
+        :approvalProcess ,
+        :announcementProcess ,
+        :communicationProcess ,
+        :updateProcess ,
+        :distributionProcess ;
+    skos:prefLabel "Processes"@en ;
+.
+
+:communicationThroughPhysicalIdentifiers
+    a skos:Concept ;
+    skos:definition "A good practice shall specify how addresses will be communicated through physical identifiers"@en ;
+    skos:example """EXAMPLE 26 Addresses are communicated by street name signs on street corners and number signs on buildings.
+
+EXAMPLE 27 AS/NZS 4819:2011, Rural and urban addressing, specifies that “it is desirable that the possible range and direction of numbers be included on the road name sign”.
+
+To support emergency services, street numbers shall be visible from the access point to the address site.""" ;
+    skos:inScheme cs: ;
+    skos:notation "5"^^xsd:integer ;
+    skos:prefLabel "Communication Through Physical Identifiers"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:conceptualModel
+    a skos:Concept ;
+    skos:definition "A good practice shall specify the conceptual model for the classes (types) of addresses assigned and maintained through the good practice. This includes a description of the address reference system, i.e., a set of address components and the rules for their combination into addresses"@en ;
+    skos:inScheme cs: ;
+    skos:notation "3"^^xsd:integer ;
+    skos:prefLabel "Context"@en ;
+    skos:scopeNote """Australia has developed a national addressing model, online at https://linked.data.gov.au/def/addr. Other relevant models are:
+
+* https://linked.data.gov.au/def/roads: Roads Model
+* https://linked.data.gov.au/def/gn: Geographical Names Model
+* https://linked.data.gov.au/def/cn: Compound Naming Model
+* https://linked.data.gov.au/def/cad: Cadastral Model
+* https://linked.data.gov.au/def/lifecycle: Lifecycle Model""" ;
+    skos:topConceptOf cs: ;
+.
+
+:context
+    a skos:Concept ;
+    skos:definition "A good practice shall specify the context in which the address assignment and maintenance takes place and shall be guided by this context"@en ;
+    skos:inScheme cs: ;
+    skos:notation "2"^^xsd:integer ;
+    skos:prefLabel "Context"@en ;
+    skos:scopeNote """When new housing, business complexes, or other types of development occur, local government are responsible for assigning and maintaining addresses for their jurisdiction. However, for Australian Capital Territory (ACT) and Northern Territory, the role is fulfilled by the territory government.
+
+State and territory governments aggregate these addresses into authoritative jurisdictional datasets. Data products and services are then distributed through various channels, including to the national data provider. PSMA Australia Limited (a public company owned by the nine governments of Australia; trading as Geoscape Australia) collate data at the national level.""" ;
+    skos:topConceptOf cs: ;
+.
+
+:dataMaintenance
+    a skos:Concept ;
+    skos:definition "Address data shall be maintained through processes and systems that consider general purpose data management principles, as well as specific requirements due to the geospatial nature of address data"@en ;
+    skos:inScheme cs: ;
+    skos:notation "14"^^xsd:integer ;
+    skos:prefLabel "Data Maintenance"@en ;
+    skos:scopeNote """An address MUST be recorded with the location coordinates for the point or access from the thoroughfare to which it is addressed.
+
+The recording of an alternative address MUST enable it to be readily distinguished from the related primary address.
+
+The recording of a sub-address and the recording of its primary address MUST enable them to be readily related to each other.
+
+Road and water feature names MUST be recorded in relation to the localities they pass through.
+
+Locality names MUST be recorded in relation to the state/territory within which it is located.
+
+Information about address components that are obsolete MUST be retained within lifecycle information including dates.
+
+The relationship between a new address and any address(es) that it replaces MUST be recorded.""" ;
+    skos:topConceptOf cs: ;
+.
+
+:deviceIndependence
+    a skos:Concept ;
+    skos:definition "Unambiguous location of the object shall be possible without requiring the use of a digital device"@en ;
+    skos:example """EXAMPLE 5 During the 2019-20 Australian wildfires there was widespread loss of connectivity due to direct fire damage to telecommunications infrastructure. This resulted in a prolonged loss of internet access to location information [e.g., address] which hampered firefighters who had to rely on radio (verbal) communication.
+
+Address elements in reverse allow gradually pinpointing of address
+State -> Locality -> Road / Waterway -> Number
+
+An address shall be unique
+
+A sub address number shall be unique regardless of subaddress (unit) type or building level
+
+An address shall be assigned a unique number in relation to the access throughfare
+
+An address shall not contain two road names
+
+Each address shall be assigned at least one geocode with coordinates
+""" ;
+    skos:inScheme cs: ;
+    skos:notation "8"^^xsd:integer ;
+    skos:prefLabel "Device Independence"@en ;
+    skos:scopeNote "This requirement is necessitated, for example, in the case of an emergency when an object needs to be identified and located in the absence of connectivity (e.g., through signage when standing in front of it)." ;
+    skos:topConceptOf cs: ;
+.
+
+:digitalMaintenance
+    a skos:Concept ;
+    skos:definition "In the case of digital address data, the data shall be maintained in an address data management system with appropriate software solutions, such as spatial database management systems and/or geographic information systems"@en ;
+    skos:example "" ;
+    skos:inScheme cs: ;
+    skos:notation "15"^^xsd:integer ;
+    skos:prefLabel "Digital Maintenance"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:dimensionsCongruentWithObjectives
+    a skos:Concept ;
+    skos:definition "Addresses shall be of an address class with dimensions congruent with the context in which they are assigned and maintained, and with the objectives for which they are assigned and maintained"@en ;
+    skos:inScheme cs: ;
+    skos:notation "10"^^xsd:integer ;
+    skos:prefLabel "Dimensions Congruent With Objectives"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:interoperability
+    a skos:Concept ;
+    skos:definition "Address data shall be interoperable between public administration systems, such as the cadastre, population register or urban information systems"@en ;
+    skos:inScheme cs: ;
+    skos:notation "13"^^xsd:integer ;
+    skos:prefLabel "Interoperability"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:license
+    a skos:Concept ;
+    skos:definition "A good practice shall specify the licences under which the address data is available and the terms and conditions for their use. Different licenses may apply for different users"@en ;
+    skos:inScheme cs: ;
+    skos:notation "4"^^xsd:integer ;
+    skos:prefLabel "License"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:noPersonalInformation
+    a skos:Concept ;
+    skos:definition "An address shall not include information about an individual or organization, owning the object to which it is assigned, or living and/or working at the object to which the address is assigned"@en ;
+    skos:inScheme cs: ;
+    skos:notation "9"^^xsd:integer ;
+    skos:prefLabel "No Personal Information"@en ;
+    skos:scopeNote "An address shall not include personal information related to a person or organisation that owns or occupies the address site (or object) to which the address is assigned" ;
+    skos:topConceptOf cs: ;
+.
+
+:objectives
+    a skos:Concept ;
+    skos:definition "A good practice shall specify one or more objectives for which addresses are assigned and shall be guided by these objectives"@en ;
+    skos:inScheme cs: ;
+    skos:notation "1"^^xsd:integer ;
+    skos:prefLabel "Objectives"@en ;
+    skos:scopeNote """This standard specifies requirements for address assignment in Australia to enable each address to be readily and unambiguously identified and located.
+
+Objectives of the standard are:
+* Localities can be uniquely and clearly identified
+* Roads and other access thoroughfares can be uniquely and clearly identified and located
+* Assigned addressing numbering ensures addresses can be uniquely and clearly identified and located
+* Signage ensures assigned addresses can be readily identified and located
+
+These objectives are to apply to all addressable locations throughout Australia, including indigenous communities and private communities such as mining towns and retirement villages.
+
+It is noted that addresses previously confirming to AS/NZS 2819:2011 should meet this standard. Addresses created prior to AS/NZS 2819:2011 may not adhere to requirements as AS/NZS 4819:2011 explicitly noted that the standard was not to be applied retrospectively.""" ;
+    skos:topConceptOf cs: ;
+.
+
+:pilotingAssignmentMethod
+    a skos:Concept ;
+    skos:definition "The assignment method shall be piloted or tested before rolling it out on a larger scale"@en ;
+    skos:inScheme cs: ;
+    skos:notation "7"^^xsd:integer ;
+    skos:prefLabel "Piloting Assignment Method"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:representsAddressInPhysicalWorld
+    a skos:Concept ;
+    skos:definition "Address data shall represent the addresses assigned to objects in the physical world"@en ;
+    skos:inScheme cs: ;
+    skos:notation "12"^^xsd:integer ;
+    skos:prefLabel "Represents Address In Physical World"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:suitableComponents
+    a skos:Concept ;
+    skos:definition "The address components of an address class shall be suitable to meet the objectives for which that class is designed"@en ;
+    skos:inScheme cs: ;
+    skos:notation "11"^^xsd:integer ;
+    skos:prefLabel "Suitable Components"@en ;
+    skos:scopeNote """Each address MUST be assigned a class from the Address Classes vocabulary (https://linked.data.gov.au/def/address-classes). All Addresses MUST associated with an Addressable Object that has associated geometry, and at least one Geocode as per the Address Model (https://linked.data.gov.au/def/addr). Geocodes MUST have an additional type indicated with a concept from the  Geocody Types vocabulary (https://linked.data.gov.au/def/geocode-types). All address components SHOULD be stored with lifecycle and provenance information.
+
+Any address assigned to an object MUST have a digital equivalent address record in the authoritative state and national address datasets . This record MUST be updated whenever an address is assigned or changed .
+""" ;
+    skos:topConceptOf cs: ;
+.
+
+:sustainableAssignmentMethod
+    a skos:Concept ;
+    skos:definition "Addressing shall be sustainable in the sense that additional addresses can be added without breaking the consistency of the address assignment method of existing addresses"@en ;
+    skos:example "EXAMPLE 4 Leaving spaces between numbers when addresses are initially assigned makes it possible to assign additional addresses later when densification takes place. Alternatively, a number can be assigned based on the distance from an intersection of origin of the street." ;
+    skos:inScheme cs: ;
+    skos:notation "6"^^xsd:integer ;
+    skos:prefLabel "Sustainable Assignment Method"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:goodPractice
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify the good practice according to which addresses shall be assigned and maintained (see clause 8)"@en ;
+    skos:inScheme cs: ;
+    skos:notation "18"^^xsd:integer ;
+    skos:prefLabel "Good Practice"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:policies
+    a skos:Concept ;
+    skos:definition "A governance framework shall exercise authority and control over address assignment and maintenance through policies with well defined decision-making structures and procedures"@en ;
+    skos:inScheme cs: ;
+    skos:notation "17"^^xsd:integer ;
+    skos:prefLabel "Policies"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:strategy
+    a skos:Concept ;
+    skos:definition "A governance framework shall be guided by a strategy for assigning addresses to objects. The strategy shall be based on policies and guidelines"@en ;
+    skos:inScheme cs: ;
+    skos:notation "16"^^xsd:integer ;
+    skos:prefLabel "Strategy"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a schema:Organization ;
+    schema:name "Queensland Spatial Information" ;
+    schema:url "https://www.resources.qld.gov.au/data-mapping"^^xsd:anyURI ;
+.
+
+:announcementProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for the announcement of a newly assigned address or changes to an address due to maintenance"@en ;
+    skos:inScheme cs: ;
+    skos:notation "29"^^xsd:integer ;
+    skos:prefLabel "Announcement Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:approvalProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for approving or rejecting the proposed new address assignment or changes to an address due to maintenance"@en ;
+    skos:inScheme cs: ;
+    skos:notation "28"^^xsd:integer ;
+    skos:prefLabel "Approval Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:communicationProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify a process for communicating addresses in the physical world, following approval of assignment or maintenance of an address"@en ;
+    skos:inScheme cs: ;
+    skos:notation "30"^^xsd:integer ;
+    skos:prefLabel "Communication Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:distributionProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for making address data available after an update to the authoritative dataset"@en ;
+    skos:inScheme cs: ;
+    skos:notation "32"^^xsd:integer ;
+    skos:prefLabel "Distribution Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:identification
+    a skos:Concept ;
+    skos:definition "A governance framework shall identify the addressing stakeholders involved in the processes and decision-making related to assignment and maintenance of addresses"@en ;
+    skos:inScheme cs: ;
+    skos:notation "19"^^xsd:integer ;
+    skos:prefLabel "Identification"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:initiationProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for initiating the assignment or maintenance of an address"@en ;
+    skos:inScheme cs: ;
+    skos:notation "26"^^xsd:integer ;
+    skos:prefLabel "Initiation Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:mandates
+    a skos:Concept ;
+    skos:definition "Assignment of responsibilities to stakeholders shall consider legal and other mandates. Responsibilities are assigned to each stakeholder in the governance framework based on the extent of the mandate of the respective stakeholders"@en ;
+    skos:inScheme cs: ;
+    skos:notation "21"^^xsd:integer ;
+    skos:prefLabel "Mandates"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:proposeValuesProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for proposing new values or changes to address components values"@en ;
+    skos:inScheme cs: ;
+    skos:notation "27"^^xsd:integer ;
+    skos:prefLabel "Purpose Values Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:resourcing
+    a skos:Concept ;
+    skos:definition "Stakeholders shall take responsibility for how they are funded, resourced and organized to fulfil their responsibilities in the governance framework"@en ;
+    skos:inScheme cs: ;
+    skos:notation "22"^^xsd:integer ;
+    skos:prefLabel "Resourcing"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:responsibilities
+    a skos:Concept ;
+    skos:definition "A governance framework shall assign at least one responsibility to each stakeholder in the governance framework, and they shall be accountable for their responsibilities"@en ;
+    skos:inScheme cs: ;
+    skos:notation "20"^^xsd:integer ;
+    skos:prefLabel "Responsibilities"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:specification
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate the processes for assigning and maintaining addresses, as specified in 8.3.1, and if address data is maintained, it shall specify and coordinate the required processes related to address data, specified in 8.3.2. Each process comprises a series of tasks towards achieving a specified goal"@en ;
+    skos:inScheme cs: ;
+    skos:notation "24"^^xsd:integer ;
+    skos:prefLabel "Specification"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:sustainability
+    a skos:Concept ;
+    skos:definition "Funding and resourcing of stakeholders in a governance framework shall be sustainable, i.e., ongoing and able to be maintained in the long run"@en ;
+    skos:inScheme cs: ;
+    skos:notation "23"^^xsd:integer ;
+    skos:prefLabel "Sustainability"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:tasks
+    a skos:Concept ;
+    skos:definition "A governance framework shall assign at least one stakeholder to each task in a process"@en ;
+    skos:inScheme cs: ;
+    skos:notation "25"^^xsd:integer ;
+    skos:prefLabel "Tasks"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:updateProcess
+    a skos:Concept ;
+    skos:definition "A governance framework shall specify and coordinate a process for updating the authoritative dataset after approval of assignment or maintenance of an address"@en ;
+    skos:inScheme cs: ;
+    skos:notation "31"^^xsd:integer ;
+    skos:prefLabel "Update Process"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a schema:Organization ;
+    schema:name "Intergovernmental Committee on Surveying & Mapping" ;
+    schema:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    reg:status status:experimental ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0" ;
+    skos:definition "Requirements and Recommendations for Address Creation & Maintenance"@en ;
+    skos:hasTopConcept
+        :announcementProcess ,
+        :approvalProcess ,
+        :communicationProcess ,
+        :distributionProcess ,
+        :goodPractice ,
+        :identification ,
+        :initiationProcess ,
+        :mandates ,
+        :policies ,
+        :proposeValuesProcess ,
+        :resourcing ,
+        :responsibilities ,
+        :specification ,
+        :strategy ,
+        :sustainability ,
+        :tasks ,
+        :updateProcess ;
+    skos:historyNote "This vocabulary was created as part of the authoring of the Intergovernmental Committee on Surveying & Mapping's Australian Addressing Creation & Maintenance Standard in 2024" ;
+    skos:prefLabel "Address Creation & Maintenance Requirements"@en ;
+    skos:scopeNote "The Requirements and Recommendations contained in this vocabulary are referred to within the Intergovernmental Committee on Surveying & Mapping's Australian Addressing Creation & Maintenance Standard" ;
+    schema:contributor <https://linked.data.gov.au/org/qsi> ;
+    schema:copyrightNotice "(c) Intergovernmental Committee on Surveying & Mapping, 2024" ;
+    schema:creator <https://linked.data.gov.au/org/icsm> ;
+    schema:dateCreated "2024-10-09"^^xsd:date ;
+    schema:dateModified "2024-10-09"^^xsd:date ;
+    schema:keywords themes:geocoded-addressing ;
+    schema:license <https://rdflicense.linkeddata.es/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/icsm> ;
+.
