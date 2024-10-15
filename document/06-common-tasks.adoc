@@ -1,0 +1,13 @@
+== Common Tasks
+
+This section describes the specific address information-related tasks that the personas listed in Section X frequently carry out.
+
+#TODO: make a Tasks vocab #
+
+=== Creator Tasks
+
+=== Aggregator Tasks
+
+=== Distributor Tasks
+
+=== User Tasks

@@ -14,9 +14,13 @@ include::03-preamble.adoc[]
 
 include::04-introduction.adoc[]
 
-include::07-good-practices.adoc[]
+include::05-usage-personas.adoc[]
 
-include::08-governance-framework.adoc[]
+include::06-common-tasks.adoc[]
+
+// include::07-good-practices.adoc[]
+
+// include::08-governance-framework.adoc[]
 
 include::09-reqs-recs.adoc[]
 
