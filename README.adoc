@@ -4,7 +4,7 @@ _The Australian Profile of ISO 19160.2:2023, Addressing – Part 2: Assigning an
 
 This repository contains the source files for the _Australian Addressing Creation & Maintenance Standard_ which is temporarily rendered online at:
 
-* https://spatial-information-qld.github.io/addr-creation-maintenance/doc.html
+* https://icsm-au.github.io/addr-creation-maintenance/doc.html
 
 This Standard will receive a permanent home at a persistent online location when officially endorsed.
 
