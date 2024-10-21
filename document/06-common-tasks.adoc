@@ -5,9 +5,232 @@ This section describes the specific address information-related tasks that the p
 #TODO: make a Tasks vocab #
 
 === Creator Tasks
+==== Creating a new address
+Addresses SHALL adhere to the https://linked.data.gov.au/def/addr[Australian address model], which in turn conforms with ISO 19160-1:2015. 
+
+All address components SHALL be stored with lifecycle and provenance information, according to the https://linked.data.gov.au/def/lifecycle[lifecycle model].
+
+===== General address principles
+
+Address creators SHALL allocate a https://linked.data.gov.au/def/address-classes[class] to each address, and assign the relevant address components according to that class. 
+
+Address creators SHALL use concepts from the relevant vocabularies to ensure data interoperability.
+
+An address SHALL be unique.
+
+Each address SHALL be assigned at least one geocode with coordinates.
+
+The relationship between a new address and any address(es) that it replaces SHALL be recorded.
+
+===== Thoroughfare class addresses
+
+Addresses in the https://linked.data.gov.au/def/address-classes/thoroughfare[thoroughfare class] specify a location by reference to a thoroughfare i.e. a road or water feature name. An address SHALL NOT include more than one thoroughfare name. 
+
+All throughfare addresses SHALL comprise at a minimum the following components:
+
+a.	Address number elements
+b.	Thoroughfare name (road or water feature name ) and type elements
+c.	Locality name
+d.	State or territory name
+
+The combination of these four components SHALL create a unique address, which reflects the point of access to the address site.
+
+An address MAY also include the following additional components:
+
+a.	Address site name
+b.	Building name
+c.	Landmark name
+d.	Sub-address type
+e.	Level type and number
+f.	Postcode
+g.	Country
+h.	Indigenous country
+
+An address SHALL be assigned to an addressable object.
+
+In instances where an address site has more than one point of access, alternative addresses may be created to reflect the additional access points. These additional addresses SHALL be stored against the same addressable object.
+
+An addressable object SHALL have at least one spatial geometry stored against it.
+
+*Address number*
+
+An address SHALL be assigned a unique number in relation to the access throughfare.
+
+The designation and form of an address number is crucial in enabling an address site to be readily located by emergency service responders and service delivery providers.
+
+An address number SHALL be assigned to each separately owned or occupied area of land, and each separately owned or occupied building or part of a building. The address number assignation method relates to the address class. For throughfare addresses, address numbers follow general and specific address class principles.
+
+*General address numbering principles*
+
+Address numbers SHALL be assigned prior to occupation and as early as practicable in the development process.
+
+Address numbers SHALL be assigned according to the location of the point of access to the address site from the throughfare (road or water feature).
+
+Address number allocation SHALL ensure clear, logical and unambiguous numbering:
+
+* Address numbers SHALL be sequential positive integers from lowest to highest, and continue for the entire length of the named road even when it continues across administrative boundaries.
+* The datum point for address numbering SHOULD be at the commencement of the road from where access to that road is most common, or is planned to occur, at the point of naming. This SHALL take into account assignation of reserved numbering requirements in a staged development.
+* A number range SHALL NOT be assigned as an address number. Any existing ranges SHOULD be phased out.
+* An address number SHALL NOT be prefixed by alphabetical characters.
+* Address sites SHALL be numbered using odd numbers on the left of the throughfare and even numbers on the right .
+* Where there are no addresses numbers available for an address site due to existing allocations, alpha suffixes SHALL be assigned to the base number; with the exception that address sites that share access SHOULD be treated as sub-address sites.
+* Alpha suffixes SHALL start at A, be assigned incrementally in the same direction as the numbering of addresses on the throughfare, and SHALL NOT extend beyond E.
+* Renumbering of the road is required where there are more than five additional address sites requiring numbering in this way.
+* In instances where an existing address site uses the base number, this MAY be retained (i.e. not have a suffix) provided it is in order.
+* A lot number SHALL NOT be used in place of an address number.
+* Where a road is renamed as a result of redesign or development, address sites SHALL be renumbered if required to ensure adherence to this standard.
+* Where an area of rural numbering is reclassified as urban, previously assigned rural numbers SHOULD be retained if urban numbering requirements can be met for the infill addressing.
+
+*Urban address numbering*
+
+For addresses designated part of the https://linked.data.gov.au/def/address-classes/urban[urban address class], address numbers SHALL be reserved to meet potential future allocation needs, for example where there are unusually wide frontages or potential for infill development.
+
+An address site on a corner SHALL be assigned both a number indicating the main point of access, and an address number on the other road assigned as an alternative address (if access exists), or be reserved for future development.
+
+*Rural address numbering*
+
+For addresses designated part of the https://linked.data.gov.au/def/address-classes/rural[rural address class], address numbering SHALL be determined by dividing the distance in metres from the datum point to the access point by ten, then rounding to the nearest odd number on the left or even number on the right side of the road (rural numbering method).
+
+Address numbers SHALL NOT exceed five digits – for roads over 1000km long, address numbering SHALL be restarted at a different datum point, preferably a town, natural feature or major intersection, with numbering in the same direction.
+
+In the absence of an access point, a rural number within the range determined by the rural numbering method may be assigned. The rural number SHALL be reassigned if an access point is subsequently created.
+
+In areas with multiple address access points within the minimum step intervals of 20m, the distance criteria may be varied as long as the overall integrity of the rural numbering system is maintained. Alternatively, suffixes may be added in accordance with [Section XX].
+
+*Numbering for roads that cross both rural and urban areas*
+
+If a road name continues across rural and urban extents, the rural numbering method SHOULD be utilised but may be varied as necessary in urban areas to ensure numbering remains logical and unique.
+
+Where a highway crosses an urban area in which another local name is used, numbering SHALL relate to each named road, both in assignment methodology and extent. Rural numbering SHALL encompass distances including the sections with local names.
+
+*Water address numbering*
+
+Addresses fall under the class of https://linked.data.gov.au/def/address-classes/water[water] if the site cannot be accessed from a road, and is instead accessed from a water feature or island.
+
+For addresses designated part of the https://linked.data.gov.au/def/address-classes/inlet[inlet address class], inlet or bay address numbering uses the distance in metres from a datum point at one end of the inlet or bay, divided by ten, and rounded to the nearest number.
+
+For addresses designated part of the https://linked.data.gov.au/def/address-classes/island[island address class], numbering uses the distance in metres clockwise from a datum point, divided by ten, and rounded to the nearest number.
+
+For addresses designated part of the https://linked.data.gov.au/def/address-classes/river[river address class], river and creek address numbering uses the distance in metres upstream from a datum point (e.g. river mouth), divided by ten, and rounded to the nearest odd number on the true right and even number on the true left (i.e. to the direction in relation to the flow of the river).
+
+*Sub-address numbering*
+
+Sub-address numbering SHALL be used for address sites contained within other address sites e.g. an apartment block or marina. A sub-address may utilise either the primary or an alternative address for the parent site.
+
+The sub-address number SHOULD be stored with the https://linked.data.gov.au/def/subaddress-types[sub-address type], although this does not have to be provided within an address string.
+
+A sub address number SHALL be unique regardless of subaddress (unit) type or building level.
+
+The sub-address number precedes the address for the parent site, and SHALL be formatted when used with a ‘/’ between the sub-address number and address number.
+
+*Thoroughfare name*
+
+*Roads*
+
+A road name SHALL be short, clear and unambiguous, and meet national naming principles. It SHALL NOT be offensive, racist, derogatory or demeaning.
+
+All formed roads, including private roads, that are generally open to the public or to services SHALL be named.
+
+A named road SHALL include only one section navigable by vehicles (or pedestrians), unless separated by a median strip.
+
+A road SHALL only have one name, other than part of a highway that is assigned a local name where it passes through a town or city.
+
+An unbroken section of road crossing an administrative boundary SHALL retain the same name.
+
+A road name SHALL consist of a name element followed by a road type. The accepted road types are in the https://linked.data.gov.au/def/road-types[road types vocabulary]. The road type SHALL reflect the function and characteristics of the road as described in the vocabulary.
+
+A road named after 2011 SHOULD NOT have a cardinal indicator after the road type. For roads named prior to this, road suffixes SHALL refer to the https://linked.data.gov.au/def/road-suffixes[affixes vocabulary].
+
+The name element of a road name, regardless of road type, SHALL NOT be the same as, or similar in spelling or sound, to an existing road name in the same locality, an adjoining locality, or in the same local government area.
+
+A road name SHOULD be enduring and changed only when necessary. A road name SHOULD be changed when redesign or redevelopment breaks the road extent into two or more segments so it is no longer contiguous.
+
+*Water features*
+
+For address sites accessed from the water and not accessible from a road, the throughfare component SHALL refer to the water feature name. The name SHALL be acceptable to the applicable naming authority.
+
+The water throughfare SHALL indicate the https://linked.data.gov.au/def/go-categories[type of geographical object].
+
+*Locality*
+
+*Locality Naming*
+
+A locality name SHALL be short, unique within the country, and assigned according to national naming principles. It SHALL NOT be offensive, racist, derogatory or demeaning.
+
+A locality name SHALL NOT be similar in spelling or sound to any other locality name with the country.
+
+A dual or alternative name SHALL NOT be assigned to a locality.
+
+A locality name SHOULD be enduring and changed only when necessary.
+
+A locality name SHALL NOT be substituted with a promotional name, neighbourhood, or regional name in an address.
+
+A locality SHALL be assigned the geographical object category of https://linked.data.gov.au/def/go-categories/locality[Locality].
+
+*Locality Boundaries*
+
+Locality boundaries SHALL be clearly defined, not overlap, and be contiguous. A locality SHALL NOT cross a Local Government boundary, and SHALL be contained within, and not cross, state or territory boundaries.
+
+When defining a locality boundary, the following SHOULD be considered:
+
+* A locality boundary SHOULD define a community of interest
+* Definite and distinguishable physical features or barriers SHOULD be used where appropriate e.g. creeks, rivers, ridgelines, centres of roads, railways.
+* The boundary SHOULD NOT, where possible, bisect properties in common ownership or land parcels.
+A locality boundary SHOULD be enduring and changed only when necessary. However, these SHOULD be reviewed and amended where appropriate in areas subject to development.
+
+===== Landmark class addresses
+
+Addresses in the https://linked.data.gov.au/def/address-classes/landmark[landmark class] specify a location by reference to a named landmark. A landmark is a relatively permanent feature of the manmade landscape that has recognizable identity within a particular cultural context.
+
+All landmark addresses SHALL comprise the following components:
+
+(a)	Landmark Name
+(b)	Locality (or city/town) name
+(c)	State or territory name
+
+Landmark addresses SHALL NOT include an address number or thoroughfare name, but SHOULD be linked to an associated throughfare address.
+
+===== Postal class addresses
+
+Addresses in the https://linked.data.gov.au/def/address-classes/postal[postal class] specify points of postal delivery which have no definite relation to the location of the recipient, such as post office boxes, overseas military addresses and general delivery offices. Postal addresses are covered by the AS/NZS ISO 19160.4:2023 standard and components are not covered in this standard.
+
+==== Assignation of address geometry
+All addresses SHALL be associated with an addressable object that has associated geometry, with, at a minimum, a geocode. Geocodes SHALL be associated with a https://linked.data.gov.au/def/geocode-types[geocode type].
+
+The coordinates of a geocode SHALL be accompanied by explanation of their coordinate reference system, such as the relevant EPSG code.
+
+Addresses SHOULD be associated with an addressable object that has associated area geometry. 
+
+An address SHALL NOT be assigned against non contiguous areas, other than in relation to two areas within the same complex e.g. a unit and an allocated garage or parking space within the same complex. 
+
+==== Updating an existing address
+
+When updating an existing address, address creators should adhere to the principles outlined in the section relating to creating a new address. 
+
+Any amendments to an address should be recorded according to the address and lifecycle models, including lifecycle and provenance information. 
+
+==== Retiring an address
+
+When an address is retired it SHALL be assigned a lifecycle status of https://linked.data.gov.au/def/lifecycle-stage-types/retired[retired], according to the https://linked.data.gov.au/def/lifecycle[lifecycle model].  
+
+==== Provision of address data
+Address creators SHALL make address data available for address aggregators and/or address users. 
+
+An address SHALL NOT include personal information related to a person or organisation that owns or occupies the address site (or object) to which the address is assigned.
 
 === Aggregator Tasks
+==== Vocabularies
+Address aggregators SHALL validate address components against relevant vocabulary concepts to ensure data consistency. 
+
+==== Digital equivalent address record
+Any address assigned to an object SHALL have a digital equivalent address record in the authoritative state and national address datasets . This record SHALL be updated whenever an address is assigned or changed.
 
 === Distributor Tasks
 
+==== Licence Provision
+Distributors SHALL specify the licences under which the address data is available and the terms and conditions for their use. 
+
+==== Metadata
+
 === User Tasks
+==== Address validation

@@ -2,26 +2,66 @@
 
 People and organisations in Australia perform different roles with respect to address information. This section of this standard lists known _personas_ - these people and organisation roles - and the next section lists common tasks that people and organisations with those roles play. Section X then describes how those tasks can be carried out to meet the requirements given in Annex A.
 
-#TODO: make a personas vocab #
+//TODO: make a personas vocab
 
 === About Personas
 
 === Personas
 
 ==== Creator
+Those with a role in creating addresses. This including assigning street numbers and approving road and locality names. 
 
 ==== Aggregator
+Those with a role in aggregating addresses and associated information. This may including collating addresses, assigning geocodes or other geometries, and runnig validation processes.  
 
 ==== Distributor
+Those with a role in distributing products and services centred around address data. 
 
 ==== User
+Those with a role in utilising address data, inclduing address validation. 
 
 === Agents with Personas
 
 ==== Creator
+Agents who have a role as a creator of addresses in Australia include:
+
+//THIS SECTION IS INCOMPLETE
+
+* Local Government agencies
+** Address numbering in New South Wales, Queensland, South Australia, Tasmania, Western Australia
+** Road naming approval in Queensland (local government owned roads), South Australia, Tasmania, Western Australia
+* State / Territory Government agencies
+** Full address creation in Australian Capital Territory and Northern Territory
+** Locality naming in Queensland, Victoria, Western Australia
+** State controlled road naming in Queensland
+** Road name approval in New South Wales, Victoria
+* Developers (limited role)
+** Sub address numbering suggestions
+** Road name suggestions
+
 
 ==== Aggregator
+Agents who have a role as an aggregator of addresses in Australia include:
+
+* State / Territory Government agencies
+* National aggregators
+** Australia Post
+** Australian Bureau of Statistics
+** Geoscape
+
 
 ==== Distributor
+Agents who have a role as a distributor of addresses in Australia include:
+
+* Local Government agencies
+* State / Territory Government agencies
+* Address data resellers
 
 ==== User
+Agents who have a role as a user of addresses in Australia include:
+
+* Emergency services
+* Postal and delivery service providers
+* Utility providers
+* Location service providers
+* The public
