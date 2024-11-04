@@ -12,29 +12,31 @@ People and organisations in Australia perform different roles with respect to ad
 Those with a role in creating addresses. This including assigning street numbers and approving road and locality names. 
 
 ==== Aggregator
-Those with a role in aggregating addresses and associated information. This may including collating addresses, assigning geocodes or other geometries, and runnig validation processes.  
+Those with a role in aggregating addresses and associated information. This may including collating addresses, assigning geocodes or other geometries, and running validation processes. 
 
 ==== Distributor
 Those with a role in distributing products and services centred around address data. 
 
 ==== User
-Those with a role in utilising address data, inclduing address validation. 
+Those with a role in utilising address data, including address validation. 
 
 === Agents with Personas
 
 ==== Creator
 Agents who have a role as a creator of addresses in Australia include:
 
-//THIS SECTION IS INCOMPLETE
+//THIS SECTION IS INCOMPLETE - perhaps make a table
 
 * Local Government agencies
 ** Address numbering in New South Wales, Queensland, South Australia, Tasmania, Western Australia
 ** Road naming approval in Queensland (local government owned roads), South Australia, Tasmania, Western Australia
+
 * State / Territory Government agencies
 ** Full address creation in Australian Capital Territory and Northern Territory
 ** Locality naming in Queensland, Victoria, Western Australia
 ** State controlled road naming in Queensland
 ** Road name approval in New South Wales, Victoria
+
 * Developers (limited role)
 ** Sub address numbering suggestions
 ** Road name suggestions
@@ -44,24 +46,49 @@ Agents who have a role as a creator of addresses in Australia include:
 Agents who have a role as an aggregator of addresses in Australia include:
 
 * State / Territory Government agencies
+** Australian Capital Territory - https://www.data.act.gov.au/Land-Planning-and-Housing/ACT-Addressing/rwvc-ci8y/about_data[Department of Environment, Planning and Sustainable Development]
+** New South Wales - https://www.spatial.nsw.gov.au/what_we_do/the_built_environment/addressing[Spatial Services, Department of Customer Service]
+** Northern Territory - https://nt.gov.au/property/land/land-development/property-and-street-addresses[Survey Branch, Department of Infrastructure, Planning and Logistics]
+** Queensland - https://www.qld.gov.au/environment/land/title/addressing[Spatial Information, Department of Resources]
+** South Australia - https://www.sa.gov.au/topics/housing/planning-and-property[Department?]
+** Tasmania - https://nre.tas.gov.au/land-tasmania/property-addressing[Location Services Branch, Department of Natural Resources and Environment Tasmania]
+** Victoria - https://www.land.vic.gov.au/[Land Use Victoria, Department of Transport and Planning]
+** Western Australia - https://www.landgate.wa.gov.au/location-data-and-services/discovering-landgate-data/property-street-address-data/[Landgate]
+
 * National aggregators
-** Australia Post
-** Australian Bureau of Statistics
-** Geoscape
+** Australia Post - https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data[Postal Address File]
+** Australian Bureau of Statistics - https://www.abs.gov.au/statistics/research/abs-address-register-users-guide[ABS Address Register]
+** Geoscape - https://geoscape.com.au/solutions/g-naf/[Geocoded National Address File (G-NAF)]
 
 
 ==== Distributor
 Agents who have a role as a distributor of addresses in Australia include:
 
 * Local Government agencies
+
 * State / Territory Government agencies
+** Australian Capital Territory - https://www.data.act.gov.au/Land-Planning-and-Housing/ACT-Addressing/rwvc-ci8y/about_data[Department of Environment, Planning and Sustainable Development]
+** New South Wales - https://www.spatial.nsw.gov.au/what_we_do/the_built_environment/addressing[Spatial Services, Department of Customer Service]
+** Northern Territory - https://nt.gov.au/property/land/land-development/property-and-street-addresses[Survey Branch, Department of Infrastructure, Planning and Logistics]
+** Queensland - https://www.qld.gov.au/environment/land/title/addressing[Spatial Information, Department of Resources]
+** South Australia - https://location.sa.gov.au/index.html[LocationSA]
+** Tasmania - https://nre.tas.gov.au/land-tasmania/property-addressing[Location Services Branch, Department of Natural Resources and Environment Tasmania]
+** Victoria - https://www.land.vic.gov.au/[Department of Transport and Planning]
+** Western Australia - https://www.landgate.wa.gov.au/location-data-and-services/discovering-landgate-data/property-street-address-data/[Landgate]
+
+* National Datasets
+** Geocoded National Address File (G-NAF) - https://geoscape.com.au/solutions/g-naf/[Gesocape]
+** Postal Address File (PAF) - https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data[Australia Post via third party resellers]
+
 * Address data resellers
 
 ==== User
 Agents who have a role as a user of addresses in Australia include:
 
+* Government
 * Emergency services
 * Postal and delivery service providers
 * Utility providers
 * Location service providers
+* Insurers
 * The public

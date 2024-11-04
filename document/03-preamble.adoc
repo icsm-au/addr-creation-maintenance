@@ -4,7 +4,7 @@
 
 This document is a Profile of <<ISO19160-2, ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world>>.
 
-In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819, <<ANZ4819, ANZ4819>> Rural and urban addressing>>. This standard does not apply to other address classes such as postal or landmark at this time. Postal addressing is expected to adhere to <<ASNZSISO19160-4, AS/NZS ISO 19160.4:2023 International postal address components and template language>>.
+In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>. This standard does not apply to other address classes such as postal at this time. Postal addressing is expected to adhere to <<ASNZSISO19160-4, AS/NZS ISO 19160.4:2023 International postal address components and template language>>.
 
 This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.
 
@@ -18,10 +18,10 @@ The following standard is needed for the application of this Australian Profile:
 
 The following documents inform aspects of this standard for Australia:
 
-* <<ANZ4819, <<ANZ4819, ANZ4819>> Rural and urban addressing>>
-* AS 4590.1:2017 Interchange of client information
+* <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>
+* <<AS4590, AS 4590.1:2017 Interchange of client information>>
 * <<ISO19160-1, AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model>>
-* ICSM Addressing 2035 Strategy and Supporting Addendum1
+* <<ADDR2035-1, ICSM Addressing 2035 Strategy>> and <<ADDR2035-2, Technical Addendum>>
 
 The following document defines the addressing model used for address records:
 
@@ -29,7 +29,7 @@ The following document defines the addressing model used for address records:
 
 === Terms & Definitions
 
-[[access-point]] access point:: The position along a throughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard
+[[access-point]] access point:: The position along a thoroughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard
 
 [[address]] address:: An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE ISO 19160-1:2015). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard
 
