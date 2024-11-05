@@ -30,4 +30,6 @@ include::50-annex-a-extended-examples.adoc[]
 
 include::51-annex-b-identifiers.adoc[]
 
+include::52-annex-c-vocabularies.adoc[]
+
 include::99-bibliography.adoc[]

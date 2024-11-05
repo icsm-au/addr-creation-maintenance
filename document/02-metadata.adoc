@@ -7,14 +7,14 @@
 |**Name** | Address Creation & Maintenance Standard
 |**Description** | How addresses should be assigned and maintained to support Australia’s addressing infrastructure
 |**Created** | 2024-09-01
-|**Modified** | 2024-10-09
+|**Modified** | 2024-11-05
 |**Issued** | 0000-00-00
 |**Creator** | https://linked.data.gov.au/org/icsm-addrwg[ICSM's Addressing Working Group]
 |**Publisher** | https://linked.data.gov.au/org/icsm[Intergovernmental Committee on Surveying & Mapping (ICSM)] (ICSM@ga.gov.au)
 |**Provenance** | This standard was created in 2024 by the ICSM Addressing Working Group after the publication of ISO's publication in 2023 of ISO19160-2 Assigning and maintaining addresses for objects in the physical world and in 2024 of ICSM's publication of its Address Model. This standard is a profile of the former and instructions in the production of data conformant to the latter.
 |**Status** | Draft
 |**Version** | 0.0.1
-|**Code Repository** | https://github.com/Spatial-Information-QLD/addr-creation-maintenance
+|**Code Repository** | https://github.com/icsm-au/addr-creation-maintenance
 |**License** | https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International (CC BY 4.0)]
 |**Copyright** | &copy; Intergovernmental Committee on Surveying & Mapping, 2024
 |===

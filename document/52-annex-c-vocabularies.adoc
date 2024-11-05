@@ -1,0 +1,55 @@
+[[AnnexC]]
+== Annex C: Relevant Vocabularies
+
+=== Vocabularies relevant to addresses
+* Address classes: https://linked.data.gov.au/def/address-classes
+* Address Geographic Name Types: https://linked.data.gov.au/def/address-geographic-name-types
+* Address Part Types: https://linked.data.gov.au/def/addr-part-types
+* Address status types: https://linked.data.gov.au/def/address-status-type 
+* Building level types: https://linked.data.gov.au/def/building-level-types 
+* countryName: https://linked.data.gov.au/def/countries 
+* Geocode types: https://linked.data.gov.au/def/geocode-types 
+* Geographical object categories: https://linked.data.gov.au/def/go-categories 
+* Lifecycle Stage Types: https://linked.data.gov.au/def/lifecycle-stage-types
+* Naming authority: https://linked.data.gov.au/def/naming-authority
+* Record access: https://linked.data.gov.au/def/record-access 
+* Spatial capture method:: https://linked.data.gov.au/def/spatial-capture-method 
+* stateOrTerritory: https://linked.data.gov.au/dataset/asgsed3/STE
+* Subaddress types: https://linked.data.gov.au/def/subaddress-types 
+
+=== Vocabularies relevant to roads
+* Geographical Name Affix: https://linked.data.gov.au/def/gn-affix
+* Geographical object categories: https://linked.data.gov.au/def/go-categories 
+* Ground relationship: https://linked.data.gov.au/def/ground-relationship 
+* Lifecycle Stage Types: https://linked.data.gov.au/def/lifecycle-stage-types
+* LRRS indicator: https://linked.data.gov.au/def/lrrs-indicator 
+* Naming authority: https://linked.data.gov.au/def/naming-authority
+* Population zone: https://linked.data.gov.au/def/population-zone 
+* Positional accuracy: https://linked.data.gov.au/def/positional-accuracy 
+* Record access: https://linked.data.gov.au/def/record-access 
+* Road cadastral relationship: https://linked.data.gov.au/def/road-cadastral-relationship 
+* Road geometry notes: https://linked.data.gov.au/def/road-geometry-notes 
+* Road lane count: https://linked.data.gov.au/def/road-lane-count 
+* Road maintainer: https://linked.data.gov.au/def/road-maintainer 
+* Road name part types: https://linked.data.gov.au/def/road-name-part-types
+* Road operational statuses: https://linked.data.gov.au/def/road-operational-statuses 
+* Road owner: https://linked.data.gov.au/def/road-owner 
+* Road seasonality: https://linked.data.gov.au/def/road-seasonality 
+* Road surfaces: https://linked.data.gov.au/def/road-surfaces 
+* Road trafficability: https://linked.data.gov.au/def/road-trafficability 
+* Road travel direction: https://linked.data.gov.au/def/road-travel-direction 
+* Road types: https://linked.data.gov.au/def/road-types 
+* Road user access: https://linked.data.gov.au/def/road-user-access 
+* Spatial capture method: https://linked.data.gov.au/def/spatial-capture-method 
+* State controlled road indicator: https://linked.data.gov.au/def/scr-indicator 
+* Surface capture method: https://linked.data.gov.au/def/surface-capture-method 
+* Transport Infrastructure Sub Types: https://linked.data.gov.au/def//transport-infrastructure-sub-types 
+* Transport Infrastructure Types: https://linked.data.gov.au/def//transport-infrastructure-types
+
+=== Vocabularies relevant to geographic names (including locality)
+* Geographical Name Affix: https://linked.data.gov.au/def/gn-affix
+* Geographical names part types: https://linked.data.gov.au/def/gn-part-types 
+* Geographical object categories: https://linked.data.gov.au/def/go-categories 
+* Lifecycle Stage Types: https://linked.data.gov.au/def/lifecycle-stage-types
+* Naming authority: https://linked.data.gov.au/def/naming-authority
+* Record access: https://linked.data.gov.au/def/record-access
