@@ -128,25 +128,31 @@ Within a formatted address string, the sub-address number precedes the address f
 
 *Multi-level sub-address numbering[[multi-level-sub-address-numbering,multi-level sub-address numbering]]*
 
+//Maybe make a collection for these?
+.Level type codes
+[width="50%",cols="2,4",options="header"]
+|=========================================================
+|Code[[Code]] |Level Type
+
+|B|https://linked.data.gov.au/def/building-level-types/basement[Basement level]
+|G|https://linked.data.gov.au/def/building-level-types/ground[Ground level]
+|LG|https://linked.data.gov.au/def/building-level-types/lower-ground-floor[Lower-ground level]
+|M|https://linked.data.gov.au/def/building-level-types/mezzaine[Mezzanine level]
+|OD|https://linked.data.gov.au/def/building-level-types/observation-deck[Observation deck level]
+|P|https://linked.data.gov.au/def/building-level-types/parking[Parking level]
+|PD|https://linked.data.gov.au/def/building-level-types/podium[Podium level]
+|RT|https://linked.data.gov.au/def/building-level-types/rooftop[Rooftop level]
+|UG|https://linked.data.gov.au/def/building-level-types/upper-ground[Upper-ground level]
+|=========================================================
+
 For multi-level buildings where <<sub-address,sub-addresses>> need to be assigned, the <<sub-address,sub-address>> number SHALL concate two parts:
 
-* Alphanumeric characters to represent the level within the building, including a level type code and/or level number
-** Level type codes:
-//Maybe make a collection for these?
-*** B for a https://linked.data.gov.au/def/building-level-types/basement[basement level]
-*** G for a https://linked.data.gov.au/def/building-level-types/ground[ground level]
-*** LG for a https://linked.data.gov.au/def/building-level-types/lower-ground-floor[lower-ground level]
-*** M for a https://linked.data.gov.au/def/building-level-types/mezzaine[mezzanine level]
-*** OD for a https://linked.data.gov.au/def/building-level-types/observation-deck[observation deck level]
-*** P for a https://linked.data.gov.au/def/building-level-types/parking[parking level]
-*** PD for a https://linked.data.gov.au/def/building-level-types/podium[podium level]
-*** RT for a https://linked.data.gov.au/def/building-level-types/rooftop[rooftop level]
-*** UG for a https://linked.data.gov.au/def/building-level-types/upper-ground[upper-ground level]
+. Alphanumeric characters to represent the level within the building, including a level type code (see <<Code,code options>>) and/or level number
 ** Where there are multiple levels for a particular https://linked.data.gov.au/def/building-level-type[building level type], a number MAY be added after the level type code.
 ** Level numbers SHALL increase with height for all above ground levels
 ** Level numbers SHALL increase with depth for all below ground levels
 ** The https://linked.data.gov.au/def/building-level-types/ground[ground level] SHALL be assigned 'G' and SHALL NOT be assigned a '0' or '1' 
-* Two digits to uniquely refer to the <<address-site, address site>> on that level (between 01 and 99)
+. Two digits to uniquely refer to the <<address-site, address site>> on that level (between 01 and 99)
 ** To be allocated in logical sequence to each <<address-site, address site>>
 ** For <<address-site, address sites>> 1 to 9, a preceding zero will be added
 ** In instances where insufficient numbers are available for all <<address-site, address sites>> on a level, an alternative method that ensures unique unambiguous numbering may be used. 
