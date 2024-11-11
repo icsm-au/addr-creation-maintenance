@@ -522,7 +522,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modified</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-10-09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-11-05</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issued</strong></p></td>
@@ -550,7 +550,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code Repository</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/Spatial-Information-QLD/addr-creation-maintenance" class="bare">https://github.com/Spatial-Information-QLD/addr-creation-maintenance</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/icsm-au/addr-creation-maintenance" class="bare">https://github.com/icsm-au/addr-creation-maintenance</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>License</strong></p></td>
@@ -573,7 +573,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>This document is a Profile of <a href="#ISO19160-2">ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world</a>.</p>
 </div>
 <div class="paragraph">
-<p>In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <a href="#ANZ4819">&lt;&lt;ANZ4819, ANZ4819</a> Rural and urban addressing&gt;&gt;. This standard does not apply to other address classes such as postal or landmark at this time. Postal addressing is expected to adhere to <a href="#ASNZSISO19160-4">AS/NZS ISO 19160.4:2023 International postal address components and template language</a>.</p>
+<p>In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <a href="#ANZ4819">AS/NZS 4819:2011 Rural and urban addressing</a>. This standard does not apply to other address classes such as postal at this time. Postal addressing is expected to adhere to <a href="#ASNZSISO19160-4">AS/NZS ISO 19160.4:2023 International postal address components and template language</a>.</p>
 </div>
 <div class="paragraph">
 <p>This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.</p>
@@ -600,16 +600,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ANZ4819">&lt;&lt;ANZ4819, ANZ4819</a> Rural and urban addressing&gt;&gt;</p>
+<p><a href="#ANZ4819">AS/NZS 4819:2011 Rural and urban addressing</a></p>
 </li>
 <li>
-<p>AS 4590.1:2017 Interchange of client information</p>
+<p><a href="#AS4590">AS 4590.1:2017 Interchange of client information</a></p>
 </li>
 <li>
 <p><a href="#ISO19160-1">AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model</a></p>
 </li>
 <li>
-<p>ICSM Addressing 2035 Strategy and Supporting Addendum1</p>
+<p><a href="#ADDR2035-1">ICSM Addressing 2035 Strategy</a> and <a href="#ADDR2035-2">Technical Addendum</a></p>
 </li>
 </ul>
 </div>
@@ -630,11 +630,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1"><a id="access-point"></a> access point</dt>
 <dd>
-<p>The position along a throughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard</p>
+<p>The position along a thoroughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard</p>
 </dd>
 <dt class="hdlist1"><a id="address"></a> address</dt>
 <dd>
-<p>An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE ISO 19160-1:2015). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard</p>
+<p>An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE: <a href="#ISO19160-1">ISO 19160-1:2015</a>). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard</p>
 </dd>
 <dt class="hdlist1"><a id="addressable-object"></a> addressable object</dt>
 <dd>
@@ -664,6 +664,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <p>a site for which an address is being assigned. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
 </dd>
+<dt class="hdlist1"><a id="alternative-address"></a> alternative address</dt>
+<dd>
+<p>an assigned address that refers to an alternative access point to an address site. Requires a preferred address to have been assigned. SOURCE: this standard</p>
+</dd>
 <dt class="hdlist1"><a id="alternative-name"></a> alternative name</dt>
 <dd>
 <p>a name that is an alternative name to another name for the same feature. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
@@ -689,6 +693,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Internationalized Resource Identifiers, IRIs, are a sequence of characters from the
 Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 </dd>
+<dt class="hdlist1"><a id="preferred-address"></a> preferred address</dt>
+<dd>
+<p>the assigned address that is preferred for usage and refers to the main access point to an address site. SOURCE: this standard</p>
+</dd>
 <dt class="hdlist1"><a id="primary-address-site"></a> primary address site</dt>
 <dd>
 <p>an address site that is not contained within another address site. It may contain a sub-address site. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
@@ -699,11 +707,15 @@ Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 </dd>
 <dt class="hdlist1"><a id="sub-address"></a> sub-address</dt>
 <dd>
-<p><mark>TODO: complete me</mark>. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
+<p>an address number element that refers to a sub-address site. SOURCE: This standard&gt;&gt;</p>
 </dd>
 <dt class="hdlist1"><a id="sub-address-site"></a> sub-address site</dt>
 <dd>
 <p>an address site that is contained within a primary address site e.g. an apartment within a building SOURCE: <a href="#ANZ4819">ANZ4819</a>. Sometimes referred to as a secondary address site. SOURCE: this standard</p>
+</dd>
+<dt class="hdlist1"><a id="thoroughfare"></a> thoroughfare</dt>
+<dd>
+<p>a road or named water feature from which an address site can be accessed. SOURCE: this standard</p>
 </dd>
 <dt class="hdlist1"><a id="thoroughfare-address"></a> thoroughfare address</dt>
 <dd>
@@ -2058,6 +2070,18 @@ TBC</p>
 <dd>
 <p>Intergovernmental Committee on Surveying &amp; Mapping, <em>Address Model</em> (2024). <a href="https://linked.data.gov.au/def/addr" class="bare">https://linked.data.gov.au/def/addr</a></p>
 </dd>
+<dt class="hdlist1"><a id="ADDR2035-1"></a> Addressing 2035 Strategy</dt>
+<dd>
+<p>Intergovernmental Committee on Surveying and Mapping. <em>Addressing 2035 Strategy</em> (2021). <a href="https://www.icsm.gov.au/publications/addressing-2035-strategy" class="bare">https://www.icsm.gov.au/publications/addressing-2035-strategy</a></p>
+</dd>
+<dt class="hdlist1"><a id="ADDR2035-2"></a> Addressing 2035 Strategy Technical Addendum</dt>
+<dd>
+<p>ICSM. <em>Addressing 2035 Strategy Technical Addendum</em> (2021). <a href="https://www.icsm.gov.au/publications/addressing-strategy-information-addendum" class="bare">https://www.icsm.gov.au/publications/addressing-strategy-information-addendum</a></p>
+</dd>
+<dt class="hdlist1"><a id="AS4590"></a> AS 4590.1:2017</dt>
+<dd>
+<p>Standards Australia. <em>Interchange of client information, Part 1: Data elements and interchange formats</em> (2017). <a href="https://store.standards.org.au/product/as-4590-1-2017" class="bare">https://store.standards.org.au/product/as-4590-1-2017</a></p>
+</dd>
 <dt class="hdlist1"><a id="ISO10646"></a> ISO10646</dt>
 <dd>
 <p>International Organization for Standardization, <em>ISO/IEC 10646: Information technology — Universal coded character set (UCS)</em>. <a href="https://www.iso.org/standard/76835.html" class="bare">https://www.iso.org/standard/76835.html</a></p>
@@ -2078,7 +2102,7 @@ TBC</p>
 <dd>
 <p>Internet Engineering Taskforce, <em>Key words for use in RFCs to Indicate Requirement Levels</em> (1997) <a href="https://datatracker.ietf.org/doc/html/rfc2119" class="bare">https://datatracker.ietf.org/doc/html/rfc2119</a></p>
 </dd>
-<dt class="hdlist1"><a id="ANZ4819"></a> AS/NZS4819:2011</dt>
+<dt class="hdlist1"><a id="ANZ4819"></a> AS/NZS 4819:2011</dt>
 <dd>
 <p>Standards Australia. <em>AS/NZS 4819:2011 Rural and urban addressing</em>. <a href="https://store.standards.org.au/product/as-nzs-4819-2011" class="bare">https://store.standards.org.au/product/as-nzs-4819-2011</a></p>
 </dd>
@@ -2101,7 +2125,7 @@ TBC</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-29 04:49:00 UTC
+Last updated 2024-11-11 21:52:18 UTC
 </div>
 </div>
 </body>
