@@ -4,7 +4,7 @@
 
 This document is a Profile of <<ISO19160-2, ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world>>.
 
-In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819, <<ANZ4819, ANZ4819>> Rural and urban addressing>>. This standard does not apply to other address classes such as postal or landmark at this time. Postal addressing is expected to adhere to <<ASNZSISO19160-4, AS/NZS ISO 19160.4:2023 International postal address components and template language>>.
+In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>. This standard does not apply to other address classes such as postal at this time. Postal addressing is expected to adhere to <<ASNZSISO19160-4, AS/NZS ISO 19160.4:2023 International postal address components and template language>>.
 
 This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.
 
@@ -18,10 +18,10 @@ The following standard is needed for the application of this Australian Profile:
 
 The following documents inform aspects of this standard for Australia:
 
-* <<ANZ4819, <<ANZ4819, ANZ4819>> Rural and urban addressing>>
-* AS 4590.1:2017 Interchange of client information
+* <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>
+* <<AS4590, AS 4590.1:2017 Interchange of client information>>
 * <<ISO19160-1, AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model>>
-* ICSM Addressing 2035 Strategy and Supporting Addendum1
+* <<ADDR2035-1, ICSM Addressing 2035 Strategy>> and <<ADDR2035-2, Technical Addendum>>
 
 The following document defines the addressing model used for address records:
 
@@ -29,9 +29,9 @@ The following document defines the addressing model used for address records:
 
 === Terms & Definitions
 
-[[access-point]] access point:: The position along a throughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard
+[[access-point]] access point:: The position along a thoroughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard
 
-[[address]] address:: An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE ISO 19160-1:2015). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard
+[[address]] address:: An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE: <<ISO19160-1, ISO 19160-1:2015>>). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard
 
 [[addressable-object]] addressable object:: Object that may be assigned an address. SOURCE: <<ISO19160-2, ISO19160-2>>
 
@@ -47,6 +47,8 @@ The following document defines the addressing model used for address records:
 
 [[address-site]] address site:: a site for which an address is being assigned. SOURCE: <<ANZ4819, ANZ4819>>
 
+[[alternative-address]] alternative address:: an assigned address that refers to an alternative access point to an address site. Requires a preferred address to have been assigned. SOURCE: this standard
+
 [[alternative-name]] alternative name:: a name that is an alternative name to another name for the same feature. SOURCE: <<ANZ4819, ANZ4819>>
 
 [[dual-name]] dual name:: a name that consists of two official names that must be used together, usually one indigenous and one European (e.g. ‘Aoraki/Mount Cook’). SOURCE: <<ANZ4819, ANZ4819>>
@@ -60,13 +62,17 @@ The following document defines the addressing model used for address records:
 [[IRI]] IRI:: Internationalized Resource Identifiers, IRIs, are a sequence of characters from the
    Universal Character Set. SOURCE: <<ISO10646, ISO10646>>
 
+[[preferred-address]] preferred address:: the assigned address that is preferred for usage and refers to the main access point to an address site. SOURCE: this standard
+
 [[primary-address-site]] primary address site:: an address site that is not contained within another address site. It may contain a sub-address site. SOURCE: <<ANZ4819, ANZ4819>>
 
 [[profile]] profile:: set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function. SOURCE: <<ISO19160-2, ISO19160-2>>
 
-[[sub-address]] sub-address:: #TODO: complete me#. SOURCE: <<ANZ4819, ANZ4819>>
+[[sub-address]] sub-address:: an address number element that refers to a sub-address site. SOURCE: This standard>>
 
 [[sub-address-site]] sub-address site:: an address site that is contained within a primary address site e.g. an apartment within a building SOURCE: <<ANZ4819, ANZ4819>>. Sometimes referred to as a secondary address site. SOURCE: this standard
+
+[[thoroughfare]] thoroughfare:: a road or named water feature from which an address site can be accessed. SOURCE: this standard
 
 [[thoroughfare-address]] thoroughfare address:: an address that is assigned with reference to the thoroughfare it is accessed from, for example a road or water feature. SOURCE: this standard
 
