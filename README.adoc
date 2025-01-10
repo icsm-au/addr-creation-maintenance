@@ -1,12 +1,19 @@
 = Australian Addressing Creation & Maintenance Standard
 
-_The Australian Profile of ISO 19160.2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world_
+This (proposed) standard codifies roles and tasks involved in the creation and maintenance of addresses in Australia and New Zealand under the authority of the https://www.icsm.gov.au/[Intergovernmental Committee on Surveying & Mapping].
 
-This repository contains the source files for the _Australian Addressing Creation & Maintenance Standard_ which is temporarily rendered online at:
+_This standard is dependent on the https://linked.data.gov.au/def/addr[Address Model]._
 
-* https://icsm-au.github.io/addr-creation-maintenance/doc.html
+_This standard does not depend on, but is aligned with, the draft https://linked.data.gov.au/def/gn-cm[Geographical Names Creation & Maintenance Standard] with which it will be cross-referenced._
+
+_This standard is intended to replace https://www.icsm.gov.au/what-we-do/addressing/standards-rural-and-urban-addressing-as4819[AS 4819: Standards for rural and urban addressing]_
+
+This repository contains the source code for the standard and the standard document is rendered from these files online at:
+
+*  https://linked.data.gov.au/def/addr-cm
 
 This Standard will receive a permanent home at a persistent online location when officially endorsed.
+
 
 == Contributions
 
@@ -22,6 +29,7 @@ Please contribute by:
 .. Pull Requests should be lodged at https://github.com/icsm-au/addr-creation-maintenance/pulls
 
 _If creating Pull Requests is a new/unknown thing for you, please communicate with the contacts below for help._
+
 
 == Rights and License
 
@@ -51,3 +59,12 @@ For technical model implementation questions, contact:
 https://kurrawong.ai[KurrawongAI] +
 nick@kurrawong.ai +
 _Contractor to Spatial Information Qld._
+
+
+== Document generation
+
+This document is developed using the https://asciidoc.org/[ASCIIDOC] document system used for many https://www.ogc.org/[OGC] and https://www.iso.org/home.html[ISO] standards. It essentially builds HTML or PDF documents from a series of text files (ending in `.adoc`), images and so, with certain styling conventions.
+
+This repository automatically builds this document from the source files in the `document/` folder using the https://asciidoctor.org/[ASCIIDoctor] tool that it integrated into a GitHub Action, meaning the document is rebuild with every error-free update to the source files here.
+
+The auto-built document is online at  https://linked.data.gov.au/def/addr-cm.
