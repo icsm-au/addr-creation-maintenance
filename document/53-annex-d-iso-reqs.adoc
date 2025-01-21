@@ -1,0 +1,4 @@
+[[AnnexD]]
+== Annex D: ISO19160-2 Requirements Mapping
+
+_A mapping between <<ISO19160-2>>'s requirements and this Standard's own requirements and its recommendations will be provided here._

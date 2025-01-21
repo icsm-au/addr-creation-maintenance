@@ -32,4 +32,6 @@ include::51-annex-b-identifiers.adoc[]
 
 include::52-annex-c-vocabularies.adoc[]
 
+include::53-annex-d-iso-reqs.adoc[]
+
 include::99-bibliography.adoc[]

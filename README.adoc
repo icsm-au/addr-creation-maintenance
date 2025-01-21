@@ -35,7 +35,7 @@ _If creating Pull Requests is a new/unknown thing for you, please communicate wi
 
 The information in this repository is available for reuse under the https://creativecommons.org/licenses/by/4.0/[Creative Commons 4.0 license], see the LICENSE file for the deed.
 
-&copy; Intergovernmental Committee on Surveying and Mapping, 2024
+&copy; Intergovernmental Committee on Surveying and Mapping, 2025
 
 
 == Contacts

@@ -1,4 +1,6 @@
-== Usage Personas
+== Roles
+
+// TODO: replace "Persona" with "Role" everywhere
 
 People and organisations in Australia perform different roles with respect to address information. This section of this standard lists known _personas_ - these people and organisation roles - and the next section lists common tasks that people and organisations with those roles play. Section X then describes how those tasks can be carried out to meet the requirements given in Annex A.
 

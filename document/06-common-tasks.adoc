@@ -1,4 +1,4 @@
-== Common Tasks
+== Tasks
 
 This section describes the specific address information-related tasks that the personas listed in <<05-usage-personas, Usage Personas>> frequently carry out.
 

@@ -1,9 +1,65 @@
 == Introduction
 
-This is a placeholder
+Effective use of address information and the availability of that information via information systems requires consistency in the information model used for addressing. In the context of Australian & New Zealand (ANZ) jurisdictions after 2024, this is handled by conformance fo information data for use and exchange to <<ADDRESS-MODEL>>.
 
-* abstract
-* purpose
+This Standard aims to ease the use and enable _best practice_ use of <<ADDRESS-MODEL>> through the description of the roles and tasks relating to the use of addresses in ANZ jurisdictions, as ascertained from those jurisdictions. These descriptions both carry the experience of their practitioners within them, assisting those new to the addressing domain, and also provide role and task consistency across jurisdictions, since they have been arrived at via collaboration.
+
+=== Relations to other standards
+
+==== Previous Address maintenance standards
+
+Previous Standards that have guided address creation & maintenance in ANZ jurisdictions are:
+
+* <<ANZ4819>>
+* <<ANZ4819-2003>>
+
+Since the publication of <<ANZ4819>>, we have seen the publication of an international address information model, <<ISO19160-1>>, an Australian address information model, <<ADDRESS-MODEL>>, and additional part extensions to the international address model for "Assigning and maintaining addresses for objects in the physical world" <<ISO19160-2>>.
+
+This Standard replaces <<ANZ4819>>, and thus <<ANZ4819-2003>> which it replaced.
+
+==== ICSM Addressing strategy
+
+The ICSM's _Addressing 2035 Strategy_ <<ADDR2035-1>> and its technical addendum <<ADDR2035-2>> drove the development of the ANZ address information model <<ADDRESS-MODEL>> on which this Standard depends for address information specification, thus this Standard is in line with the ICSM strategy.
+
+==== International address standards
+
+This Standard depends on <<ADDRESS-MODEL>> which is an implementation of <<ISO19160-1>>. Linked between these two information models are made explicit in <<ADDRESS-MODEL>> and not repeated here.
+
+This Standard is also an implementation of <<ISO19160-2>>, which has been co-adopted as an ANZ standard AS/NZS ISO 19160.2:2024, and how this standard caters for requirements it gives is detailed in <<AnnexD>>.
+
+==== International practice
+
+// TODO: ref to Buyle, Raf, Ziggy Vanlishout, Serena Coetzee, Dieter De Paepe, Mathias Van Compernolle, Geert Thijs, Bert Van Nuffelen, et al. “Raising Interoperability among Base Registries: The Evolution of the Linked Base Registry for Addresses in Flanders.” Journal of Web Semantics 55 (March 2019): 86–101. https://doi.org/10.1016/j.websem.2018.10.003.
+This Standard...
+
+=== Document Structure
+
+This Standard is structured in the following way:
+
+[cols="1,2,6"]
+|===
+| # | Section | Purpose
+
+| 1 | Abstract | Short Standard overview
+| 2 | Metadata | Standard's identifying information
+| 3 | Preamble | Resources for the effective use of this Standard
+| 4 | Introduction | Background information about how and why this Standard was developed and the role it plays in relation to other standards
+| 5 | Roles | Roles known to be played by organisations and people in Australia and New Zealand with respect to addressing
+| 6 | Tasks | Tasks undertaken by those playing Roles, as above
+| 7 | Requirements & Recommendations | Required and recommended courses of action for those undertaking tasks, as above
+| A-D | Annexes | Supporting information for this Standard
+| | Bibliography | References cited in this document
+|===
+
+
+
+////
+TODO: new Intro sections
+
 * history
-* big picture
+** previous standards
+** 19160
+** model
+* relation to other domains
 * doc structure
+////

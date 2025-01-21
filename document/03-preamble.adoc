@@ -2,120 +2,132 @@
 
 === Scope
 
-This document is a Profile of <<ISO19160-2, ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world>>.
+This standard replaces <<ANZ4819>> but also provides guidance on aspects of addressing not covered by it, so this standard's scope then is a superset of <<ANZ4819>>'s.
 
-In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>. This standard does not apply to other address classes such as postal at this time. Postal addressing is expected to adhere to <<ASNZSISO19160-4, AS/NZS ISO 19160.4:2023 International postal address components and template language>>.
+Scope from <<ANZ4819>>:
 
-This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.
+a. assigning addresses;
+b. naming roads and localities;
+c. recording and mapping the related information; and
+d. signage related to the above.
 
-This standard provides requirements for addressing authorities to assign addresses, record the related information, and signage related to addressing components.
+Additional scope is able to be catered for here due to the presence of the <<ADDRESS-MODEL>> which is the mandated information model for address data exchange in Australia and New Zealand.
+
+Additional scope:
+
+[start=5]
+a. validating address information
+b. sharing address information
+c. joining address information to other information
+
+=== Objective
+
+The goals of this Standard are
+
+1. to specify requirements for assigning addresses that can be readily and unambiguously identified and located
+2. to create information representations of addresses that can be identified, understood and reused with maximum information completeness and minimum ambiguity
+
+In order to achieve these goals, the objectives of the Standard are that:
+
+a. Addresses are uniquely and clearly identified.
+b. Roads or other primary means of access are uniquely identified and addresses' references to them are unambiguous
+c. The total set of address parts, including locality, access object, numbering and sub-address elements enables addressed objects to be readily located.
+d. Address information is shown to be able to be created in accordance with the ISCM ANZ Address Model
+e. Address information enables addressed objects to be readily located.
+f. Signage enables assigned addresses to be readily identified and located.
+
+The Standard aims to keep addresses as simple as possible to enable their ready application and consistent information structure and style across jurisdictions. All matters pertaining to address information allowances are handled by <<ADDRESS-MODEL>>.
+
+=== Application
+
+==== Intended Audience
+
+The Standard outlines various roles related to the use of address information and the tasks undertaken by holders of those roles. It is intended primarily for use by any organisation or person that is called on to act in one, or many, of those roles within an Australian or New Zealand jurisdiction.
+
+Use of the standard is aimed at helping those acting in the roles to fulfil their custodial responsibility for the ongoing maintenance, accuracy and quality of addresses and the exchange of addressing information in a manner that is consistent across jurisdictions.
+
+==== Retrospective application - Existing addresses
+
+This standard is intended to apply to all roles and tasks relevant to addresses within the Intended Audience and the remediation of existing addresses is one of those tasks.
+
+==== Data specification partially in scope
+
+This Standard depends on the use of <<ADDRESS-MODEL>> for address information validation and exchange but does not specify detailed data requirements nor imply a database schema for the storage or internal use, within a jurisdiction, of address information.
+
+This Standard also depends on the set of ICSM vocabularies (see the https://www.icsm.gov.au[ICSM Vocabulary Register]) to provide specific values for information model object categorisation and, in some cases, object values for <<ADDRESS-MODEL>> and its model dependencies.
+
+==== Cooperation between agencies
+
+Effective address information sharing and use across agencies depends on the faithful implementation of a shared information model, for which this Standard depends on <<ADDRESS-MODEL>>. This Standard aims to provide role and task guidance around the use of that model, its supporting vocabularies and addresses in general to assist with its faithful implementation.
+
+===== Application to Indigenous addressing
+
+Within Indigenous communities, roads shall be named and address sites numbered in accordance with this Standard.
+
+Indigenous address elements and the use of Indigenous languages within address information is catered for within <<ADDRESS-MODEL>>.
+
+==== Application to private communities and towns
+
+A private community or town, such as a retirement village or mining town, shall be addressed in terms of this Standard.
+
+Extended forms of addressing, such as subaddressing, is catered for within <<ADDRESS-MODEL>>.
 
 === Normative References
 
-The following standard is needed for the application of this Australian Profile:
+Multiple Australia/New Zealand Standards, information models and other documents are referred to by this Standard. References from normative sections of this document are themselves considered to be normative, unless they are specifically indicated as being informative.
 
-* <<ISO19160-2, ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world>>
+References from informative sections, however made, are informative.
 
-The following documents inform aspects of this standard for Australia:
+=== Definitions
 
-* <<ANZ4819, AS/NZS 4819:2011 Rural and urban addressing>>
-* <<AS4590, AS 4590.1:2017 Interchange of client information>>
-* <<ISO19160-1, AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model>>
-* <<ADDR2035-1, ICSM Addressing 2035 Strategy>> and <<ADDR2035-2, Technical Addendum>>
+==== Imperative terminology
 
-The following document defines the addressing model used for address records:
+The keywords MAY, MUST, MUST NOT, and SHOULD in this document are to be interpreted as described in <<BCP14>> when, and only when, they appear in all capitals, as shown here.
 
-* <<ADDR2024, ICSM's Address Model>>
+==== Glossary
 
-=== Terms & Definitions
+Definitions of specialised terms used in this Standard are taken from ICSM Vocabularies and models, in particular:
 
-[[access-point]] access point:: The position along a thoroughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard
+// TODO: make Addressing Glossary PID
+* https://linked.data.gov.au/def/addr-glossary[Addressing Glossary]
+* <<ADDRESS-MODEL>>
+* vocabularies supporting <<ADDRESS-MODEL>>
+** See the model's https://linked.data.gov.au/def/addr#_vocabularies[Vocabularies Section]
 
-[[address]] address:: An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE: <<ISO19160-1, ISO 19160-1:2015>>). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard
+See the https://www.icsm.gov.au[ICSM Vocabulary Register] for all ICSM vocabularies.
 
-[[addressable-object]] addressable object:: Object that may be assigned an address. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[address-assignment-method]] address assignment method:: The way in which addresses are assigned according to the rules of an address reference system. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[address-authority]] address authority:: Agency responsible for assigning addresses. Usually a local government. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[address-class]] address class:: description of a set of addresses that share the same address components, operations, methods, relationships, and semantics. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[address-component]] address component:: constituent part of the address. These may reference another object such as a spatial object including and administrative boundary or land parcel, or a non-spatial entity. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[address-reference-system]] address reference system:: A defined set of address components and the rules for their combination into addresses. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[address-site]] address site:: a site for which an address is being assigned. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[alternative-address]] alternative address:: an assigned address that refers to an alternative access point to an address site. Requires a preferred address to have been assigned. SOURCE: this standard
-
-[[alternative-name]] alternative name:: a name that is an alternative name to another name for the same feature. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[dual-name]] dual name:: a name that consists of two official names that must be used together, usually one indigenous and one European (e.g. ‘Aoraki/Mount Cook’). SOURCE: <<ANZ4819, ANZ4819>>
-
-[[formed]] formed:: in relation to a road, means that it is physically constructed or prepared for passage by vehicles or pedestrians. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[geocode]] geocode:: a point feature for an address indicating a geometry. SOURCE: this standard
-
-[[locality]] locality:: a named geographical area defining a community or area of interest, which may be rural or urban in character, and is usually a suburb in the latter case. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[IRI]] IRI:: Internationalized Resource Identifiers, IRIs, are a sequence of characters from the
-   Universal Character Set. SOURCE: <<ISO10646, ISO10646>>
-
-[[preferred-address]] preferred address:: the assigned address that is preferred for usage and refers to the main access point to an address site. SOURCE: this standard
-
-[[primary-address-site]] primary address site:: an address site that is not contained within another address site. It may contain a sub-address site. SOURCE: <<ANZ4819, ANZ4819>>
-
-[[profile]] profile:: set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function. SOURCE: <<ISO19160-2, ISO19160-2>>
-
-[[sub-address]] sub-address:: an address number element that refers to a sub-address site. SOURCE: This standard>>
-
-[[sub-address-site]] sub-address site:: an address site that is contained within a primary address site e.g. an apartment within a building SOURCE: <<ANZ4819, ANZ4819>>. Sometimes referred to as a secondary address site. SOURCE: this standard
-
-[[thoroughfare]] thoroughfare:: a road or named water feature from which an address site can be accessed. SOURCE: this standard
-
-[[thoroughfare-address]] thoroughfare address:: an address that is assigned with reference to the thoroughfare it is accessed from, for example a road or water feature. SOURCE: this standard
-
-=== Conformance
-
-Keywords used to signify requirements in this document are those defined by <<RFC2119, RFC2119>> and they are:
-
-* _MUST_
-* _MUST NOT_
-* _REQUIRED_
-* _SHALL_
-* _SHALL NOT_
-* _SHOULD_
-* _SHOULD NOT_
-* _RECOMMENDED_
-* _MAY_
-
-For process and information to be conformant with this standard, the imperatives of those keywords _MUST_ be followed as per their <<RFC2119, RFC2119>> definitions.
-
-Address information created following processes outlined in this standard _MUST_ conform to the <<ADDR2024, ICSM Address Model>> with conformance to it tested as per it's https://linked.data.gov.au/def/addr#AnnexB[Annex B: Validation] section.
+// TODO: Fix Geocode PID
+Where specialised terms defined in the above resources are used, they are hyperlinked to their definition online, for example the term https://linked.data.gov.au/def/addr/Geocode[geocode].
 
 === Namespaces
 
-Namespaces, in this document's context, are managed <<IRI, IRIs>> which allow further IRIs to be created within their scope. Namespaces are allocated to macro data objects and provide IRIs for all the micro data objects within that object.
+// TODO: Add IRI to Glossary
+Namespaces, in this document's context, are managed http://linked.data.gov.au/def/addrr-glossary/IRI[IRIs] which allow further IRIs to be created within their scope. Namespaces are allocated to macro data objects and provide IRIs for all the micro data objects within that object.
 
-For example, the IRI for the <<ADDR2024, Address Model>> is `+https://linked.data.gov.au/def/addr+` and the namespace of `+https://linked.data.gov.au/def/addr/+` (the Address Model's IRI + `/`) allows for IRIs to be created for elements within the model such as one for the `AddressableObject` class which is `+https://linked.data.gov.au/def/addr/AddressableObject+`.
+For example, the IRI for the <<ADDR2024, Address Model>> is `+https://linked.data.gov.au/def/addr+` and the namespace of `+https://linked.data.gov.au/def/addr/+` (the Address Model's IRI + `/`) allows for IRIs to be created for elements within the model such as one for the `Geocode` class which is `+https://linked.data.gov.au/def/addr/Geocode+`.
 
-When used in some forms of data and human-readable text, IRIs can either be written in full or in a shortened form using prefixes for known namespace. For example, the `Addresable Object` mentioned above can be written in full like this:
+When used in some forms of data and human-readable text, IRIs can either be written in full or in a shortened form using prefixes for known namespace. For example, the `Geocode` mentioned above can be written in full like this:
 
-`+https://linked.data.gov.au/def/addr/AddressableObject+`
+`+https://linked.data.gov.au/def/addr/Geocode+`
 
 or in prefixed form with the prefix `addr` for the namespace `+https://linked.data.gov.au/def/addr/+` like this:
 
-`addr:AddressableObject`
+`addr:Geocode`
+
+See the table below for namespace prefixes used in this Standard.
+
+==== Prefixes
 
 The prefixed namespaces used in this document are:
 
+// TODO: tidy prefixes as used/not used in this doc
 [width=100%, frame=none, grid=none, cols="1,5,4"]
 |===
 |Prefix | Namespace | Description
 
 | `*addr*` | `*+https://linked.data.gov.au/def/addr/+*` | <<ADDR2024, ICSM's  Address Model>>
-| `*addrcm*` | `*+https://linked.data.gov.au/def/addrcm/+*` | *This Document*
+| `*addrcm*` | `*+https://linked.data.gov.au/def/addr-cm/+*` | *This Document*
+| `*addrg*` | `*+https://linked.data.gov.au/def/addr-glos/+*` | https://linked.data.gov.au/def/addr-glos/[Addressing Glossary]
 | `addreq` | `+https://linked.data.gov.au/def/addrcm-req/+` | https://linked.data.gov.au/def/addrcm-req[Address Creation & Maintenance Requirements Vocabulary]
 | `als` | `+https://linked.data.gov.au/def/address-lifecycle-stage-type/+` | https://linked.data.gov.au/def/lifecycle-stage-types[Address Lifecycle Stage Types vocabulary]
 | `apt` | `+https://linked.data.gov.au/def/address-part-type/+` | https://linked.data.gov.au/def/addr-part-types[Address Part Types vocabulary]
@@ -133,11 +145,3 @@ The prefixed namespaces used in this document are:
 | `time` | `+http://www.w3.org/2006/time#+` | https://www.w3.org/TR/owl-time/[Time Ontology in OWL]
 | `xsd` | `+http://www.w3.org/2001/XMLSchema#+` | https://www.w3.org/TR/xmlschema-2/[XML Schema Definitions ontology]
 |===
-
-////
-=== Notation
-
-==== Identifiers
-
-URIs for identifiable provisions in this document are specified as partial URIs relative to https://standards.isotc211.org/19160/-2/1, as specified in ISO 19105.
-////

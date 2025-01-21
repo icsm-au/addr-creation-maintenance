@@ -6,7 +6,11 @@
 
 [[ADDR2035-2]] Addressing 2035 Strategy Technical Addendum:: ICSM. _Addressing 2035 Strategy Technical Addendum_ (2021). https://www.icsm.gov.au/publications/addressing-strategy-information-addendum
 
+[[ADDRESS-MODEL]] ICSM ANZ Address Model:: ICSM. _ICSM ANZ Address Model_ (2024). Information Model. https://linked.data.gov.au/def/addr
+
 [[AS4590]] AS 4590.1:2017:: Standards Australia. _Interchange of client information, Part 1: Data elements and interchange formats_ (2017). https://store.standards.org.au/product/as-4590-1-2017
+
+[[BCP14]] BCP 14:: Internet Engineering Taskforce. _Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels & Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words_ https://www.rfc-editor.org/info/bcp14
 
 [[ISO10646]] ISO10646:: International Organization for Standardization, _ISO/IEC 10646: Information technology — Universal coded character set (UCS)_. https://www.iso.org/standard/76835.html
 
@@ -19,6 +23,8 @@
 [[RFC2119]] RDF2119:: Internet Engineering Taskforce, _Key words for use in RFCs to Indicate Requirement Levels_ (1997) https://datatracker.ietf.org/doc/html/rfc2119
 
 [[ANZ4819]] AS/NZS 4819:2011:: Standards Australia. _AS/NZS 4819:2011 Rural and urban addressing_. https://store.standards.org.au/product/as-nzs-4819-2011
+
+[[ANZ4819-2003]] AS/NZS 4819:2003:: Standards Australia. _AS/NZS 4819:2003 Rural and urban addressing_. https://store.standards.org.au/product/as-nzs-4819-2003
 
 [[ASNZSISO19160-4]] ASNZSISO19160-4:: Standards Australia. _AS/NZS ISO 19160.4: Addressing, Part 4: International postal address components and template language_ (2023). https://store.standards.org.au/product/as-nzs-iso-19160-4-2023
 
