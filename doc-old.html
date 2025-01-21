@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.16">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <title>Australian Addressing Creation &amp; Maintenance Standard</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -84,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -193,7 +193,8 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
 details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
 details{margin-left:1.25rem}
-details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;-webkit-tap-highlight-color:transparent}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
 details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
 details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
 details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
@@ -207,13 +208,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -235,9 +233,8 @@ pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
 table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
 table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
 table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}
-pre.pygments .lineno{border-right:1px solid;opacity:.35;display:inline-block;margin-right:.75em}
-pre.pygments .lineno::before{content:"";margin-right:-.125em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
 .quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
 .quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
@@ -274,7 +271,7 @@ table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-c
 table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
 table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
 table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
-table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -290,10 +287,11 @@ ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
-ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
 ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
 ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
 ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
 ul.checklist>li>p:first-child{margin-left:-1em}
 ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
 ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
@@ -336,8 +334,6 @@ sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
-.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
-.gist .file-data>table td.line-data{width:99%}
 div.unbreakable{page-break-inside:avoid}
 .big{font-size:larger}
 .small{font-size:smaller}
@@ -394,7 +390,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -448,13 +444,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_preamble">3. Preamble</a>
 <ul class="sectlevel2">
 <li><a href="#_scope">3.1. Scope</a></li>
-<li><a href="#_normative_references">3.2. Normative References</a></li>
-<li><a href="#_terms_definitions">3.3. Terms &amp; Definitions</a></li>
-<li><a href="#_conformance">3.4. Conformance</a></li>
-<li><a href="#_namespaces">3.5. Namespaces</a></li>
+<li><a href="#_objective">3.2. Objective</a></li>
+<li><a href="#_application">3.3. Application</a></li>
+<li><a href="#_normative_references">3.4. Normative References</a></li>
+<li><a href="#_definitions">3.5. Definitions</a></li>
+<li><a href="#_namespaces">3.6. Namespaces</a></li>
 </ul>
 </li>
-<li><a href="#_introduction">4. Introduction</a></li>
+<li><a href="#_introduction">4. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_relations_to_other_standards">4.1. Relations to other standards</a></li>
+<li><a href="#_document_structure">4.2. Document Structure</a></li>
+</ul>
+</li>
 <li><a href="#_good_practice_for_assigning_and_maintaining_addresses">5. Good Practice for assigning and maintaining addresses</a>
 <ul class="sectlevel2">
 <li><a href="#_general">5.1. General</a></li>
@@ -468,6 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_processes">6.3. Processes</a></li>
 </ul>
 </li>
+<li><a href="#AnnexA">Annex A: Extended Examples</a></li>
 <li><a href="#AnnexB">Annex B: Identifiers</a>
 <ul class="sectlevel2">
 <li><a href="#_identifiers_per_class">Identifiers per Class</a></li>
@@ -522,7 +525,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modified</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-11-05</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-01-21</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Issued</strong></p></td>
@@ -546,7 +549,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code Repository</strong></p></td>
@@ -570,223 +573,217 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_scope"><a class="anchor" href="#_scope"></a>3.1. Scope</h3>
 <div class="paragraph">
-<p>This document is a Profile of <a href="#ISO19160-2">ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world</a>.</p>
+<p>This standard replaces <a href="#ANZ4819">AS/NZS 4819:2011</a> but also provides guidance on aspects of addressing not covered by it, so this standard&#8217;s scope then is a superset of <a href="#ANZ4819">AS/NZS 4819:2011</a>'s.</p>
 </div>
 <div class="paragraph">
-<p>In the Australian context, this standard applies to thoroughfare-based addressing i.e. street and water, as well as landmark addressing. It is designed as a replacement for <a href="#ANZ4819">AS/NZS 4819:2011 Rural and urban addressing</a>. This standard does not apply to other address classes such as postal at this time. Postal addressing is expected to adhere to <a href="#ASNZSISO19160-4">AS/NZS ISO 19160.4:2023 International postal address components and template language</a>.</p>
+<p>Scope from <a href="#ANZ4819">AS/NZS 4819:2011</a>:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>assigning addresses;</p>
+</li>
+<li>
+<p>naming roads and localities;</p>
+</li>
+<li>
+<p>recording and mapping the related information; and</p>
+</li>
+<li>
+<p>signage related to the above.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>This document focuses on assigning and maintaining addresses that allow the unambiguous determination of an object in the physical world for purposes of identification and location in the context of public administration and public service delivery.</p>
+<p>Additional scope is able to be catered for here due to the presence of the <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> which is the mandated information model for address data exchange in Australia and New Zealand.</p>
 </div>
 <div class="paragraph">
-<p>This standard provides requirements for addressing authorities to assign addresses, record the related information, and signage related to addressing components.</p>
+<p>Additional scope:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" start="5">
+<li>
+<p>validating address information</p>
+</li>
+<li>
+<p>sharing address information</p>
+</li>
+<li>
+<p>joining address information to other information</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_normative_references"><a class="anchor" href="#_normative_references"></a>3.2. Normative References</h3>
+<h3 id="_objective"><a class="anchor" href="#_objective"></a>3.2. Objective</h3>
 <div class="paragraph">
-<p>The following standard is needed for the application of this Australian Profile:</p>
+<p>The goals of this Standard are</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>to specify requirements for assigning addresses that can be readily and unambiguously identified and located</p>
+</li>
+<li>
+<p>to create information representations of addresses that can be identified, understood and reused with maximum information completeness and minimum ambiguity</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In order to achieve these goals, the objectives of the Standard are that:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Addresses are uniquely and clearly identified.</p>
+</li>
+<li>
+<p>Roads or other primary means of access are uniquely identified and addresses' references to them are unambiguous</p>
+</li>
+<li>
+<p>The total set of address parts, including locality, access object, numbering and sub-address elements enables addressed objects to be readily located.</p>
+</li>
+<li>
+<p>Address information is shown to be able to be created in accordance with the ISCM ANZ Address Model</p>
+</li>
+<li>
+<p>Address information enables addressed objects to be readily located.</p>
+</li>
+<li>
+<p>Signage enables assigned addresses to be readily identified and located.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Standard aims to keep addresses as simple as possible to enable their ready application and consistent information structure and style across jurisdictions. All matters pertaining to address information allowances are handled by <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_application"><a class="anchor" href="#_application"></a>3.3. Application</h3>
+<div class="sect3">
+<h4 id="_intended_audience"><a class="anchor" href="#_intended_audience"></a>3.3.1. Intended Audience</h4>
+<div class="paragraph">
+<p>The Standard outlines various roles related to the use of address information and the tasks undertaken by holders of those roles. It is intended primarily for use by any organisation or person that is called on to act in one, or many, of those roles within an Australian or New Zealand jurisdiction.</p>
+</div>
+<div class="paragraph">
+<p>Use of the standard is aimed at helping those acting in the roles to fulfil their custodial responsibility for the ongoing maintenance, accuracy and quality of addresses and the exchange of addressing information in a manner that is consistent across jurisdictions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_retrospective_application_existing_addresses"><a class="anchor" href="#_retrospective_application_existing_addresses"></a>3.3.2. Retrospective application - Existing addresses</h4>
+<div class="paragraph">
+<p>This standard is intended to apply to all roles and tasks relevant to addresses within the Intended Audience and the remediation of existing addresses is one of those tasks.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_specification_partially_in_scope"><a class="anchor" href="#_data_specification_partially_in_scope"></a>3.3.3. Data specification partially in scope</h4>
+<div class="paragraph">
+<p>This Standard depends on the use of <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> for address information validation and exchange but does not specify detailed data requirements nor imply a database schema for the storage or internal use, within a jurisdiction, of address information.</p>
+</div>
+<div class="paragraph">
+<p>This Standard also depends on the set of ICSM vocabularies (see the <a href="https://www.icsm.gov.au">ICSM Vocabulary Register</a>) to provide specific values for information model object categorisation and, in some cases, object values for <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> and its model dependencies.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cooperation_between_agencies"><a class="anchor" href="#_cooperation_between_agencies"></a>3.3.4. Cooperation between agencies</h4>
+<div class="paragraph">
+<p>Effective address information sharing and use across agencies depends on the faithful implementation of a shared information model, for which this Standard depends on <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>. This Standard aims to provide role and task guidance around the use of that model, its supporting vocabularies and addresses in general to assist with its faithful implementation.</p>
+</div>
+<div class="sect4">
+<h5 id="_application_to_indigenous_addressing"><a class="anchor" href="#_application_to_indigenous_addressing"></a>3.3.4.1. Application to Indigenous addressing</h5>
+<div class="paragraph">
+<p>Within Indigenous communities, roads shall be named and address sites numbered in accordance with this Standard.</p>
+</div>
+<div class="paragraph">
+<p>Indigenous address elements and the use of Indigenous languages within address information is catered for within <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_application_to_private_communities_and_towns"><a class="anchor" href="#_application_to_private_communities_and_towns"></a>3.3.5. Application to private communities and towns</h4>
+<div class="paragraph">
+<p>A private community or town, such as a retirement village or mining town, shall be addressed in terms of this Standard.</p>
+</div>
+<div class="paragraph">
+<p>Extended forms of addressing, such as subaddressing, is catered for within <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_normative_references"><a class="anchor" href="#_normative_references"></a>3.4. Normative References</h3>
+<div class="paragraph">
+<p>Multiple Australia/New Zealand Standards, information models and other documents are referred to by this Standard. References from normative sections of this document are themselves considered to be normative, unless they are specifically indicated as being informative.</p>
+</div>
+<div class="paragraph">
+<p>References from informative sections, however made, are informative.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_definitions"><a class="anchor" href="#_definitions"></a>3.5. Definitions</h3>
+<div class="sect3">
+<h4 id="_imperative_terminology"><a class="anchor" href="#_imperative_terminology"></a>3.5.1. Imperative terminology</h4>
+<div class="paragraph">
+<p>The keywords MAY, MUST, MUST NOT, and SHOULD in this document are to be interpreted as described in <a href="#BCP14">BCP 14</a> when, and only when, they appear in all capitals, as shown here.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_glossary"><a class="anchor" href="#_glossary"></a>3.5.2. Glossary</h4>
+<div class="paragraph">
+<p>Definitions of specialised terms used in this Standard are taken from ICSM Vocabularies and models, in particular:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ISO19160-2">ISO 19160-2:2023, Addressing – Part 2: Assigning and maintaining addresses for objects in the physical world</a></p>
+<p><a href="https://linked.data.gov.au/def/addr-glossary">Addressing Glossary</a></p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The following documents inform aspects of this standard for Australia:</p>
-</div>
+<li>
+<p><a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a></p>
+</li>
+<li>
+<p>vocabularies supporting <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ANZ4819">AS/NZS 4819:2011 Rural and urban addressing</a></p>
+<p>See the model&#8217;s <a href="https://linked.data.gov.au/def/addr#_vocabularies">Vocabularies Section</a></p>
 </li>
-<li>
-<p><a href="#AS4590">AS 4590.1:2017 Interchange of client information</a></p>
-</li>
-<li>
-<p><a href="#ISO19160-1">AS/NZS ISO 19160.1:2018 Addressing – Part 1: Conceptual model</a></p>
-</li>
-<li>
-<p><a href="#ADDR2035-1">ICSM Addressing 2035 Strategy</a> and <a href="#ADDR2035-2">Technical Addendum</a></p>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The following document defines the addressing model used for address records:</p>
+<p>See the <a href="https://www.icsm.gov.au">ICSM Vocabulary Register</a> for all ICSM vocabularies.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#ADDR2024">ICSM&#8217;s Address Model</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Where specialised terms defined in the above resources are used, they are hyperlinked to their definition online, for example the term <a href="https://linked.data.gov.au/def/addr/Geocode">geocode</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_terms_definitions"><a class="anchor" href="#_terms_definitions"></a>3.3. Terms &amp; Definitions</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a id="access-point"></a> access point</dt>
-<dd>
-<p>The position along a thoroughfare (road or water feature) where the public would normally access an address site. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="address"></a> address</dt>
-<dd>
-<p>An address is structured information that allows the unambiguous determination of an object for purposes of identification and location (SOURCE: <a href="#ISO19160-1">ISO 19160-1:2015</a>). The objects exist in the physical world (i.e. virtual objects are excluded) and can be outdoor (e.g. a building) or indoor (e.g. an office inside a building). SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="addressable-object"></a> addressable object</dt>
-<dd>
-<p>Object that may be assigned an address. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-assignment-method"></a> address assignment method</dt>
-<dd>
-<p>The way in which addresses are assigned according to the rules of an address reference system. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-authority"></a> address authority</dt>
-<dd>
-<p>Agency responsible for assigning addresses. Usually a local government. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-class"></a> address class</dt>
-<dd>
-<p>description of a set of addresses that share the same address components, operations, methods, relationships, and semantics. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-component"></a> address component</dt>
-<dd>
-<p>constituent part of the address. These may reference another object such as a spatial object including and administrative boundary or land parcel, or a non-spatial entity. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-reference-system"></a> address reference system</dt>
-<dd>
-<p>A defined set of address components and the rules for their combination into addresses. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="address-site"></a> address site</dt>
-<dd>
-<p>a site for which an address is being assigned. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="alternative-address"></a> alternative address</dt>
-<dd>
-<p>an assigned address that refers to an alternative access point to an address site. Requires a preferred address to have been assigned. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="alternative-name"></a> alternative name</dt>
-<dd>
-<p>a name that is an alternative name to another name for the same feature. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="dual-name"></a> dual name</dt>
-<dd>
-<p>a name that consists of two official names that must be used together, usually one indigenous and one European (e.g. ‘Aoraki/Mount Cook’). SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="formed"></a> formed</dt>
-<dd>
-<p>in relation to a road, means that it is physically constructed or prepared for passage by vehicles or pedestrians. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="geocode"></a> geocode</dt>
-<dd>
-<p>a point feature for an address indicating a geometry. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="locality"></a> locality</dt>
-<dd>
-<p>a named geographical area defining a community or area of interest, which may be rural or urban in character, and is usually a suburb in the latter case. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="IRI"></a> IRI</dt>
-<dd>
-<p>Internationalized Resource Identifiers, IRIs, are a sequence of characters from the
-Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
-</dd>
-<dt class="hdlist1"><a id="preferred-address"></a> preferred address</dt>
-<dd>
-<p>the assigned address that is preferred for usage and refers to the main access point to an address site. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="primary-address-site"></a> primary address site</dt>
-<dd>
-<p>an address site that is not contained within another address site. It may contain a sub-address site. SOURCE: <a href="#ANZ4819">ANZ4819</a></p>
-</dd>
-<dt class="hdlist1"><a id="profile"></a> profile</dt>
-<dd>
-<p>set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function. SOURCE: <a href="#ISO19160-2">ISO19160-2</a></p>
-</dd>
-<dt class="hdlist1"><a id="sub-address"></a> sub-address</dt>
-<dd>
-<p>an address number element that refers to a sub-address site. SOURCE: This standard&gt;&gt;</p>
-</dd>
-<dt class="hdlist1"><a id="sub-address-site"></a> sub-address site</dt>
-<dd>
-<p>an address site that is contained within a primary address site e.g. an apartment within a building SOURCE: <a href="#ANZ4819">ANZ4819</a>. Sometimes referred to as a secondary address site. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="thoroughfare"></a> thoroughfare</dt>
-<dd>
-<p>a road or named water feature from which an address site can be accessed. SOURCE: this standard</p>
-</dd>
-<dt class="hdlist1"><a id="thoroughfare-address"></a> thoroughfare address</dt>
-<dd>
-<p>an address that is assigned with reference to the thoroughfare it is accessed from, for example a road or water feature. SOURCE: this standard</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_conformance"><a class="anchor" href="#_conformance"></a>3.4. Conformance</h3>
+<h3 id="_namespaces"><a class="anchor" href="#_namespaces"></a>3.6. Namespaces</h3>
 <div class="paragraph">
-<p>Keywords used to signify requirements in this document are those defined by <a href="#RFC2119">RFC2119</a> and they are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>MUST</em></p>
-</li>
-<li>
-<p><em>MUST NOT</em></p>
-</li>
-<li>
-<p><em>REQUIRED</em></p>
-</li>
-<li>
-<p><em>SHALL</em></p>
-</li>
-<li>
-<p><em>SHALL NOT</em></p>
-</li>
-<li>
-<p><em>SHOULD</em></p>
-</li>
-<li>
-<p><em>SHOULD NOT</em></p>
-</li>
-<li>
-<p><em>RECOMMENDED</em></p>
-</li>
-<li>
-<p><em>MAY</em></p>
-</li>
-</ul>
+<p>Namespaces, in this document&#8217;s context, are managed <a href="http://linked.data.gov.au/def/addrr-glossary/IRI">IRIs</a> which allow further IRIs to be created within their scope. Namespaces are allocated to macro data objects and provide IRIs for all the micro data objects within that object.</p>
 </div>
 <div class="paragraph">
-<p>For process and information to be conformant with this standard, the imperatives of those keywords <em>MUST</em> be followed as per their <a href="#RFC2119">RFC2119</a> definitions.</p>
+<p>For example, the IRI for the <a href="#ADDR2024">Address Model</a> is <code>https://linked.data.gov.au/def/addr</code> and the namespace of <code>https://linked.data.gov.au/def/addr/</code> (the Address Model&#8217;s IRI + <code>/</code>) allows for IRIs to be created for elements within the model such as one for the <code>Geocode</code> class which is <code>https://linked.data.gov.au/def/addr/Geocode</code>.</p>
 </div>
 <div class="paragraph">
-<p>Address information created following processes outlined in this standard <em>MUST</em> conform to the <a href="#ADDR2024">ICSM Address Model</a> with conformance to it tested as per it&#8217;s <a href="https://linked.data.gov.au/def/addr#AnnexB">Annex B: Validation</a> section.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_namespaces"><a class="anchor" href="#_namespaces"></a>3.5. Namespaces</h3>
-<div class="paragraph">
-<p>Namespaces, in this document&#8217;s context, are managed <a href="#IRI">IRIs</a> which allow further IRIs to be created within their scope. Namespaces are allocated to macro data objects and provide IRIs for all the micro data objects within that object.</p>
+<p>When used in some forms of data and human-readable text, IRIs can either be written in full or in a shortened form using prefixes for known namespace. For example, the <code>Geocode</code> mentioned above can be written in full like this:</p>
 </div>
 <div class="paragraph">
-<p>For example, the IRI for the <a href="#ADDR2024">Address Model</a> is <code>https://linked.data.gov.au/def/addr</code> and the namespace of <code>https://linked.data.gov.au/def/addr/</code> (the Address Model&#8217;s IRI + <code>/</code>) allows for IRIs to be created for elements within the model such as one for the <code>AddressableObject</code> class which is <code>https://linked.data.gov.au/def/addr/AddressableObject</code>.</p>
-</div>
-<div class="paragraph">
-<p>When used in some forms of data and human-readable text, IRIs can either be written in full or in a shortened form using prefixes for known namespace. For example, the <code>Addresable Object</code> mentioned above can be written in full like this:</p>
-</div>
-<div class="paragraph">
-<p><code>https://linked.data.gov.au/def/addr/AddressableObject</code></p>
+<p><code>https://linked.data.gov.au/def/addr/Geocode</code></p>
 </div>
 <div class="paragraph">
 <p>or in prefixed form with the prefix <code>addr</code> for the namespace <code>https://linked.data.gov.au/def/addr/</code> like this:</p>
 </div>
 <div class="paragraph">
-<p><code>addr:AddressableObject</code></p>
+<p><code>addr:Geocode</code></p>
 </div>
+<div class="paragraph">
+<p>See the table below for namespace prefixes used in this Standard.</p>
+</div>
+<div class="sect3">
+<h4 id="_prefixes"><a class="anchor" href="#_prefixes"></a>3.6.1. Prefixes</h4>
 <div class="paragraph">
 <p>The prefixed namespaces used in this document are:</p>
 </div>
@@ -806,13 +803,18 @@ Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>addr</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>+https://linked.data.gov.au/def/addr/+</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>https://linked.data.gov.au/def/addr/</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ADDR2024">ICSM&#8217;s  Address Model</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>addrcm</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>+https://linked.data.gov.au/def/addrcm/+</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>https://linked.data.gov.au/def/addr-cm/</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>This Document</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>addrg</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>https://linked.data.gov.au/def/addr-glos/</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/def/addr-glos/">Addressing Glossary</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>addreq</code></p></td>
@@ -899,30 +901,128 @@ Universal Character Set. SOURCE: <a href="#ISO10646">ISO10646</a></p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>4. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is a placeholder</p>
+<p>Effective use of address information and the availability of that information via information systems requires consistency in the information model used for addressing. In the context of Australian &amp; New Zealand (ANZ) jurisdictions after 2024, this is handled by conformance fo information data for use and exchange to <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>.</p>
+</div>
+<div class="paragraph">
+<p>This Standard aims to ease the use and enable <em>best practice</em> use of <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> through the description of the roles and tasks relating to the use of addresses in ANZ jurisdictions, as ascertained from those jurisdictions. These descriptions both carry the experience of their practitioners within them, assisting those new to the addressing domain, and also provide role and task consistency across jurisdictions, since they have been arrived at via collaboration.</p>
+</div>
+<div class="sect2">
+<h3 id="_relations_to_other_standards"><a class="anchor" href="#_relations_to_other_standards"></a>4.1. Relations to other standards</h3>
+<div class="sect3">
+<h4 id="_previous_address_maintenance_standards"><a class="anchor" href="#_previous_address_maintenance_standards"></a>4.1.1. Previous Address maintenance standards</h4>
+<div class="paragraph">
+<p>Previous Standards that have guided address creation &amp; maintenance in ANZ jurisdictions are:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>abstract</p>
+<p><a href="#ANZ4819">AS/NZS 4819:2011</a></p>
 </li>
 <li>
-<p>purpose</p>
-</li>
-<li>
-<p>history</p>
-</li>
-<li>
-<p>big picture</p>
-</li>
-<li>
-<p>doc structure</p>
+<p><a href="#ANZ4819-2003">AS/NZS 4819:2003</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Since the publication of <a href="#ANZ4819">AS/NZS 4819:2011</a>, we have seen the publication of an international address information model, <a href="#ISO19160-1">ISO19160-1</a>, an Australian address information model, <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a>, and additional part extensions to the international address model for "Assigning and maintaining addresses for objects in the physical world" <a href="#ISO19160-2">ISO19160-2</a>.</p>
+</div>
+<div class="paragraph">
+<p>This Standard replaces <a href="#ANZ4819">AS/NZS 4819:2011</a>, and thus <a href="#ANZ4819-2003">AS/NZS 4819:2003</a> which it replaced.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_icsm_addressing_strategy"><a class="anchor" href="#_icsm_addressing_strategy"></a>4.1.2. ICSM Addressing strategy</h4>
+<div class="paragraph">
+<p>The ICSM&#8217;s <em>Addressing 2035 Strategy</em> <a href="#ADDR2035-1">Addressing 2035 Strategy</a> and its technical addendum <a href="#ADDR2035-2">Addressing 2035 Strategy Technical Addendum</a> drove the development of the ANZ address information model <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> on which this Standard depends for address information specification, thus this Standard is in line with the ICSM strategy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_international_address_standards"><a class="anchor" href="#_international_address_standards"></a>4.1.3. International address standards</h4>
+<div class="paragraph">
+<p>This Standard depends on <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> which is an implementation of <a href="#ISO19160-1">ISO19160-1</a>. Linked between these two information models are made explicit in <a href="#ADDRESS-MODEL">ICSM ANZ Address Model</a> and not repeated here.</p>
+</div>
+<div class="paragraph">
+<p>This Standard is also an implementation of <a href="#ISO19160-2">ISO19160-2</a>, which has been co-adopted as an ANZ standard AS/NZS ISO 19160.2:2024, and how this standard caters for requirements it gives is detailed in <a href="#AnnexD">[AnnexD]</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_international_practice"><a class="anchor" href="#_international_practice"></a>4.1.4. International practice</h4>
+<div class="paragraph">
+<p>This Standard&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_document_structure"><a class="anchor" href="#_document_structure"></a>4.2. Document Structure</h3>
+<div class="paragraph">
+<p>This Standard is structured in the following way:</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">#</th>
+<th class="tableblock halign-left valign-top">Section</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Short Standard overview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard&#8217;s identifying information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preamble</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resources for the effective use of this Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Introduction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Background information about how and why this Standard was developed and the role it plays in relation to other standards</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roles known to be played by organisations and people in Australia and New Zealand with respect to addressing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tasks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tasks undertaken by those playing Roles, as above</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirements &amp; Recommendations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required and recommended courses of action for those undertaking tasks, as above</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A-D</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annexes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supporting information for this Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bibliography</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">References cited in this document</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1991,6 +2091,12 @@ TBC</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="AnnexA"><a class="anchor" href="#AnnexA"></a>Annex A: Extended Examples</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="AnnexB"><a class="anchor" href="#AnnexB"></a>Annex B: Identifiers</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -2078,9 +2184,17 @@ TBC</p>
 <dd>
 <p>ICSM. <em>Addressing 2035 Strategy Technical Addendum</em> (2021). <a href="https://www.icsm.gov.au/publications/addressing-strategy-information-addendum" class="bare">https://www.icsm.gov.au/publications/addressing-strategy-information-addendum</a></p>
 </dd>
+<dt class="hdlist1"><a id="ADDRESS-MODEL"></a> ICSM ANZ Address Model</dt>
+<dd>
+<p>ICSM. <em>ICSM ANZ Address Model</em> (2024). Information Model. <a href="https://linked.data.gov.au/def/addr" class="bare">https://linked.data.gov.au/def/addr</a></p>
+</dd>
 <dt class="hdlist1"><a id="AS4590"></a> AS 4590.1:2017</dt>
 <dd>
 <p>Standards Australia. <em>Interchange of client information, Part 1: Data elements and interchange formats</em> (2017). <a href="https://store.standards.org.au/product/as-4590-1-2017" class="bare">https://store.standards.org.au/product/as-4590-1-2017</a></p>
+</dd>
+<dt class="hdlist1"><a id="BCP14"></a> BCP 14</dt>
+<dd>
+<p>Internet Engineering Taskforce. <em>Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels &amp; Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</em> <a href="https://www.rfc-editor.org/info/bcp14" class="bare">https://www.rfc-editor.org/info/bcp14</a></p>
 </dd>
 <dt class="hdlist1"><a id="ISO10646"></a> ISO10646</dt>
 <dd>
@@ -2106,6 +2220,10 @@ TBC</p>
 <dd>
 <p>Standards Australia. <em>AS/NZS 4819:2011 Rural and urban addressing</em>. <a href="https://store.standards.org.au/product/as-nzs-4819-2011" class="bare">https://store.standards.org.au/product/as-nzs-4819-2011</a></p>
 </dd>
+<dt class="hdlist1"><a id="ANZ4819-2003"></a> AS/NZS 4819:2003</dt>
+<dd>
+<p>Standards Australia. <em>AS/NZS 4819:2003 Rural and urban addressing</em>. <a href="https://store.standards.org.au/product/as-nzs-4819-2003" class="bare">https://store.standards.org.au/product/as-nzs-4819-2003</a></p>
+</dd>
 <dt class="hdlist1"><a id="ASNZSISO19160-4"></a> ASNZSISO19160-4</dt>
 <dd>
 <p>Standards Australia. <em>AS/NZS ISO 19160.4: Addressing, Part 4: International postal address components and template language</em> (2023). <a href="https://store.standards.org.au/product/as-nzs-iso-19160-4-2023" class="bare">https://store.standards.org.au/product/as-nzs-iso-19160-4-2023</a></p>
@@ -2125,7 +2243,7 @@ TBC</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-11-11 21:52:18 UTC
+Last updated 2025-01-21 06:40:33 UTC
 </div>
 </div>
 </body>
