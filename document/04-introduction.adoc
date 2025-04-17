@@ -1,5 +1,7 @@
 == Introduction
 
+this is a test paragraph
+
 Effective use of address information and the availability of that information via information systems requires consistency in the information model used for addressing. In the context of Australian & New Zealand (ANZ) jurisdictions after 2024, this is handled by conformance fo information data for use and exchange to <<ADDRESS-MODEL>>.
 
 This Standard aims to ease the use and enable _best practice_ use of <<ADDRESS-MODEL>> through the description of the roles and tasks relating to the use of addresses in ANZ jurisdictions, as ascertained from those jurisdictions. These descriptions both carry the experience of their practitioners within them, assisting those new to the addressing domain, and also provide role and task consistency across jurisdictions, since they have been arrived at via collaboration.
