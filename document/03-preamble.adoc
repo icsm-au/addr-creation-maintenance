@@ -72,6 +72,25 @@ A private community or town, such as a retirement village or mining town, shall 
 
 Extended forms of addressing, such as subaddressing, is catered for within <<ADDRESS-MODEL>>.
 
+=== Collaboration
+
+Collaborate on this document is both sought and required for broad acceptance.
+
+In general, collaboration is sought through the https://www.icsm.gov.au/what-we-do/addressing[ICSM's Addressing Working Group]. Specific collaboration on this document could take any of the following forms:
+
+1. **Creating https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests[Pull Requests]**
+** these are proposals for specific changes to the content that can be reviewed and absorbed
+** using the https://github.com/icsm-au/addr-creation-maintenance[content in the source code repository] as a base
+2. **Lodging Issues**
+** in the document's https://github.com/icsm-au/addr-creation-maintenance/issues[Issue Tracker]
+3. **Contacting the authors**
+** the initial drafters of this document are the addressing officers of Victoria, the ACT & Queensland
+** they can be contacted via the AWG on icsm@ga.gov.au.
+** Qld can be contacted directly on AddressQueensland@resources.qld.gov.au
+4. **Raise issues in the AWG**
+** the forum governing the drafting and ultimate acceptance of this document is the https://www.icsm.gov.au/what-we-do/addressing[ICSM's Addressing Working Group]
+** broad discussion of this document should take place in that WG
+
 === Normative References
 
 Multiple Australia/New Zealand Standards, information models and other documents are referred to by this Standard. References from normative sections of this document are themselves considered to be normative, unless they are specifically indicated as being informative.
